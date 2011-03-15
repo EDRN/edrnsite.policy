@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+Copyright 2009-2010 California Institute of Technology. ALL RIGHTS
+RESERVED. U.S. Government Sponsorship acknowledged.
+-->
+<configure
+    xmlns='http://namespaces.zope.org/zope'
+    xmlns:five='http://namespaces.zope.org/five'
+    xmlns:genericsetup='http://namespaces.zope.org/genericsetup'
+    xmlns:zcml='http://namespaces.zope.org/zcml'
+    i18n_domain='edrnsite.policy'>
+
+    <five:registerPackage package='.' initialize='.initialize' />
+
+    <include package='p4a.subtyper' />
+    <include package='eea.facetednavigation' file='meta.zcml'/>
+    <include package='eea.facetednavigation' file='overrides.zcml'/>
+    <include package='eea.facetednavigation' />
+    <include package='plone.app.ldap' />
+    <include package='edrn.theme' />
+    <include package='edrnsite.portlets'/>
+    <include package='edrnsite.funding'/>
+    <include package='edrnsite.misccontent' />
+    <include package='edrnsite.search'/>
+    <include package='eke.knowledge'/>
+    <include package='eke.publications'/>
+    <include package='eke.site'/>
+    <include package='eke.study'/>
+    <include package='eke.biomarker' />
+    <include package='eke.committees' />
+    <include package='eke.ecas' />
+    <include package='eke.review' />
+    <include package='eke.specimens' />
+    <include package='.actions' />
+    <include package='.browser' />
+
+    <genericsetup:registerProfile 
+        name='default'
+        title='EDRN Site Policy'
+        directory='profiles/default'
+        description='Turns a Plone site into the EDRN public portal.'
+        provides='Products.GenericSetup.interfaces.EXTENSION'
+    />
+
+    <include
+        zcml:condition='installed Products.GenericSetup.upgrade'
+        file='upgrades.zcml'
+    />
+        
+</configure>

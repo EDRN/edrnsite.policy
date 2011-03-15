@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+Copyright 2009 California Institute of Technology. ALL RIGHTS
+RESERVED. U.S. Government Sponsorship acknowledged.
+-->
+<import-steps>
+    <import-step id='content'
+        version='20090504-02'
+        handler='Products.CMFCore.exportimport.importSiteStructure'
+        title='Content'>
+        <dependency step='plone-final' />
+        Import site's structure and content.
+    </import-step>
+    <import-step id='edrnsite.policy.setup'
+        version='20090504-01'
+        handler='edrnsite.policy.setuphandlers.setupVarious'
+        title='EDRN Site Setup'>
+        <dependency step='content'/>
+        <dependency step='workflow'/>
+        <dependency step='types' />
+        Perform additional steps to make this the EDRN public portal.
+    </import-step>
+</import-steps>

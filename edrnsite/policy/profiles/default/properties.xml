@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+Copyright 2009-2010 California Institute of Technology. ALL RIGHTS
+RESERVED. U.S. Government Sponsorship acknowledged.
+-->
+<site>
+	<property name='title'>EDRN Public Portal</property>
+	<property name='description'>Early Detection Research Network</property>
+    <property name='email_from_name'>EDRN Portal Administrator</property>
+    <property name='email_from_address'>kruegerk@mail.nih.gov</property>
+    <property name='edrnIngestPaths' type='lines'>
+        <element value='resources/body-systems'/>
+        <element value='resources/diseases'/>
+        <element value='resources/miscellaneous-resources'/>
+        <element value='protocols'/>
+        <element value='sites'/>
+        <element value='publications'/>
+        <element value='biomarkers'/>
+        <element value='science-data'/>
+        <element value='protocols'/>
+        <element value='science-data'/>
+        <element value='biomarkers'/>
+        <element value='specimens/bank'/>
+    </property>
+</site>

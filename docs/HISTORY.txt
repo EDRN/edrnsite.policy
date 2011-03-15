@@ -1,0 +1,182 @@
+Changelog
+=========
+
+What follows is a history of changes from release to release.  More detail
+about the issues mentioned here can be found at the issue tracker, at::
+
+    https://oodt.jpl.nasa.gov/jira/browse/CA
+
+
+1.0.5 - NCI Hates Cookies
+-------------------------
+
+The following issues were addressed in this release:
+
+* CA-743 - Disable Google Analytics
+* CA-742 - Apply fix for CVE-2011-0720
+* CA-597 - Add clock event to update sign-in secret
+
+
+1.0.4 - The Googles, They Do Nothing
+------------------------------------
+
+The following issue was addressed in this release:
+
+* CA-726 - Google verification now requires specific page content
+
+
+1.0.3 - A Mixed Bag
+-------------------
+
+The following issues were addressed in this release:
+
+* CA-681 - Fix the word staffers to say just staff
+* CA-698 - "Structural" objects appear in searches
+
+
+1.0.2 - Specimen Search
+-----------------------
+
+This time around, the policy package implements a dynamic search page for EDRN
+specimens.  (There is no corresponding issue in the issue tracker for this new
+feature; or if there is, the issue tracker is down as I write this and can't
+confirm.)
+
+The following issues are also addressed by this release:
+
+* CA-684 - Breadcrumb links are not correct on specimen search tab
+* CA-667 - Organ and title edits that were added were lost when re-ingesting
+
+
+1.0.1 - Ingest Cleanup
+----------------------
+
+This release addresses the following:
+
+* CA-649 - Automatic ingest is not updating publication state
+* CA-662 - Remove "Potential Link Breakage" message from automatic ingest
+
+It also adds a dynamic list of EDRN members and allows YouTube videos to be
+embedded in portal pages.  See the issue tracker at
+https://oodt.jpl.nasa.gov/jira/browse/CA for more details.
+
+
+1.0.0 - Automation Spam
+-----------------------
+
+This release addresses several issues: the automatic periodic ingest of RDF
+information into the portal from its various information sources.  You can
+read more about this issue at https://oodt.jpl.nasa.gov/jira/browse/CA-528.
+
+It also adds search and tracking of tissue and other specimens from ERNE, the
+EDRN Resource Network Exchange.
+
+Finally, it reworks the logic by which the emailed portal notices are sent.
+Previously, any content addition, deletion, modification, or any content
+publication state change would trigger an email to the DMCC.  These included
+all changes during RDF ingest, which could amount to thousands of such
+changes.
+
+Now, the email notice is sent solely if the user who's doing the change is a
+member of the "National Cancer Institute" group.  For more details on this
+update, see https://oodt.jpl.nasa.gov/jira/browse/CA-644.
+
+
+0.0.7 - The Eleventh Hour
+-------------------------
+
+After viewing the new look-and-feel for EDRN across a variety of applications,
+management suddenly realizes they don't like it.  This release attempts to
+satisfy them.  See https://oodt.jpl.nasa.gov/jira/browse/CA-599 for more.
+
+
+0.0.6 - Jackie Hates Our Content
+--------------------------------
+
+In release 0.0.6 of this component, we've addressed the following issues:
+
+* https://oodt.jpl.nasa.gov/jira/browse/CA-577 - Update the Sample Reference
+  Sets page
+* https://oodt.jpl.nasa.gov/jira/browse/CA-579 - Access to secure web site
+  link goes to wrong URL
+* https://oodt.jpl.nasa.gov/jira/browse/CA-582 - Publications missing authors
+
+
+0.0.5 - Content in Four Part Harmony
+------------------------------------
+
+The following issues are addressed in this release:
+
+* Content harmonized between the old operational portal (version 2) and beta
+  demonstration portal (version 3 at http://edrn.jpl.nasa.gov/portal3.0).
+* https://oodt.jpl.nasa.gov/jira/browse/CA-379 - Generate email notification
+  to DMCC when portal changes are approved at NCI
+* https://oodt.jpl.nasa.gov/jira/browse/CA-540 - PI not showing for a site
+* https://oodt.jpl.nasa.gov/jira/browse/CA-541 - Add to software repository
+* https://oodt.jpl.nasa.gov/jira/browse/CA-549 - Biological Specimens Link
+  under Resources - Page doesn't exist
+* https://oodt.jpl.nasa.gov/jira/browse/CA-559 - The current EDRN-Wide
+  Collaborations link downloads a protocol search html
+* https://oodt.jpl.nasa.gov/jira/browse/CA-561 - Subscription to a listserv
+  link - page doesn't exist
+* https://oodt.jpl.nasa.gov/jira/browse/CA-563 - Remove CDE Links from Portal
+
+
+0.0.4 - To Be Named At Release Time
+-----------------------------------
+
+The following issues are addressed in this release:
+
+* http://oodt.jpl.nasa.gov/jira/browse/CA-526 - Duplicate science-data
+  deployed as part of portal setup
+
+
+0.0.3 - EDRN SC Meeting 2010 RDF-ification
+------------------------------------------
+* http://oodt.jpl.nasa.gov/jira/browse/CA-521 - Load EDRN SC Mar 2010 meeting RDF into portal cache
+* http://oodt.jpl.nasa.gov/jira/browse/CA-498 - Disable mailing of
+  password-reset messages.
+* http://oodt.jpl.nasa.gov/jira/browse/CA-508 - Travel Fellowships out-of-date
+* http://oodt.jpl.nasa.gov/jira/browse/CA-509 - Research Tools need updating
+
+
+0.0.2 - Starting Content & Polish
+---------------------------------
+
+This release includes a refresh cache of knowledge from the EDRN Catalog and
+Archive Service, the Biomarker Database, and the EDRN DMCC RDF Service.  In
+addition, this release addresses the following issues:
+
+* http://oodt.jpl.nasa.gov/jira/browse/CA-482 - For Researchers - EDRN
+  Investigators' Publications - Page Doesn't Exist
+* http://oodt.jpl.nasa.gov/jira/browse/CA-481 - Remove CDE Spreadsheet and
+  PDF.  Add CDE Search
+* http://oodt.jpl.nasa.gov/jira/browse/CA-480 - Study Design Guidance Tools
+  page in "old" format
+* http://oodt.jpl.nasa.gov/jira/browse/CA-478 - Public, Patients, Advocates -
+  EDRN Informatics link - Page Does Not Exist
+* http://oodt.jpl.nasa.gov/jira/browse/CA-470 - List of "BDL" sites point to
+  old DMCC site
+* http://oodt.jpl.nasa.gov/jira/browse/CA-435 - Remove :log in to add comments
+  from public portal pages
+* http://oodt.jpl.nasa.gov/jira/browse/CA-486 - Application Procedure, Receipt
+  Dates, and Review - Contact Investigator Link - Page Doesn't Exist
+
+
+0.0.1 - Content Updates and Broken Links
+----------------------------------------
+
+The following issues have been addressed in this release:
+
+* http://oodt.jpl.nasa.gov/jira/browse/CA-469 - List of sites on "About EDRN"
+  still points to the old site at DMCC
+* http://oodt.jpl.nasa.gov/jira/browse/CA-471 - Under patient advocates, press
+  releases - sorry page doesn't exist...
+* http://oodt.jpl.nasa.gov/jira/browse/CA-467 - PI page does not exist from EC
+  page
+
+
+0.0.0 - Unreleased
+------------------
+
+Initial release into beta.

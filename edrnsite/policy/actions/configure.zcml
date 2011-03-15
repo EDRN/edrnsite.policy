@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+Copyright 2010 California Institute of Technology. ALL RIGHTS
+RESERVED. U.S. Government Sponsorship acknowledged.
+-->
+<configure
+    xmlns='http://namespaces.zope.org/zope'
+    xmlns:browser='http://namespaces.zope.org/browser'
+    xmlns:plone='http://namespaces.plone.org/plone'>
+    <include package='plone.app.contentrules' />
+    <adapter factory='.mail.EDRNMailActionExecutor' />
+    <browser:page
+        for='plone.app.contentrules.browser.interfaces.IRuleActionAdding'
+        name='edrn.actions.Mail'
+        class='.mail.EDRNMailAddForm'
+        permission='cmf.ManagePortal'
+    />
+    <browser:page
+        for='edrnsite.policy.actions.mail.IEDRNMailAction'
+        name='edit'
+        class='.mail.EDRNMailEditForm'
+        permission='cmf.ManagePortal'
+    />
+    <plone:ruleAction
+        name='edrn.actions.Mail'
+        title='Send email for EDRN ignoring errors'
+        description='Sends an email message on behalf of EDRN (ignoring transmission errors) on the triggering object'
+        for='*'
+        event='zope.component.interfaces.IObjectEvent'
+        addview='edrn.actions.Mail'
+        editview='edit'
+        schema='.mail.IEDRNMailAction'
+        factory='.mail.EDRNMailAction'
+    />
+</configure>

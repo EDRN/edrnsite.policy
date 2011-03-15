@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+Copyright 2009 California Institute of Technology. ALL RIGHTS
+RESERVED. U.S. Government Sponsorship acknowledged.
+-->
+<portlets>
+ <assignment name="review-list" category="context" key="/"
+    manager="plone.leftcolumn" type="portlets.Review"/>
+ <assignment name="edrn-quick-links" category="context" key="/"
+    manager="plone.leftcolumn" type="edrnsite.portlets.QuickLinks"/> 
+ <assignment name="search" category="context" key="/"
+        manager="plone.rightcolumn" type="portlets.Search"/>
+ <assignment name="DMCCRSS-announcements" category="context" key="/"
+    manager="plone.rightcolumn" type="edrnsite.portlets.DMCCRSS">
+  <property name="count">2</property>
+  <property
+     name="url">http://www.compass.fhcrc.org/edrnnci/rss.asp?t=Announcement&amp;type=1&amp;web=8&amp;d=03/01/05&amp;p=&amp;num=15</property>
+  <property name="timeout">100</property>
+ </assignment>
+ <blacklist category="user" location="/" manager="plone.dashboard2"
+    status="acquire"/>
+ <blacklist category="group" location="/" manager="plone.dashboard2"
+    status="acquire"/>
+ <blacklist category="content_type" location="/" manager="plone.dashboard2"
+    status="acquire"/>
+ <blacklist category="context" location="/" manager="plone.dashboard2"
+    status="acquire"/>
+ <blacklist category="user" location="/" manager="plone.dashboard3"
+    status="acquire"/>
+ <blacklist category="group" location="/" manager="plone.dashboard3"
+    status="acquire"/>
+ <blacklist category="content_type" location="/" manager="plone.dashboard3"
+    status="acquire"/>
+ <blacklist category="context" location="/" manager="plone.dashboard3"
+    status="acquire"/>
+ <blacklist category="user" location="/" manager="plone.dashboard1"
+    status="acquire"/>
+ <blacklist category="group" location="/" manager="plone.dashboard1"
+    status="acquire"/>
+ <blacklist category="content_type" location="/" manager="plone.dashboard1"
+    status="acquire"/>
+ <blacklist category="context" location="/" manager="plone.dashboard1"
+    status="acquire"/>
+ <blacklist category="user" location="/" manager="plone.dashboard4"
+    status="acquire"/>
+ <blacklist category="group" location="/" manager="plone.dashboard4"
+    status="acquire"/>
+ <blacklist category="content_type" location="/" manager="plone.dashboard4"
+    status="acquire"/>
+ <blacklist category="context" location="/" manager="plone.dashboard4"
+    status="acquire"/>
+ <blacklist category="user" location="/" manager="plone.leftcolumn"
+    status="acquire"/>
+ <blacklist category="group" location="/" manager="plone.leftcolumn"
+    status="acquire"/>
+ <blacklist category="content_type" location="/" manager="plone.leftcolumn"
+    status="acquire"/>
+ <blacklist category="context" location="/" manager="plone.leftcolumn"
+    status="show"/>
+ <blacklist category="user" location="/" manager="plone.rightcolumn"
+    status="acquire"/>
+ <blacklist category="group" location="/" manager="plone.rightcolumn"
+    status="acquire"/>
+ <blacklist category="content_type" location="/" manager="plone.rightcolumn"
+    status="acquire"/>
+ <blacklist category="context" location="/" manager="plone.rightcolumn"
+    status="acquire"/>
+</portlets>

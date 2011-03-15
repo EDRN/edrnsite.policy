@@ -1,0 +1,6 @@
+Flag file.
+
+This flag file is copyright 2009 California Institute of Technology.  ALL
+RIGHTS RESERVED.  U.S. Government Sponsorship acknowledged.  Use of this flag
+file without specific, written consent from the California Institute of
+Technology is STRICTLY FORBIDDEN.

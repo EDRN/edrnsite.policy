@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+Copyright 2010 California Institute of Technology. ALL RIGHTS
+RESERVED. U.S. Government Sponsorship acknowledged.
+-->
+<contentrules>
+    <rule
+        name='edrn-add-event'
+        title='EDRN Event: Item Added'
+        description='Event triggered when an item is added (newly created or pasted) to a container.'
+        enabled='True'
+        event='zope.app.container.interfaces.IObjectAddedEvent'
+        stop-after='True'>
+        <conditions/>
+        <actions>
+            <action type='edrn.actions.Mail'>
+                <property name='source'/>
+                <property name='message'>Greetings!
+     
+A new item has been added to the Early Detection Research Network's public portal.
+     
+The item is called "${title}".  You can view this newly-added item at the following URL:
+     
+${url}
+     
+Please note that if your mail reader wraps the URL across several lines, you may need to put it back together manually.  Also note that even though an item has been added, it may not be viewable to the general public or even logged-in users depending on the sharing permissions and publication state assigned to the item.
+     
+Thank you for taking the time to read this message in its entirety.</property>
+                <property name='recipients'>heather.kincaid@jpl.nasa.gov</property>
+                <property name='subject'>EDRN Portal: new item added</property>
+            </action>
+        </actions>
+    </rule>
+    <rule
+        name='edrn-mod-event' 
+        title='EDRN Event: Item Modified'
+        description='Event triggered when an item is modified (edited or altered).'
+        enabled='True'
+        event='zope.lifecycleevent.interfaces.IObjectModifiedEvent'
+        stop-after='True'>
+        <conditions/>
+        <actions>
+            <action type='edrn.actions.Mail'>
+                <property name='source'/>
+                <property name='message'>Greetings!
+     
+An item (such as a web page, an image, or other content) has been modified at the Early Detection Research Network's portal.
+     
+The modified item's title is "${title}". You can view the item at
+     
+${url}
+     
+Please note that if your mail reader wraps the URL across several lines, you may need to put it back together manually.  Also note that an item may not be viewable to the general public or even logged-in users depending on the sharing permissions and publication state assigned to the item.
+     
+Thank you for taking the time to keep abreast on the latest changes at the EDRN portal.</property>
+                <property name='recipients'>heather.kincaid@jpl.nasa.gov</property>
+                <property name='subject'>EDRN Portal: item modified</property>
+            </action>
+        </actions>
+    </rule>
+    <rule
+        name='edrn-del-event'
+        title='EDRN Event: Item Deleted'
+        description='Event triggered when an item is removed (moved or deleted) from a container.'
+        enabled='True'
+        event='zope.app.container.interfaces.IObjectRemovedEvent'
+        stop-after='True'>
+        <conditions/>
+        <actions>
+            <action type='edrn.actions.Mail'>
+                <property name='source'/>
+                <property name='message'>Greetings!
+     
+An item (such as a web page, an image, or other content) has been deleted from the Early Detection Research Network's portal.
+     
+The deleted item was called "${title}".  It used to be visible at the following URL:
+     
+${url}
+     
+The portal sincerely hopes you will not mourn the loss of this item and, if it were not something you expected to be deleted, that someone has a backup copy.</property>
+                <property name='recipients'>heather.kincaid@jpl.nasa.gov</property>
+                <property name='subject'>EDRN Portal: item deleted</property>
+            </action>
+        </actions>
+    </rule>
+    <rule
+        name='edrn-pub-event'
+        title='EDRN Event: Publication State Changed'
+        description='Event triggered when an item has its publication state adjusted.'
+        enabled='True'
+        event='Products.CMFCore.interfaces.IActionSucceededEvent'
+        stop-after='True'>
+        <conditions/>
+        <actions>
+            <action type='edrn.actions.Mail'>
+                <property name='source'/>
+                <property name='message'>Greetings!
+     
+An item (such as a web page, an image, or other content) at the Early Detection Research Network's portal had its publication state changed.  Publication state refers to the publication workflow, and a change means it went from "private" to "pending review", or from "pending review" to "published", or from "published" to "retracted", and so forth.
+     
+The item that had its publication state changed is called "${title}". You can view the item at
+     
+${url}
+     
+Please note that if your mail reader wraps the URL across several lines, you may need to put it back together manually.  Also, depending on the new publication state (such as "private", for example), the item may not be viewable by the general public or even by logged-in users that lack appropriate sharing permissions to access it.
+     
+Thank you for taking the time to stay current on the dynamic changes happening at the EDRN portal.</property>
+                <property name='recipients'>heather.kincaid@jpl.nasa.gov</property>
+                <property name='subject'>EDRN Portal: publication state changed</property>
+            </action>
+        </actions>
+    </rule>
+    <assignment location='' name='edrn-add-event' bubbles='False' enabled='True'/>
+    <assignment location='' name='edrn-mod-event' bubbles='False' enabled='True'/>
+    <assignment location='' name='edrn-del-event' bubbles='False' enabled='True'/>
+    <assignment location='' name='edrn-pub-event' bubbles='False' enabled='True'/>
+    <assignment location='/about-edrn' name='edrn-add-event' bubbles='True' enabled='True'/>
+    <assignment location='/about-edrn' name='edrn-del-event' bubbles='True' enabled='True'/>
+    <assignment location='/about-edrn' name='edrn-mod-event' bubbles='True' enabled='True'/>
+    <assignment location='/about-edrn' name='edrn-pub-event' bubbles='True' enabled='True'/>
+    <assignment location='/admin' name='edrn-add-event' bubbles='True' enabled='True'/>
+    <assignment location='/admin' name='edrn-del-event' bubbles='True' enabled='True'/>
+    <assignment location='/admin' name='edrn-mod-event' bubbles='True' enabled='True'/>
+    <assignment location='/admin' name='edrn-pub-event' bubbles='True' enabled='True'/>
+    <assignment location='/advocates' name='edrn-add-event' bubbles='True' enabled='True'/>
+    <assignment location='/advocates' name='edrn-del-event' bubbles='True' enabled='True'/>
+    <assignment location='/advocates' name='edrn-mod-event' bubbles='True' enabled='True'/>
+    <assignment location='/advocates' name='edrn-pub-event' bubbles='True' enabled='True'/>
+    <assignment location='/colops' name='edrn-add-event' bubbles='True' enabled='True'/>
+    <assignment location='/colops' name='edrn-del-event' bubbles='True' enabled='True'/>
+    <assignment location='/colops' name='edrn-mod-event' bubbles='True' enabled='True'/>
+    <assignment location='/colops' name='edrn-pub-event' bubbles='True' enabled='True'/>
+    <assignment location='/committees' name='edrn-add-event' bubbles='True' enabled='True'/>
+    <assignment location='/committees' name='edrn-del-event' bubbles='True' enabled='True'/>
+    <assignment location='/committees' name='edrn-mod-event' bubbles='True' enabled='True'/>
+    <assignment location='/committees' name='edrn-pub-event' bubbles='True' enabled='True'/>
+    <assignment location='/docs' name='edrn-add-event' bubbles='True' enabled='True'/>
+    <assignment location='/docs' name='edrn-del-event' bubbles='True' enabled='True'/>
+    <assignment location='/docs' name='edrn-mod-event' bubbles='True' enabled='True'/>
+    <assignment location='/docs' name='edrn-pub-event' bubbles='True' enabled='True'/>
+    <assignment location='/funding-opportunities' name='edrn-add-event' bubbles='True' enabled='True'/>
+    <assignment location='/funding-opportunities' name='edrn-del-event' bubbles='True' enabled='True'/>
+    <assignment location='/funding-opportunities' name='edrn-mod-event' bubbles='True' enabled='True'/>
+    <assignment location='/funding-opportunities' name='edrn-pub-event' bubbles='True' enabled='True'/>
+    <assignment location='/researchers' name='edrn-add-event' bubbles='True' enabled='True'/>
+    <assignment location='/researchers' name='edrn-del-event' bubbles='True' enabled='True'/>
+    <assignment location='/researchers' name='edrn-mod-event' bubbles='True' enabled='True'/>
+    <assignment location='/researchers' name='edrn-pub-event' bubbles='True' enabled='True'/>
+    <assignment location='/resources' name='edrn-add-event' bubbles='True' enabled='True'/>
+    <assignment location='/resources' name='edrn-del-event' bubbles='True' enabled='True'/>
+    <assignment location='/resources' name='edrn-mod-event' bubbles='True' enabled='True'/>
+    <assignment location='/resources' name='edrn-pub-event' bubbles='True' enabled='True'/>
+</contentrules>

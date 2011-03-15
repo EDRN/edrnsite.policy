@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+Copyright 2009-2010 California Institute of Technology. ALL RIGHTS
+RESERVED. U.S. Government Sponsorship acknowledged.
+-->
+<metadata>
+    <version>1</version>
+    <description>The EDRN Site Policy turns a plain old Plone site into the EDRN public portal.</description>
+    <dependencies>
+        <dependency>profile-p4a.subtyper:default</dependency>
+        <dependency>profile-eea.facetednavigation:default</dependency>
+        <dependency>profile-edrn.theme:default</dependency>
+        <dependency>profile-edrnsite.funding:default</dependency>
+        <dependency>profile-edrnsite.search:default</dependency>
+        <dependency>profile-edrnsite.portlets:default</dependency>
+        <dependency>profile-edrnsite.misccontent:default</dependency>
+        <dependency>profile-eke.knowledge:default</dependency>
+        <dependency>profile-eke.publications:default</dependency>
+        <dependency>profile-eke.site:default</dependency>
+        <dependency>profile-eke.study:default</dependency>
+        <dependency>profile-eke.biomarker:default</dependency>
+        <dependency>profile-eke.committees:default</dependency>
+        <dependency>profile-eke.ecas:default</dependency>
+        <dependency>profile-eke.review:default</dependency>
+        <dependency>profile-eke.specimens:default</dependency>
+    </dependencies>
+</metadata>

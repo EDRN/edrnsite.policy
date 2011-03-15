@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+Copyright 2010-2011 California Institute of Technology. ALL RIGHTS
+RESERVED. U.S. Government Sponsorship acknowledged.
+-->
+<configure
+    xmlns='http://namespaces.zope.org'
+    xmlns:browser='http://namespaces.zope.org/browser'
+    i18n_domain='edrnsite.policy'>
+    <browser:page
+        for='Products.CMFCore.interfaces.ISiteRoot'
+        name='ingestEverythingFully'
+        class='.ingest.FullIngestor'
+        permission='cmf.ManagePortal'
+    />
+    <browser:page
+        for='Products.CMFCore.interfaces.ISiteRoot'
+        name='createNewSecret'
+        class='.session.SecretGenerator'
+        permission='cmf.ManagePortal'
+    />
+</configure>

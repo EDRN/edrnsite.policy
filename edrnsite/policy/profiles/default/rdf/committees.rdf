@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:_3="http://edrn.nci.nih.gov/xml/rdf/edrn.rdf#"
+   xmlns:_4="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/committees/10">
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Committee"/>
+    <_3:committeeType>Working Group</_3:committeeType>
+    <_4:title>ERNE Working Group</_4:title>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2326"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1081"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1286"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/729"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1075"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1017"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1015"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/993"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1043"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1028"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1196"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/996"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/998"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/29"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1016"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1000"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1085"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/997"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1082"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/committees/16">
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Committee"/>
+    <_3:committeeType>Collaborative Group</_3:committeeType>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1013"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2808"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1324"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/29"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1721"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1043"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2396"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1012"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2314"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1466"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2816"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2812"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2805"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2389"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1071"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2809"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/997"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1017"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1081"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2806"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1078"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1958"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1014"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1645"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1004"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2811"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1821"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1005"/>
+    <_4:title>Lung and Upper Aerodigestive Cancers Research Group</_4:title>
+    <_3:coChiar rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1957"/>
+    <_3:chair rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1301"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/committees/14">
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Committee"/>
+    <_3:committeeType>Collaborative Group</_3:committeeType>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1082"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1021"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1019"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1043"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1046"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2753"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1732"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2021"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1727"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2824"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2313"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1918"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/995"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1033"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1898"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2739"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1899"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2817"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1822"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/997"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1009"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1527"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1900"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1218"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1025"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1018"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1469"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1052"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1736"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1719"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2818"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1910"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1645"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1114"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2811"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1348"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2481"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1000"/>
+    <_4:title>Breast and Gynecologic Cancers Research Group</_4:title>
+    <_3:coChiar rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1974"/>
+    <_3:chair rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1076"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/committees/6">
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Committee"/>
+    <_3:committeeType>Subcommittee</_3:committeeType>
+    <_4:title>Communication and Workshop Subcommittee</_4:title>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1009"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1494"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1012"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2814"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1840"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2418"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1054"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1719"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1916"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1731"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1823"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1726"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1821"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1000"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1760"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1388"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/committees/4">
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Committee"/>
+    <_3:committeeType>Subcommittee</_3:committeeType>
+    <_4:title>Prioritization Subcommittee</_4:title>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/993"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1747"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1014"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1525"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2813"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1721"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1371"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1076"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1498"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2810"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1736"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1729"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/committees/29">
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Committee"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1324"/>
+    <_3:abbreviatedName>CEVC</_3:abbreviatedName>
+    <_4:title>Clinical Epidemiology and Validation Center</_4:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/committees/8">
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Committee"/>
+    <_3:committeeType>Subcommittee</_3:committeeType>
+    <_3:consultant rdf:resource="http://edrn.nci.nih.gov/data/registered-person/729"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/51"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2604"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2313"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1358"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2806"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/159"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2805"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1075"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2326"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1730"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2809"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1031"/>
+    <_4:title>Data Sharing and Informatics Subcommittee</_4:title>
+    <_3:chair rdf:resource="http://edrn.nci.nih.gov/data/registered-person/29"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/committees/33">
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Committee"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2007"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2080"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1817"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2006"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2096"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2093"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2094"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2081"/>
+    <_3:abbreviatedName>Assoc. Member</_3:abbreviatedName>
+    <_4:title>Associate Member</_4:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/committees/3">
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Committee"/>
+    <_3:committeeType>Team</_3:committeeType>
+    <_3:abbreviatedName>NCT</_3:abbreviatedName>
+    <_4:title>Network Consulting Team</_4:title>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2828"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2834"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2835"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2827"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2825"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2829"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1080"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2833"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2832"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2830"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2831"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2826"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/committees/7">
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Committee"/>
+    <_3:committeeType>Subcommittee</_3:committeeType>
+    <_4:title>Collaboration and Publication Subcommittee</_4:title>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1958"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1005"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2812"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1301"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2314"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1016"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1050"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1822"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/999"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/committees/17">
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Committee"/>
+    <_3:committeeType>Collaborative Group</_3:committeeType>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2814"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1000"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2813"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1747"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1367"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2080"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1016"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1823"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1726"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1730"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1821"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1760"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/993"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1910"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2815"/>
+    <_4:title>Prostate and Urologic Cancers Research Group</_4:title>
+    <_3:coChiar rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2418"/>
+    <_3:chair rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2807"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/committees/15">
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Committee"/>
+    <_3:committeeType>Collaborative Group</_3:committeeType>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2808"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1371"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1031"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1376"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/993"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1729"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2527"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1498"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2253"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1720"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1050"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1731"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1525"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1840"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2570"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1054"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2810"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2338"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1294"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1077"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2809"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1907"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1494"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1263"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1264"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1916"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2336"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1000"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1005"/>
+    <_4:title>G.I. and Other Associated Cancers Research Group</_4:title>
+    <_3:coChiar rdf:resource="http://edrn.nci.nih.gov/data/registered-person/999"/>
+    <_3:chair rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1728"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/committees/27">
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Committee"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1301"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1645"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1900"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1898"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1348"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1899"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1466"/>
+    <_3:abbreviatedName>BDL</_3:abbreviatedName>
+    <_4:title>Biomarker Developmental  Laboratories</_4:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/committees/5">
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Committee"/>
+    <_3:committeeType>Subcommittee</_3:committeeType>
+    <_4:title>Technology and Resource Sharing Subcommittee</_4:title>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1728"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2808"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2816"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1898"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2253"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1367"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2389"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1910"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1760"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1720"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1729"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/committees/1">
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Committee"/>
+    <_3:committeeType>Committee</_3:committeeType>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2808"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2814"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1371"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1747"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1012"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1823"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1726"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/993"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1729"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/999"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2807"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1957"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2816"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2813"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2812"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1076"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1301"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2389"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2806"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2253"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2817"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2809"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1050"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1822"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1731"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1009"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1958"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1075"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1840"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2418"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1054"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1719"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2810"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2338"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1760"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1736"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1974"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1728"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1907"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1720"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1014"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1015"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2481"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2811"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1498"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1916"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1910"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2805"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1730"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1821"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1000"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1525"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1005"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2815"/>
+    <_4:title>Steering Committee</_4:title>
+    <_3:abbreviatedName>SC</_3:abbreviatedName>
+    <_3:coChiar rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1898"/>
+    <_3:chair rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1016"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/committees/2">
+    <_3:chair rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1898"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Committee"/>
+    <_3:committeeType>Committee</_3:committeeType>
+    <_4:title>Executive Committee</_4:title>
+    <_3:abbreviatedName>EC</_3:abbreviatedName>
+    <_3:coChiar rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1016"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1728"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2807"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/2816"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1015"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1076"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/1301"/>
+    <_3:member rdf:resource="http://edrn.nci.nih.gov/data/registered-person/993"/>
+  </rdf:Description>
+</rdf:RDF>

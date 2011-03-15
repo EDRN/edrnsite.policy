@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:_3="http://edrn.nci.nih.gov/xml/rdf/edrn.rdf#"
+   xmlns:_4="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/24">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/34"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>184</_3:icd9>
+    <_4:title>Malignant neoplasm of vagina</_4:title>
+    <_3:icd10>C52.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/5">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/8"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>180</_3:icd9>
+    <_4:title>Malignant neoplasm of cervix uteri</_4:title>
+    <_3:icd10>C53.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/2">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/3"/>
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/7"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>170</_3:icd9>
+    <_4:title>Malignant neoplasm of bone and articular cartilage</_4:title>
+    <_3:icd10>C41.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/23">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/30"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>186</_3:icd9>
+    <_4:title>Malignant neoplasm of testis</_4:title>
+    <_3:icd10>C62.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/20">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/29"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>151</_3:icd9>
+    <_4:title>Malignant neoplasm of stomach</_4:title>
+    <_3:icd10>C16.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/25">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/12"/>
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/11"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>148</_3:icd9>
+    <_4:title>Malignant neoplasm of hypopharynx</_4:title>
+    <_3:icd10>C13.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/8">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/11"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>140-149</_3:icd9>
+    <_4:title>Malignant neoplasms of lip, oral cavity and pharynx </_4:title>
+    <_3:icd10>C00-C14</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/11">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/2"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>208.9</_3:icd9>
+    <_4:title>Plasma cell leukaemia</_4:title>
+    <_3:icd10>C90.1</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/17">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/26"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>185</_3:icd9>
+    <_4:title>Malignant neoplasm of prostate</_4:title>
+    <_3:icd10>C61.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/12">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/2"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>205</_3:icd9>
+    <_4:title>Myeloid leukaemia</_4:title>
+    <_3:icd10>C92.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/10">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/15"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>155</_3:icd9>
+    <_4:title>Liver cell carcinoma</_4:title>
+    <_3:icd10>C22.0</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/7">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/10"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>150</_3:icd9>
+    <_4:title>Malignant neoplasm of esophagus</_4:title>
+    <_3:icd10>C15.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/3">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/4"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>191</_3:icd9>
+    <_4:title>Malignant neoplasm of brain</_4:title>
+    <_3:icd10>C71.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/9">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/13"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>189</_3:icd9>
+    <_4:title>Malignant neoplasm of kidney</_4:title>
+    <_3:icd10>C64.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/19">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/28"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>172</_3:icd9>
+    <_4:title>Malignant melanoma of skin</_4:title>
+    <_3:icd10>C43.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/22">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/33"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>182</_3:icd9>
+    <_4:title>Malignant neoplasm of uterus</_4:title>
+    <_3:icd10>C55.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/29">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/22"/>
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/18"/>
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/11"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>145</_3:icd9>
+    <_4:title>Malignant neoplasm of other and unspecified parts of mouth</_4:title>
+    <_3:icd10>C06.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/1">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/1"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>188</_3:icd9>
+    <_4:title>Malignant neoplasm of bladder</_4:title>
+    <_3:icd10>C67.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/18">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/27"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>153</_3:icd9>
+    <_4:title>Malignant neoplasm of rectum</_4:title>
+    <_3:icd10>C20.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/15">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/24"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>183</_3:icd9>
+    <_4:title>Malignant neoplasm of ovary</_4:title>
+    <_3:icd10>C56.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/4">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/5"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>174</_3:icd9>
+    <_4:title>Malignant neoplasm of breast</_4:title>
+    <_3:icd10>C50.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/14">
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd10>C81-C96</_3:icd10>
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/17"/>
+    <_4:title>Lymphoid leukaemia</_4:title>
+    <_4:description>43 different diseases</_4:description>
+    <_3:icd9>204</_3:icd9>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/21">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/32"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>193</_3:icd9>
+    <_4:title>Malignant neoplasm of thyroid gland</_4:title>
+    <_3:icd10>C73.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/13">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/6"/>
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/16"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>162</_3:icd9>
+    <_4:title>Malignant neoplasm of bronchus and lung</_4:title>
+    <_3:icd10>C34.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/16">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/25"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>157</_3:icd9>
+    <_4:title>Malignant neoplasm of pancreas</_4:title>
+    <_3:icd10>C25.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/27">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/20"/>
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/11"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>147</_3:icd9>
+    <_4:title>Malignant neoplasm of nasopharynx</_4:title>
+    <_3:icd10>C11.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/6">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/9"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>153</_3:icd9>
+    <_4:title>Malignant neoplasm of colon</_4:title>
+    <_3:icd10>C18.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/28">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/23"/>
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/11"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>146</_3:icd9>
+    <_4:title>Malignant neoplasm of oropharynx</_4:title>
+    <_3:icd10>C10.</_3:icd10>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://edrn.nci.nih.gov/data/diseases/26">
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/14"/>
+    <_3:bodySystemsAffected rdf:resource="http://edrn.nci.nih.gov/data/body-systems/11"/>
+    <rdf:type rdf:resource="http://edrn.nci.nih.gov/rdf/types.rdf#Disease"/>
+    <_3:icd9>161</_3:icd9>
+    <_4:title>Malignant neoplasm of larynx</_4:title>
+    <_3:icd10>C32.</_3:icd10>
+  </rdf:Description>
+</rdf:RDF>

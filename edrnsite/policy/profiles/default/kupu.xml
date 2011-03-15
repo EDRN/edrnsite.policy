@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+Copyright 2010 California Institute of Technology. ALL RIGHTS
+RESERVED. U.S. Government Sponsorship acknowledged.
+-->
+<kupu-settings>
+  <config captioning="False" userefbrowser="False"
+          linkbyuid="False" filtersourceedit="True">
+    <table>plain|Subdued grid</table>
+    <table>invisible|Invisible grid</table>
+    <table>listing|Fancy listing</table>
+    <table>grid listing|Fancy grid listing</table>
+    <table>vertical listing|Fancy vertical listing</table>
+    <style>Heading|h2</style>
+    <style>Subheading|h3</style>
+    <style>Literal|pre</style>
+    <style>Discreet|p|discreet</style>
+    <style>Pull-quote|div|pullquote</style>
+    <style>Call-out|p|callout</style>
+    <style>Highlight|span|visualHighlight</style>
+    <style>Odd row|tr|odd</style>
+    <style>Even row|tr|even</style>
+    <style>Heading cell|th|</style>
+    <style>Page break (print only)|div|pageBreak</style>
+    <style>Clear floats|div|visualClear</style>
+    <filter attributes="width height" tags="table th td"/>
+    <filter attributes="lang valign halign border frame rules cellspacing cellpadding bgcolor"
+            tags=""/>
+    <filter attributes=""
+            tags="button fieldset form input label legend link noscript optgroup option script select style textarea"/>
+    <filterstyle>text-align</filterstyle>
+    <filterstyle>list-style-type</filterstyle>
+    <filterstyle>float</filterstyle>
+  </config>
+  <library src="string:${globals_view/navigationRootUrl|portal_url}/kupucollection.xml"
+           uri="string:${globals_view/navigationRootUrl|portal_url}"
+           id="root"
+           icon="string:${globals_view/navigationRootUrl|portal_url}/misc_/CMFPlone/plone_icon"
+           title="string:Home">
+  </library>
+  <library src="string:${folder_url}/kupucollection.xml"
+           uri="string:${folder_url}" id="current"
+           icon="string:${folder/getIcon}"
+           title="string:Current folder">
+  </library>
+  <library src="string:${portal_url}/kupumyitems.xml"
+           uri="string:${portal_url}/kupumyitems.xml"
+           id="myitems"
+           icon="string:${portal_url}/kupuimages/kupusearch_icon.gif"
+           title="string:My recent items">
+  </library>
+  <library src="string:${portal_url}/kupurecentitems.xml"
+           uri="string:${portal_url}/kupurecentitems.xml"
+           id="recentitems"
+           icon="string:${portal_url}/kupuimages/kupusearch_icon.gif"
+           title="string:Recent items">
+  </library>
+  <defaultlibrary>current</defaultlibrary>
+  <resource id="collection" mode="whitelist">
+    <type>Plone Site</type>
+    <type>Large Plone Folder</type>
+    <type>Folder</type>
+    <type>Biomarker Folder</type>
+    <type>Dataset Folder</type>
+    <type>Funding Folder</type>
+    <type>Knowledge Folder</type>
+    <type>Publication Folder</type>
+    <type>Site Folder</type>
+  </resource>
+  <resource id="containsanchors" mode="blacklist">
+    <type>ATBooleanCriterion</type>
+    <type>ATCurrentAuthorCriterion</type>
+    <type>ATDateCriteria</type>
+    <type>ATDateRangeCriterion</type>
+    <type>ATListCriterion</type>
+    <type>ATPathCriterion</type>
+    <type>ATPortalTypeCriterion</type>
+    <type>ATReferenceCriterion</type>
+    <type>ATSelectionCriterion</type>
+    <type>ATSimpleIntCriterion</type>
+    <type>ATSimpleStringCriterion</type>
+    <type>ATSortCriterion</type>
+    <type>Announcement</type>
+    <type>Biomarker Body System</type>
+    <type>Biomarker Folder</type>
+    <type>Biomarker Panel</type>
+    <type>Body System</type>
+    <type>Body System Study</type>
+    <type>CachePolicy</type>
+    <type>CacheTool</type>
+    <type>ChangeSet</type>
+    <type>ContentCacheRule</type>
+    <type>Dataset</type>
+    <type>Dataset Folder</type>
+    <type>Discussion Item</type>
+    <type>Disease</type>
+    <type>EDRN Home</type>
+    <type>Elemental Biomarker</type>
+    <type>Favorite</type>
+    <type>FieldsetFolder</type>
+    <type>File</type>
+    <type>Folder</type>
+    <type>FormBooleanField</type>
+    <type>FormCaptchaField</type>
+    <type>FormCustomScriptAdapter</type>
+    <type>FormDateField</type>
+    <type>FormFileField</type>
+    <type>FormFixedPointField</type>
+    <type>FormFolder</type>
+    <type>FormIntegerField</type>
+    <type>FormLabelField</type>
+    <type>FormLikertField</type>
+    <type>FormLinesField</type>
+    <type>FormMailerAdapter</type>
+    <type>FormMultiSelectionField</type>
+    <type>FormPasswordField</type>
+    <type>FormRichLabelField</type>
+    <type>FormRichTextField</type>
+    <type>FormSaveDataAdapter</type>
+    <type>FormSelectionField</type>
+    <type>FormStringField</type>
+    <type>FormTextField</type>
+    <type>FormThanksPage</type>
+    <type>Funding Folder</type>
+    <type>Funding Opportunity</type>
+    <type>HeaderSet</type>
+    <type>HeaderSetFolder</type>
+    <type>Image</type>
+    <type>Knowledge Folder</type>
+    <type>Knowledge Object</type>
+    <type>Large Plone Folder</type>
+    <type>Link</type>
+    <type>Person</type>
+    <type>PolicyHTTPCacheManagerCacheRule</type>
+    <type>Protocol</type>
+    <type>Publication</type>
+    <type>Publication Folder</type>
+    <type>Review Listing</type>
+    <type>RuleFolder</type>
+    <type>Site</type>
+    <type>Site Folder</type>
+    <type>Specimen Folder</type>
+    <type>Specimen Record</type>
+    <type>Specimens at Site in Protocol</type>
+    <type>Specimens in Protocol</type>
+    <type>Study Folder</type>
+    <type>Study Statistics</type>
+    <type>TempFolder</type>
+    <type>TemplateCacheRule</type>
+    <type>Topic</type>
+  </resource>
+  <resource id="linkable" mode="blacklist">
+    <type>ATBooleanCriterion</type>
+    <type>ATCurrentAuthorCriterion</type>
+    <type>ATDateCriteria</type>
+    <type>ATDateRangeCriterion</type>
+    <type>ATListCriterion</type>
+    <type>ATPathCriterion</type>
+    <type>ATPortalTypeCriterion</type>
+    <type>ATReferenceCriterion</type>
+    <type>ATRelativePathCriterion</type>
+    <type>ATSelectionCriterion</type>
+    <type>ATSimpleIntCriterion</type>
+    <type>ATSimpleStringCriterion</type>
+    <type>ATSortCriterion</type>
+    <type>Announcement</type>
+    <type>Biomarker Body System</type>
+    <type>Body System</type>
+    <type>Body System Study</type>
+    <type>CachePolicy</type>
+    <type>CacheTool</type>
+    <type>ChangeSet</type>
+    <type>ContentCacheRule</type>
+    <type>Discussion Item</type>
+    <type>Disease</type>
+    <type>EDRN Home</type>
+    <type>Favorite</type>
+    <type>FieldsetFolder</type>
+    <type>FormBooleanField</type>
+    <type>FormCaptchaField</type>
+    <type>FormCustomScriptAdapter</type>
+    <type>FormDateField</type>
+    <type>FormFileField</type>
+    <type>FormFixedPointField</type>
+    <type>FormIntegerField</type>
+    <type>FormLabelField</type>
+    <type>FormLikertField</type>
+    <type>FormLinesField</type>
+    <type>FormMailerAdapter</type>
+    <type>FormMultiSelectionField</type>
+    <type>FormPasswordField</type>
+    <type>FormRichLabelField</type>
+    <type>FormRichTextField</type>
+    <type>FormSaveDataAdapter</type>
+    <type>FormSelectionField</type>
+    <type>FormStringField</type>
+    <type>FormTextField</type>
+    <type>FormThanksPage</type>
+    <type>HeaderSet</type>
+    <type>HeaderSetFolder</type>
+    <type>Knowledge Object</type>
+    <type>Link</type>
+    <type>Plone Site</type>
+    <type>PolicyHTTPCacheManagerCacheRule</type>
+    <type>RuleFolder</type>
+    <type>Specimen Folder</type>
+    <type>Specimen Record</type>
+    <type>Specimens at Site in Protocol</type>
+    <type>Specimens in Protocol</type>
+    <type>Study Folder</type>
+    <type>Study Statistics</type>
+    <type>TempFolder</type>
+    <type>TemplateCacheRule</type>
+  </resource>
+  <resource id="mediaobject" mode="whitelist">
+    <type>Image</type>
+  </resource>
+  <defaultresource>linkable</defaultresource>
+  <preview portaltype="Image" scalefield="image"
+           preview="string:${object_url}/image_thumb"/>
+  <preview portaltype="News Item" scalefield="image"
+           preview="string:${object_url}/image_thumb"/>
+  <globaltoolbar></globaltoolbar>
+  <toolbar>
+    <element visible="True" id="save-button"/>
+    <element visible="True" id="bg-basicmarkup"/>
+    <element visible="True" id="bold-button"/>
+    <element visible="True" id="italic-button"/>
+    <element visible="False" id="bg-subsuper"/>
+    <element visible="False" id="subscript-button"/>
+    <element visible="False" id="superscript-button"/>
+    <element visible="False" id="bg-colorchooser"/>
+    <element visible="False" id="forecolor-button"/>
+    <element visible="False" id="hilitecolor-button"/>
+    <element visible="True" id="bg-justify"/>
+    <element visible="True" id="justifyleft-button"/>
+    <element visible="True" id="justifycenter-button"/>
+    <element visible="True" id="justifyright-button"/>
+    <element visible="True" id="bg-list"/>
+    <element visible="True" id="list-ol-addbutton"/>
+    <element visible="True" id="list-ul-addbutton"/>
+    <element visible="True" id="definitionlist"/>
+    <element visible="True" id="bg-indent"/>
+    <element visible="True" id="outdent-button"/>
+    <element visible="True" id="indent-button"/>
+    <element visible="True" id="bg-drawers"/>
+    <element visible="True" id="imagelibdrawer-button"/>
+    <element visible="True" id="linklibdrawer-button"/>
+    <element visible="True" id="linkdrawer-button"/>
+    <element visible="True" expression="python:True"
+             id="embed-tab"/>
+    <element visible="True" id="anchors-button"/>
+    <element visible="True" id="manage-anchors-tab"/>
+    <element visible="False" id="toc-tab"/>
+    <element visible="True" id="tabledrawer-button"/>
+    <element visible="True" id="bg-remove"/>
+    <element visible="True" id="removeimage-button"/>
+    <element visible="True" id="removelink-button"/>
+    <element visible="False" id="bg-undo"/>
+    <element visible="False" id="undo-button"/>
+    <element visible="False" id="redo-button"/>
+    <element visible="True" expression="python:False"
+             id="spellchecker"/>
+    <element visible="True" id="source"/>
+    <element visible="True" id="styles"/>
+    <element visible="False" id="ulstyles"/>
+    <element visible="True" id="olstyles"/>
+    <element visible="True" id="zoom"/>
+  </toolbar>
+</kupu-settings>

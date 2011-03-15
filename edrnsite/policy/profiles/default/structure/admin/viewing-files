@@ -1,0 +1,37 @@
+id: viewing-files
+title: Viewing Files
+description: In addition to standard HTML Web pages, our web site contain other file formats. You may need additional software or browser plug-ins to view some of the information available on our site. This document lists show each format, along with links to the corresponding freely available plug-ins or viewers.
+  
+  
+subject: 
+relatedItems: 
+location: 
+language: 
+effectiveDate: 2009/06/19 17:19:51.903 GMT-5
+expirationDate: None
+creation_date: 2009/06/19 17:09:51.212 GMT-5
+modification_date: 2009/06/19 17:19:51.904 GMT-5
+creators: admin
+contributors: 
+rights: 
+allowDiscussion: False
+excludeFromNav: False
+presentation: False
+tableContents: False
+Content-Type: text/html
+
+
+<p>The following additional tools and browser plug-ins may be needed to fully experience content offered on the EDRN web site:</p>
+<h2>Documents</h2>
+<p><a class="link-plain" href="http://www.adobe.com/products/acrobat/readstep2.html"><img src="images/pdf.gif" alt="Adobe Acrobat Reader" height="17" width="17" /></a> <strong>Adobe Acrobat Reader</strong> (.pdf)<br /> Macintosh users can use the Mac OS X built-in "Preview" application as well as the Safari browser to view PDF files. Windows users will need to <a href="http://www.adobe.com/products/acrobat/readstep2.html">download Acrobat Reader for free</a>*.</p>
+<p><a class="link-plain" href="http://www.microsoft.com/downloads/details.aspx?familyid=95E24C87-8732-48D5-8689-AB826E7B8FDF&amp;displaylang=en"><img src="images/word.gif" alt="Microsoft Word" height="17" width="17" /></a> <strong>Microsoft Word</strong> (.doc)<br /> Where possible, EDRN prefers PDF files. However, if a Word file sneaks by our inspectors, Macintosh users can use built-in features of Mac OS X to view them. Windows users will need to <a href="http://www.microsoft.com/downloads/details.aspx?familyid=95E24C87-8732-48D5-8689-AB826E7B8FDF&amp;displaylang=en">download Word Viewer 2003 for free</a>*.</p>
+<p><a class="link-plain" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=c8378bf4-996c-4569-b547-75edbd03aaf0&amp;amp;DisplayLang=en%22"><img src="images/excel.gif" alt="Microsoft Excel" height="17" width="17" /></a> <strong>Microsoft Excel</strong> (.xls)<br /> 
+Macintosh users can use built-in features of Mac OS X to view Excel files. Windows users will need to <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=c8378bf4-996c-4569-b547-75edbd03aaf0&amp;amp;DisplayLang=en%22">download Excel Viewer 2003 for free</a>*.</p>
+<p><a class="link-plain" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=428d5727-43ab-4f24-90b7-a94784af71a4&amp;amp;DisplayLang=en%22"><img src="images/ppt.gif" alt="Microsoft PowerPoint" height="17" width="17" /></a> <strong>Microsoft PowerPoint</strong> (.ppt)<br /> 
+Where possible, EDRN prefers PDF files. However, if a PowerPoint presentation sneaks by our inspectors, Macintosh users can use built-in features of Mac OS X to view them. Windows users will need to <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=428d5727-43ab-4f24-90b7-a94784af71a4&amp;amp;DisplayLang=en%22">download PowerPoint Viewer 2003 for free</a>*.</p>
+<h2>Multimedia</h2>
+<p><a class="link-plain" href="http://www.apple.com/quicktime/download/"><img src="images/qt.gif" alt="Apple QuickTime" height="18" width="20" /></a> <strong>Apple QuickTime</strong> (.mov, .mpg, .mpeg, .aif, .mp3, .m4p, .m4v, .m4a)<br /> 
+If you do not already have QuickTime, you can <a href="http://www.apple.com/quicktime/download/">download QuickTime Player for free</a>* (Macintosh and Windows).</p>
+<p><a class="link-plain" href="http://www.adobe.com/go/getflashplayer"><img src="images/flash.gif" alt="Adobe Flash Player" height="20" width="21" /></a> <strong>Adobe Flash Player</strong> (.swf)<br /> 
+If you do not already have Adobe Flash, you can <a href="http://www.adobe.com/go/getflashplayer">download Adobe Flash Player for free</a>* (Macintosh and Windows).</p>
+<p class="discreet">* The NCI Web site provides links to other Internet sites for informational purposes and the convenience of its users. When users select a link to an external Web site, they are leaving the NCI Web site and are subject to the privacy and security policies of the owners/sponsors of the external site.</p>

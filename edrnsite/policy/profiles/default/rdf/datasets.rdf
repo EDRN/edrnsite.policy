@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:cas="urn:oodt:" xmlns:edrn="urn:edrn:" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:x="http://edrn.nci.nih.gov/rdf/schema.rdf#">
+<edrn:UPittLabMAPOvarianData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:UPittLabMAPOvarianData">
+<edrn:Date>2008-06-24T20:12:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/119"/>
+<edrn:ResearchSupport>N N.I.H., Extramural</edrn:ResearchSupport>
+<edrn:ResearchSupport>U.S. Gov't, Non-P.H.S.</edrn:ResearchSupport>
+<edrn:ResearchSupport>U.S. Gov't, P.H.S.</edrn:ResearchSupport>
+<edrn:DataCustodian>Tina Xiao</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Ovary"/>
+<edrn:CollaborativeGroup>Breast/GYN</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:UPittLabMAPOvarianData</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>Breast and Gynecologic</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/5"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:StudyConclusion>The presented data show that simultaneous testing of a panel of serum cytokines and CA-125 
+        using LabMAP technology may present a promising approach for ovarian cancer detection.
+        </edrn:StudyConclusion>
+<edrn:DataSetName>University of Pittsburg Ovarian Data</edrn:DataSetName>
+<edrn:StudyResults>Concentrations of 24 cytokines (cytokines/chemokines, growth, and angiogenic 
+        factors) in combination with cancer antigen-125 (CA-125), were measured in sera of 44 patients 
+        with early-stage ovarian cancer, 45 healthy women, and 37 patients with benign pelvic tumors. 
+        Six markers, i.e., interleukin (IL)-6, IL-8, epidermal growth factor (EGF), vascular endothelial 
+        growth factor (VEGF), monocyte chemoattractant protein-1 (MCP-1), and CA-125, showed significant 
+        differences in serum concentrations between ovarian cancer and control groups. Out of this group, 
+        IL-6, IL-8, VEGF, EGF, and CA-125, were used in a classification tree analysis that resulted in 
+        84 percent sensitivity at 95 percent specificity. The receiver operator characteristic curve created using the 
+        combination of markers produced sensitivities between 90 percent and 100 percent in the area of 80 percent to 90 percent 
+        specificity, whereas the receiver operator characteristic curve for CA-125 alone resulted in 
+        sensitivities of 70 percent to 80 percent. The classification tree analysis for discrimination of benign 
+        condition from ovarian cancer used CA-125, granulocyte colony-stimulating factor (G-CSF), IL-6, 
+        EGF, and VEGF resulting in 86.5 percent sensitivity and 93.0 percent specificity.
+        </edrn:StudyResults>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<edrn:GrantSupport>1R01 CA098642-01A1/CA/NCI</edrn:GrantSupport>
+<edrn:GrantSupport>R03 CA102888/CA/NCI</edrn:GrantSupport>
+<edrn:StudyBackground>Early detection of ovarian cancer might improve 
+        clinical outcome. Some studies have shown the role of cytokines as a 
+        new group of tumor markers for ovarian cancer. We hypothesized that a 
+        panel comprised of multiple cytokines, which individually may not show 
+        strong correlation with the disease, might provide higher diagnostic power.
+        </edrn:StudyBackground>
+<edrn:StudyMethods>To evaluate the diagnostic utility of cytokine panel, we used a novel multianalyte 
+        LabMAP profiling technology that allows simultaneous measurement of multiple 
+        markers.
+        </edrn:StudyMethods>
+<edrn:LeadPI>Anna Lokshin</edrn:LeadPI>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/119"/>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:UPittLabMAPOvarianData>
+<edrn:FHCRCHanashAnnexinLamr rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:FHCRCHanashAnnexinLamr">
+<edrn:Date>2009-03-02T18:24:00.000Z</edrn:Date>
+<edrn:PubMedID>18794547</edrn:PubMedID>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/138"/>
+<edrn:DataCustodian>Ji Qiu</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+        NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+        NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+        In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Lung"/>
+<edrn:CollaborativeGroup>Lung and Upper Aerodigestive</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:FHCRCHanashAnnexinLamr</edrn:DatasetId>
+<x:AccessGrantedTo>Lung and Upper Aerodigestive</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/151"/>
+<x:QAState>Accepted</x:QAState>
+<edrn:DataCustodianEmail>jiqiu@fhcrc.org</edrn:DataCustodianEmail>
+<edrn:DataSetName>Autoantibody Biomarkers</edrn:DataSetName>
+<edrn:ProtocolID>138</edrn:ProtocolID>
+<edrn:DateDatasetFrozen>05/29/2007</edrn:DateDatasetFrozen>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/138"/>
+<edrn:LeadPI>Samir Hanash</edrn:LeadPI>
+<edrn:ResultsAndConclusionSummary>Our findings suggest potential utility of an approach to diagnosis of lung cancer before onset of symptoms that includes screening for autoantibodies to defined antigens. </edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>Proteins from human lung adenocarcinoma cell line A549 lysates were subjected to extensive fractionation. The resulting 1,824 fractions were spotted in 
+duplicate on nitrocellulose-coated slides. The microarrays produced were used in a blinded validation study to determine whether annexin I, PGP9.5, and 14-3-3 theta 
+antigens previously found to be targets of autoantibodies in newly diagnosed patients with lung cancer are associated with autoantibodies in sera collected at the
+presymptomatic stage and to determine whether additional antigens may be identified in prediagnostic sera. Individual sera collected from 85 patients within 1 year
+before a diagnosis of lung cancer and 85 matched controls from the Carotene and Retinol Efficacy Trial (CARET) cohort were hybridized to individual microarrays.
+For combined analysis, the markers were integrated by a summation of dichotomized markers, whereby each marker was dichotomized by its optimal cutoff point, which 
+corresponds to the minimum classification error rate. The 95 percent CI band of the receiver operating characteristic curve was estimated from 500 bootstrap procedures. 
+The combination rule should be treated as a discovered biomarker and provides information on the complementarities of informative antigens.</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:FHCRCHanashAnnexinLamr>
+<edrn:NISTFishMSAData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:NISTFishMSAData">
+<edrn:Date>2008-06-24T20:12:00.000Z</edrn:Date>
+<edrn:StudyDescription>To standardize a fluorescence in situ hybridization (FISH) modification of the 
+       mutagen sensitivity assay (MSA), scoring criteria were evaluated by web-based validation.</edrn:StudyDescription>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/54"/>
+<edrn:DataCustodian>Tina Xiao</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Unknown"/>
+<edrn:CollaborativeGroup>N/A</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:NISTFishMSAData</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/63"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>NIST Fish Data</edrn:DataSetName>
+<edrn:StudyResults>inter-rater agreement within a factor of 2 for average breakage frequency, but revealed greater 
+        variability in cell selection. These results aid in estimating the components of assay variance due 
+        to definitions, technical parameters and biological variables.</edrn:StudyResults>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<edrn:GrantSupport>Y1-CN-010-01</edrn:GrantSupport>
+<edrn:StudyBackground>In chromosome breakage assays, validated, universal criteria for selection of cells 
+        and classification of chromosome aberrations may enhance their utility for cancer susceptibility 
+        screening. To standardize a fluorescence in situ hybridization (FISH) modification of the mutagen 
+        sensitivity assay (MSA), scoring criteria were evaluated by web-based validation. Two hundred digital 
+        FISH images were assigned random identification numbers. With this set of images, criteria for inclusion 
+        of cells and measurement of the frequency of abnormal cells were evaluated by eight observers, all of 
+        whom had five or more years of experience. Observers included doctoral and MS/BS level cytogeneticists, 
+        and were drawn from a randomized pool of 54 volunteers. Questions addressed were: (1) how uniformly were 
+        criteria applied to analysis of a standard digital FISH image set and (2) did concordance vary with 
+        educational level? These data suggest inter-rater agreement within a factor of 2 for average breakage 
+        frequency, but revealed greater variability in cell selection. These results aid in estimating the 
+        components of assay variance due to definitions, technical parameters and biological variables.</edrn:StudyBackground>
+<edrn:StudyMethods>Two hundred digital FISH images were assigned random identification numbers. With this set of 
+        images, criteria for inclusion of cells and measurement of the frequency of abnormal cells were evaluated 
+        by eight observers, all of whom had five or more years of experience.</edrn:StudyMethods>
+<edrn:LeadPI>Peter Barker</edrn:LeadPI>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/54"/>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:NISTFishMSAData>
+<edrn:BCCA_Affy6.0RawData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:BCCA_Affy6.0RawData">
+<edrn:Date>2010-08-03T15:59:00.000Z</edrn:Date>
+<edrn:PubMedID>N/A</edrn:PubMedID>
+<edrn:DataCustodian>TBD</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+        NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+        NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+        In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Lung"/>
+<edrn:CollaborativeGroup>Lung and Upper Aerodigestive</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:BCCA_Affy6.0RawData</edrn:DatasetId>
+<x:AccessGrantedTo>Canary</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/420"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>BCCA_Affy6.0RawData</edrn:DataSetName>
+<edrn:ProtocolID>173</edrn:ProtocolID>
+<edrn:DateDatasetFrozen>N/A</edrn:DateDatasetFrozen>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/173"/>
+<edrn:LeadPI>Canary</edrn:LeadPI>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD
+      </edrn:MethodDetails>
+</edrn:BCCA_Affy6.0RawData>
+<edrn:WSUCellularSequencingUnprocessed rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:WSUCellularSequencingUnprocessed">
+<edrn:Date>2009-02-10T18:24:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>555-555-5555</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/126"/>
+<edrn:DataCustodian>Bin Ye</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+        NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+        NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+        In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Colon"/>
+<edrn:CollaborativeGroup>GI and Other Associated</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:WSUCellularSequencingUnprocessed</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>GI and Other Associated</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/232"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>email address here</edrn:DataCustodianEmail>
+<edrn:DataSetName>WSU Cellular Sequencing Raw Data</edrn:DataSetName>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/126"/>
+<edrn:LeadPI>Michael Tainsky</edrn:LeadPI>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:WSUCellularSequencingUnprocessed>
+<edrn:DukeLabMAPBreastData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:DukeLabMAPBreastData">
+<edrn:Date>2008-06-24T20:12:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/70"/>
+<edrn:DataCustodian>Tina Xiao</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Breast"/>
+<edrn:CollaborativeGroup>Breast/GYN</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:DukeLabMAPBreastData</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>Breast and Gynecologic</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/81"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>Duke University Breast Data</edrn:DataSetName>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<edrn:StudyBackground>Early detection of breast cancer might improve clinical outcome. Some studies have 
+        shown the role of cytokines as a new group of tumor markers for breast cancer. We hypothesized 
+        that a panel comprised of multiple cytokines, which individually may not show strong correlation 
+        with the disease, might provide higher diagnostic power.</edrn:StudyBackground>
+<edrn:StudyMethods>To evaluate the diagnostic utility of cytokine panel, we used a novel multianalyte LabMAP profiling 
+        technology that allows simultaneous measurement of multiple markers.</edrn:StudyMethods>
+<edrn:LeadPI>Jeffrey Marks</edrn:LeadPI>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/70"/>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:DukeLabMAPBreastData>
+<edrn:BGWHCramerPrePLCOPhaseIIAnalysis rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:BGWHCramerPrePLCOPhaseIIAnalysis">
+<edrn:Date>2010-02-27T22:06:00.000Z</edrn:Date>
+<edrn:PubMedID>N/A</edrn:PubMedID>
+<edrn:DataCustodian>Allison Vitonis</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+        NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+        NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+        In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Ovary"/>
+<edrn:CollaborativeGroup>Breast/GYN</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:BGWHCramerPrePLCOPhaseIIAnalysis</edrn:DatasetId>
+<x:AccessGrantedTo>Breast and Gynecologic</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/70"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>AVITONIS@PARTNERS.ORG</edrn:DataCustodianEmail>
+<edrn:DataSetName>Pre-PLCO Phase II Dataset</edrn:DataSetName>
+<edrn:ProtocolID>119</edrn:ProtocolID>
+<edrn:DateDatasetFrozen>N/A</edrn:DateDatasetFrozen>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/119"/>
+<edrn:LeadPI>Daniel Cramer</edrn:LeadPI>
+<edrn:ResultsAndConclusionSummary>The Pre-PLCO datasets contain 59 markers measured by 4 sites (Partners, FHCRC, MD Anderson, and Pittsburgh).  The best performers were selected to be measured in PLCO samples.</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>Pre PLCO datasets (Phase II):
+        This phase II set consisted of 160 cases of epithelial ovarian cancer with specimens obtained from FHCRC, 
+        Fox Chase Cancer Center (FCCC, AKG), MDACC, and Partners.  Approximately half of the cases were early stage (I, II) 
+        and half late stage (III, IV). Also included was a benign disease group of 160 cases.  There were 480 general population 
+        controls assembled from the four sites.  The healthy controls were recruited in the context of selection from the 
+        general population as controls for an ovarian cancer case-control study or from attendees at mammographic screening 
+        clinics.  Forty paired serial specimens from healthy controls were obtained from women participating in regular mammography 
+        screening (FHCRC) and 84 replicates were constructed from pooled female sera available for laboratory standardization (ProMedDX, 
+        Norton, MA).  All cases had blood drawn prior to surgery or chemotherapy and processed for serum generally within four hours of 
+        draws.  The serum was stored in aliquots at -80 C.  Controls had blood drawn, processed, and stored under conditions similar to 
+        the cases at each contributing sites.  All subjects were accrued between 1998 and 2006 under IRB approved protocols.
+        
+        All of the common phase II specimens were banked at the individual sites contributing specimens.  Two ml aliquots of blood for all 
+        subjects selected were assembled from the sites listed above and sent to FCCC for separation into aliquots and re-labeling to blind 
+        their source and case or control status.   Four aliquots were prepared: 0.3 ml to go to FHCRC, 0.1 ml to go MDACC, and 1.4 ml to go 
+        to Partners, and 0.2 ml to go to UPCI.  Specimens for each set were organized so there would be similar ratios of cases, benign disease 
+        controls, general population controls, paired serial, and quality control specimens in batch sizes of 96.  Aliquots were express-shipped 
+        on dry ice.  
+        
+        Laboratory Assays
+        
+        Laboratory assays for the phase II study were conducted at the four separate laboratories by individuals who were blind to case or control 
+        status for the phase II specimens.  Assays included single- or multi-plex Luminex bead assays, plate-based ELISA assays, platform-based 
+        (Roche E170) assays, and a mass spectroscopy-based system using surface enhanced antibody chips.  With the exceptions noted below, the assays 
+        used for the phase III specimens were also used for the phase II specimens.
+        
+        At FHCRC single-plex Luminex bead assays were used for all markers, details of which can be found in (Shah CA, Lowe KA, Paley P, Wallace E, Anderson 
+        GL, McIntosh MW, Andersen MR, Scholler N, Bergan LA, Thorpe JD, Urban N, and Drescher CW, Influence of ovarian cancer risk status on the diagnostic 
+        performance of the serum biomarkers mesothelin, HE4, and CA125. Cancer Epidemiol Biomarkers Prev, 2009. 18(5): p. 1365-72.).  MDACC used a 
+        mass spectroscopy based system for its markers, described in (Zhang Z, Bast RC, Jr., Yu Y, Li J, Sokoll LJ, Rai AJ, Rosenzweig JM, Cameron B, Wang YY, 
+        Meng XY, Berchuck A, Van Haaften-Day C, Hacker NF, de Bruijn HW, van der Zee AG, Jacobs IJ, Fung ET, and Chan DW, Three biomarkers identified from 
+        serum proteomic analysis for the detection of early stage ovarian cancer. Cancer Res, 2004. 64(16): p. 5882-90.).    Partners used plate-based
+         assay for B7-H4(Diadexus), DcR3(Diadexus), CA72.4, IGF 2, Mesothelin, HE4, and Kallikrein 6 (as described in (Diamandis EP, Scorilas A, Fracchioli S, 
+         Van Gramberen M, De Bruijn H, Henrik A, Soosaipillai A, Grass L, Yousef GM, Stenman UH, Massobrio M, Van Der Zee AG, Vergote I, and Katsaros D, 
+         Human kallikrein 6 (hK6): a new potential serum biomarker for diagnosis and prognosis of ovarian carcinoma. J Clin Oncol, 2003. 21(6): p. 1035-43)).  
+         Platform-based assays (Roche) were used for CA125, CA15.3, CA19.9, and CEA.  Unless the volume was insufficient assays were run in duplicate and 
+         averaged.  Seven markers were carried over to phase III and these included B7H4, CA125, CA15.3, CA19.9, CA72.4, HE4, and HK 6.   The same assays were used 
+         except that a platform-based assay was available for CA72.4.   The two 0.3 aliquots were first combined and homogenized.  UPCI used a multi-plex bead assay 
+         system was used to evaluate 34 markers in phase II.  This technique is described in (Nolen B, Marrangoni A, Velikokhatnaya L, Prosser D, Winans M, Gorelik E, 
+         and Lokshin A, A serum based analysis of ovarian epithelial tumorigenesis. Gynecol Oncol, 2009. 112(1): p. 47-54). For the phase II markers included in the 
+         Yale panel, these markers were evaluated using a multi-plex bead system described in (Visintin I, Feng Z, Longton G, Ward DC, Alvero AB, Lai Y, Tenthorey J, 
+         Leiser A, Flores-Saaib R, Yu H, Azori M, Rutherford T, Schwartz PE, and Mor G, Diagnostic markers for early detection of ovarian cancer. Clin Cancer Res, 2008. 
+         14(4): p. 1065-72).
+      </edrn:MethodDetails>
+</edrn:BGWHCramerPrePLCOPhaseIIAnalysis>
+<edrn:UPittWHIMassSpecUnprocessedPooledData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:UPittWHIMassSpecUnprocessedPooledData">
+<edrn:Date>2009-04-07T11:06:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/126"/>
+<edrn:DataCustodian>TBD</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Colon"/>
+<edrn:CollaborativeGroup>GI and Other Associated</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:UPittWHIMassSpecUnprocessedPooledData</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>GI and Other Associated</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/65"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>University of Pittsburg Cancer Institute Unprocessed Pooled Data</edrn:DataSetName>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/126"/>
+<edrn:LeadPI>William Bigbee</edrn:LeadPI>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:UPittWHIMassSpecUnprocessedPooledData>
+<edrn:EVMSSELDIPhaseITOFMSData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:EVMSSELDIPhaseITOFMSData">
+<edrn:Date>2008-06-24T20:12:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/109"/>
+<edrn:DataCustodian>Tina Xiao</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Prostate"/>
+<edrn:CollaborativeGroup>Prostate and Urologic</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:EVMSSELDIPhaseITOFMSData</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>Prostate and Urologic</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/92"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:StudyConclusion>These results demonstrate that "between-laboratory" reproducibility of SELDI-TOF-MS serum profiling approaches that of 
+        "within-laboratory" reproducibility as determined by measuring discrete m/z peaks over time and across laboratories.</edrn:StudyConclusion>
+<edrn:DataSetName>EVMS Mass Spec Data</edrn:DataSetName>
+<edrn:StudyResults>When the described standard operating procedures were established at all laboratory sites, the across-laboratory 
+        measurements revealed a CV for mass accuracy of 0.1 percent, signal-to-noise ratio of 40 percent, and normalized intensity of 15-36 percent 
+        for the three pooled serum peaks. This was comparable to the intralaboratory measurements of the same peaks. The instrument 
+        systems were then challenged with sera from a selected group of 14 cases and 14 controls. The classification agreement 
+        between each site and the established decision algorithm were examined by use of both raw peak intensity boosting and ranked 
+        peak intensity boosting. All six sites achieved perfect blinded classification for all samples when boosted alignment of raw 
+        intensities was used. Four of six sites achieved perfect blinded classification with ranked intensities, with one site passing 
+        the criteria of 26 of 28 correct and one site failing with 19 of 28 correct.
+      </edrn:StudyResults>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<edrn:StudyBackground>Protein expression profiling for differences indicative of early cancer has promise for improving 
+        diagnostics. This report describes the first stage of a National Cancer Institute/Early Detection Research 
+        Network-sponsored multiinstitutional evaluation and validation of this approach for detection of prostate cancer.</edrn:StudyBackground>
+<edrn:StudyMethods>Two sequential experimental phases were conducted to establish interlaboratory calibration and standardization 
+        of the surface-enhanced laser desorption (SELDI) instrumental and assay platform output. We first established whether 
+        the output from multiple calibrated Protein Biosystem II SELDI-ionization time-of-flight mass spectrometry (TOF-MS) 
+        instruments demonstrated acceptable interlaboratory reproducibility. This was determined by measuring mass accuracy, 
+        resolution, signal-to-noise ratio, and normalized intensity of three m/z "peaks" present in a standard pooled serum 
+        sample. We next evaluated the ability of the calibrated and standardized instrumentation to accurately differentiate 
+        between selected cases of prostate cancer and control by use of an algorithm developed from data derived from a single 
+        site 2 years earlier.
+      </edrn:StudyMethods>
+<edrn:LeadPI>John Semmes</edrn:LeadPI>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/109"/>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:EVMSSELDIPhaseITOFMSData>
+<edrn:FHCRC_ProteomicsAnalyzedData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:FHCRC_ProteomicsAnalyzedData">
+<edrn:Date>2010-08-03T15:59:00.000Z</edrn:Date>
+<edrn:PubMedID>N/A</edrn:PubMedID>
+<edrn:DataCustodian>TBD</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+        NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+        NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+        In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Lung"/>
+<edrn:CollaborativeGroup>Lung and Upper Aerodigestive</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:FHCRC_ProteomicsAnalyzedData</edrn:DatasetId>
+<x:AccessGrantedTo>Canary</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/5"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>FHCRC_ProteomicsAnalyzedData</edrn:DataSetName>
+<edrn:ProtocolID>173</edrn:ProtocolID>
+<edrn:DateDatasetFrozen>N/A</edrn:DateDatasetFrozen>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/173"/>
+<edrn:LeadPI>Canary</edrn:LeadPI>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD
+      </edrn:MethodDetails>
+</edrn:FHCRC_ProteomicsAnalyzedData>
+<edrn:BGWHCramerPLCOPhaseIIIAnalysis rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:BGWHCramerPLCOPhaseIIIAnalysis">
+<edrn:Date>2010-02-28T08:55:00.000Z</edrn:Date>
+<edrn:PubMedID>N/A</edrn:PubMedID>
+<edrn:DataCustodian>Allison Vitonis</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+        NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+        NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+        In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Ovary"/>
+<edrn:CollaborativeGroup>Breast/GYN</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:BGWHCramerPLCOPhaseIIIAnalysis</edrn:DatasetId>
+<x:AccessGrantedTo>Breast and Gynecologic</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/70"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>AVITONIS@PARTNERS.ORG</edrn:DataCustodianEmail>
+<edrn:DataSetName>PLCO Phase III Dataset</edrn:DataSetName>
+<edrn:ProtocolID>312</edrn:ProtocolID>
+<edrn:DateDatasetFrozen>N/A</edrn:DateDatasetFrozen>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/312"/>
+<edrn:LeadPI>Daniel Cramer</edrn:LeadPI>
+<edrn:ResultsAndConclusionSummary>The PLCO datasets contain 35 markers measured by five sites (Partners, FHCRC, MD Anderson, Pittsburgh, and Yale)</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>PLCO datasets (Phase III):
+        
+        The Phase III study was coordinated by the PLCO.  Sample collection, processing, shipping and storage were standardized across 
+        all screening sites.  Briefly, blood was drawn and processed within 2 hours into vials (~1.8ml) of serum/plasma, buffy coat and 
+        red blood cells. A unique specimen identification number was generated for each vial and daughter vial created.  Vials were 
+        stored at -70 °C and shipped to the central biorepository overnight on dry ice for long-term storage at -70°C or -157 °C. 
+        By June of 2006, 118 cases of invasive ovarian, primary peritoneal, and fallopian tube cancers with available samples had been 
+        confirmed. Tumors of “borderline malignancy” were excluded.    Serum samples most proximate to diagnosis were selected.  Controls 
+        were selected from a pool of healthy individuals who remained cancer free and were matched to cases by five year age categories at 
+        blood draw, calendar year of blood draw.  Women who reported a history of cancer or oophorectomy at baseline were excluded from control 
+        selection. For each case, 8 healthy controls were selected: 4 randomly selected from a pool of all eligible controls and representing 
+        general population controls; 2 with positive family history of breast or ovarian cancer; and 2 with history of an elevated CA125.  Sixty 
+        replicate pairs were randomly inserted into the batches for blinded QC; ten pairs of which had CA125 values greater than 25 U/ml.  
+        
+        PLCO serum samples to be allocated are at the PLCO biorepository in Frederick, Md. One vial containing 1.8ml of serum was pulled from the 
+        PLCO biorepository for each selected subject and was sent to the PLCO central processing lab for aliquoting. Aliquots of desired amounts 
+        for each investigator teams were made side by side in small batches to avoid repeated freeze-thaw, and to minimize variability in handling.  
+        FHCRC received 0.3 ml, MDACC 0.1 ml, Partners two 0.6ml aliquots, and Pittsburgh 0.2 ml, and YUSM 0.2 ml.  Aliquots were labeled with a 
+        unique sample ID, and were randomly ordered such that cases and controls were evenly distributed, then packed into 81-cell freezer boxes 
+        and kept frozen. Prior to shipping, the laboratories were notified of the shipment 24 hours in advance. Aliquots were shipped overnight on 
+        dry ice.  A shipping manifest containing aliquot IDs was included in the package and was also emailed to the laboratories.  Each laboratory 
+        received aliquots of identical sets of samples. 
+        
+        Laboratory Assays
+        
+        Laboratory assays for the phase III PLCO study were conducted at the four separate laboratories by individuals who were blind to case or control 
+        status for both the phase II and phase III specimens.  Assays included single- or multi-plex Luminex bead assays, plate-based ELISA assays, platform-based 
+        (Roche E170) assays, and a mass spectroscopy-based system using surface enhanced antibody chips.  With the exceptions noted below, the assays used for 
+        the phase III specimens were also used for the phase II specimens.
+        
+        At FHCRC single-plex Luminex bead assays were used for all markers, details of which can be found in (Shah CA, Lowe KA, Paley P, Wallace E, Anderson GL, McIntosh MW, 
+        Andersen MR, Scholler N, Bergan LA, Thorpe JD, Urban N, and Drescher CW, Influence of ovarian cancer risk status on the diagnostic performance of the serum biomarkers 
+        mesothelin, HE4, and CA125. Cancer Epidemiol Biomarkers Prev, 2009. 18(5): p. 1365-72.).   The same assays were carried over into phase III except that a plate based 
+        assay for MMP-7 was introduced.  MDACC used a mass spectroscopy based system for its markers in both phases  further described in (Zhang Z, Bast RC, Jr., Yu Y, Li J, 
+        Sokoll LJ, Rai AJ, Rosenzweig JM, Cameron B, Wang YY, Meng XY, Berchuck A, Van Haaften-Day C, Hacker NF, de Bruijn HW, van der Zee AG, Jacobs IJ, Fung ET, and Chan DW, 
+        Three biomarkers identified from serum proteomic analysis for the detection of early stage ovarian cancer. Cancer Res, 2004. 64(16): p. 5882-90.).    Partners used plate-based 
+        assay for B7-H4(Diadexus), DcR3(Diadexus), CA72.4, IGF 2, Mesothelin, HE4, and Kallikrein 6 (as described in (Diamandis EP, Scorilas A, Fracchioli S, Van Gramberen M, De Bruijn H, 
+        Henrik A, Soosaipillai A, Grass L, Yousef GM, Stenman UH, Massobrio M, Van Der Zee AG, Vergote I, and Katsaros D, Human kallikrein 6 (hK6): a new potential serum biomarker for 
+        diagnosis and prognosis of ovarian carcinoma. J Clin Oncol, 2003. 21(6): p. 1035-43)).  Platform-based assays (Roche) were used for CA125, CA15.3, CA19.9, and CEA.  Unless the volume 
+        was insufficient assays were run in duplicate and averaged.  Seven markers were carried over to phase III and these included B7H4, CA125, CA15.3, CA19.9, CA72.4, HE4, and HK 6.   
+        The same assays were used except that a platform-based assay was available for CA72.4.   The two 0.3 aliquots were first combined and homogenized.  UPCI used a multi-plex bead 
+        assay system was used to evaluate 34 markers in phase II.  This technique is described in (Nolen B, Marrangoni A, Velikokhatnaya L, Prosser D, Winans M, Gorelik E, and Lokshin A, 
+        A serum based analysis of ovarian epithelial tumorigenesis. Gynecol Oncol, 2009. 112(1): p. 47-54).  For phase III, the number of markers was reduced to 8 but the same technique 
+        was used.  For the phase II markers included in the Yale panel, these markers were evaluated using a multi-plex bead system described in (Visintin I, Feng Z, Longton G, Ward DC, 
+        Alvero AB, Lai Y, Tenthorey J, Leiser A, Flores-Saaib R, Yu H, Azori M, Rutherford T, Schwartz PE, and Mor G, Diagnostic markers for early detection of ovarian cancer. Clin Cancer
+        Res, 2008. 14(4): p. 1065-72).  For the phase III specimens the same markers were carried over but the analyses were performed by Laboratory Corporation of America.
+      </edrn:MethodDetails>
+</edrn:BGWHCramerPLCOPhaseIIIAnalysis>
+<edrn:UABEGFRTranslocationUnprocessedImages rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:UABEGFRTranslocationUnprocessedImages">
+<edrn:Date>2008-12-16T18:24:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/No Associated Protocol"/>
+<edrn:DataCustodian>Bill Grizzle</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Unknown"/>
+<edrn:CollaborativeGroup>Prostate and Urologic</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:UABEGFRTranslocationUnprocessedImages</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>Prostate and Urologic</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/75"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>UAB Test EGFR Translocation Data</edrn:DataSetName>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/No Associated Protocol"/>
+<edrn:LeadPI>Bill Grizzle</edrn:LeadPI>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:UABEGFRTranslocationUnprocessedImages>
+<edrn:UPittLabMAPPancreaticData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:UPittLabMAPPancreaticData">
+<edrn:Date>2008-06-24T20:12:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/234"/>
+<edrn:ResearchSupport>N N.I.H., Extramural</edrn:ResearchSupport>
+<edrn:ResearchSupport>U.S. Gov't, Non-P.H.S</edrn:ResearchSupport>
+<edrn:ResearchSupport>U.S. Gov't, P.H.S.</edrn:ResearchSupport>
+<edrn:DataCustodian>Tina Xiao</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Pancreas"/>
+<edrn:CollaborativeGroup>GI and Other Associated</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:UPittLabMAPPancreaticData</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>GI and Other Associated</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/167"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:StudyConclusion>The presented data show that simultaneous testing of a panel of serum cytokines and CA-125 
+        using LabMAP technology may present a promising approach for pancreatic cancer detection.</edrn:StudyConclusion>
+<edrn:DataSetName>University of Pittsburg Pancreatic Data</edrn:DataSetName>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<edrn:GrantSupport>1R01 CA098642-01A1/CA/NCI</edrn:GrantSupport>
+<edrn:GrantSupport>R03 CA102888/CA/NCI</edrn:GrantSupport>
+<edrn:StudyBackground>Early detection of pancreatic cancer might improve clinical outcome. Some studies 
+        have shown the role of cytokines as a new group of tumor markers for pancreatic cancer. We hypothesized 
+        that a panel comprised of multiple cytokines, which individually may not show strong correlation with 
+        the disease, might provide higher diagnostic power.</edrn:StudyBackground>
+<edrn:StudyMethods>To evaluate the diagnostic utility of cytokine panel, we used a novel multianalyte LabMAP 
+        profiling technology that allows simultaneous measurement of multiple markers.</edrn:StudyMethods>
+<edrn:LeadPI>Anna Lokshin</edrn:LeadPI>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/234"/>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:UPittLabMAPPancreaticData>
+<edrn:UPittWHIMassSpecUnprocessedCalibratedIndividualData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:UPittWHIMassSpecUnprocessedCalibratedIndividualData">
+<edrn:Date>2009-03-27T11:06:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/126"/>
+<edrn:DataCustodian>TBD</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Colon"/>
+<edrn:CollaborativeGroup>GI and Other Associated</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:UPittWHIMassSpecUnprocessedCalibratedIndividualData</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>GI and Other Associated</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/65"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>University of Pittsburg Cancer Institute Calibrated Individual Data</edrn:DataSetName>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/126"/>
+<edrn:LeadPI>William Bigbee</edrn:LeadPI>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:UPittWHIMassSpecUnprocessedCalibratedIndividualData>
+<edrn:UABPreinvasiveNeoplasiaUnProcessedImages rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:UABPreinvasiveNeoplasiaUnProcessedImages">
+<edrn:Date>2008-12-16T18:24:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/No Associated Protocol"/>
+<edrn:DataCustodian>Bill Grizzle</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Cervix"/>
+<edrn:CollaborativeGroup>Breast/GYN</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:UABPreinvasiveNeoplasiaUnProcessedImages</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>Breast and Gynecologic</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/75"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>UAB Test Preinvasive Neoplasia Image and Summary Data</edrn:DataSetName>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/No Associated Protocol"/>
+<edrn:LeadPI>Bill Grizzle</edrn:LeadPI>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:UABPreinvasiveNeoplasiaUnProcessedImages>
+<edrn:EVMSSELDIPhaseIIProcessedData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:EVMSSELDIPhaseIIProcessedData">
+<edrn:Date>2007-08-07T15:46:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/110"/>
+<edrn:DataCustodian>Dale McLerran</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Prostate"/>
+<edrn:CollaborativeGroup>Prostate and Urologic</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:EVMSSELDIPhaseIIProcessedData</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>Prostate and Urologic</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/142"/>
+<edrn:SpecificAims>Specific Aim Phase II - The overall goal of Phase II is to develop and evaluate an algorithm for classifying cases and controls using 			protein profiles produced from SELDI-TOF-MS using serum collected from prostate cancer cases and non-cancer controls.
+			Objective 1 - Identification of biorepositories
+			Objective 2 - Generate protein profiles
+			Objective 3 - Construction of classifiers and development of algorithm.
+			Objective 4 – Validate the classifier constructed in Objective 3. If Objective 3, Aim 1, is successfully met</edrn:SpecificAims>
+<x:QAState>Accepted</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>SELDI EVMS Processed Data</edrn:DataSetName>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<edrn:PlannedSampleSize>The EDRN-Prostate-SELDI Investigational Collaboration (EPSIC) will implement a process to 
+	         synchronize SELDI output at the seven participating institutions using a single source of pooled 
+	         normal sera (QC). The target was to recruit 100 healthy males and 100 healthy females to donate 
+	         two tubes of blood. Pregnant women and subjects less than 110 pounds were excluded from the blood 
+	         collection. An IRB protocol was submitted two months in advance of the project. After IRB approval, 
+	         fliers were generated and posted at many locations (e.g., EVMS, hospitals, doctor's offices). The 
+	         blood was collected on November 6, 2002 from 7:30 am to 2:00 pm. A total of 360 healthy people (154 
+	         male and 206 female) donated two tubes of blood each to make quality control (QC) serum.</edrn:PlannedSampleSize>
+<edrn:LeadPI>John Semmes</edrn:LeadPI>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/110"/>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:StudyObjective>It is then the goal of this collaborative project - EDRN-Prostate-SELDI Investigational 
+	         Collaboration (EPSIC) - to use state-of-the-art protein profiling technology to develop and 
+	         validate such screening methods</edrn:StudyObjective>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:EVMSSELDIPhaseIIProcessedData>
+<edrn:BethIsraelSandaDataMarkerPerformanceSummary rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:BethIsraelSandaDataMarkerPerformanceSummary">
+<edrn:Date>2010-03-01T01:13:00.000Z</edrn:Date>
+<edrn:PubMedID>N/A</edrn:PubMedID>
+<edrn:DataCustodian>Azza Eissa</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+        NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+        NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+        In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Prostate"/>
+<edrn:CollaborativeGroup>Prostate and Urologic</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:BethIsraelSandaDataMarkerPerformanceSummary</edrn:DatasetId>
+<x:AccessGrantedTo>Prostate and Urologic</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/144"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>AEissa@mtsinai.on.ca</edrn:DataCustodianEmail>
+<edrn:DataSetName>Prostate pre-validation for hk2, hk4 and hk11.</edrn:DataSetName>
+<edrn:ProtocolID>287</edrn:ProtocolID>
+<edrn:DateDatasetFrozen>N/A</edrn:DateDatasetFrozen>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/287"/>
+<edrn:LeadPI>Eleftherios Diamandis</edrn:LeadPI>
+<edrn:ResultsAndConclusionSummary>In evaluating the performance of 163 markers, 3 samples (case) were missing due to QNS. 116 observations had PSA measured.
+       </edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>Three markers (hk2, hk4 and hk11) were measured among 123 samples (60 controls, 63 cases). 
+        Among the cases, 33 had low Gleason grade (less than 7) and 30 had high Gleason grade (greather than or equal to 7).</edrn:MethodDetails>
+</edrn:BethIsraelSandaDataMarkerPerformanceSummary>
+<edrn:UWashTransProfileMicroarrayData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:UWashTransProfileMicroarrayData">
+<edrn:Date>2008-06-24T20:12:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/114"/>
+<edrn:ResearchSupport>N.I.H., Extramural</edrn:ResearchSupport>
+<edrn:ResearchSupport>Non-U.S. Gov't</edrn:ResearchSupport>
+<edrn:ResearchSupport>U.S. Gov't, P.H.S</edrn:ResearchSupport>
+<edrn:DataCustodian>Tina Xiao</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Prostate"/>
+<edrn:CollaborativeGroup>Prostate and Urologic</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:UWashTransProfileMicroarrayData</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>Prostate and Urologic</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/192"/>
+<x:QAState>Accepted</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:StudyConclusion>Our data indicates that transcriptome profiling with a single methodology will not fully assess the expression of all genes in a cell line. A combination of transcription profiling technologies such as DNA array and MPSS provides a more robust means to assess the expression profile of an RNA sample. Finally, genes that were differentially expressed in cell lines were also differentially expressed in primary prostate cancer and its metastases.
+        </edrn:StudyConclusion>
+<edrn:DataSetName>University of Washington Microarray Data</edrn:DataSetName>
+<edrn:StudyResults>Comparison of the data revealed that both technologies detected genes the other did not. 
+        In LNCaP, 3,180 genes were only detected by Affymetrix and 1,169 genes were only detected by MPSS. Similarly, 
+        in C4-2, 4,121 genes were only detected by Affymetrix and 1,014 genes were only detected by MPSS. Analysis of the 
+        combined transcriptomes identified 66 genes unique to LNCaP cells and 33 genes unique to C4-2 cells. Expression 
+        analysis of these genes in prostate cancer specimens showed CA1 to be highly expressed in bone metastasis but not 
+        expressed in primary tumor and EPHA7 to be expressed in normal prostate and primary tumor but not bone metastasis.
+        </edrn:StudyResults>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<edrn:GrantSupport>CA85859/CA/NCI</edrn:GrantSupport>
+<edrn:GrantSupport>CA98699/CA/NCI</edrn:GrantSupport>
+<edrn:GrantSupport>DK63630/DK/NIDDK</edrn:GrantSupport>
+<edrn:StudyBackground>Affymetrix GeneChip Array and Massively Parallel Signature Sequencing (MPSS) 
+         are two high throughput methodologies used to profile transcriptomes. Each method has certain 
+         strengths and weaknesses; however, no comparison has been made between the data derived from Affymetrix 
+         arrays and MPSS. In this study, two lineage-related prostate cancer cell lines, LNCaP and C4-2, were 
+         used for transcriptome analysis with the aim of identifying genes associated with prostate cancer progression.
+         </edrn:StudyBackground>
+<edrn:StudyMethods>Affymetrix GeneChip array and MPSS analyses were performed. Data was analyzed with GeneSpring 6.2 
+        and in-house perl scripts. Expression array results were verified with RT-PCR.
+        </edrn:StudyMethods>
+<edrn:LeadPI>Alvin Liu</edrn:LeadPI>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/114"/>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:UWashTransProfileMicroarrayData>
+<edrn:BethIsraelSandaTSPPreval rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:BethIsraelSandaTSPPreval">
+<edrn:Date>2010-03-01T00:27:00.000Z</edrn:Date>
+<edrn:PubMedID>N/A</edrn:PubMedID>
+<edrn:DataCustodian>Brian Haab</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+        NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+        NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+        In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Prostate"/>
+<edrn:CollaborativeGroup>Prostate and Urologic</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:BethIsraelSandaTSPPreval</edrn:DatasetId>
+<x:AccessGrantedTo>Prostate and Urologic</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/161"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>Brian.Haab@vai.org</edrn:DataCustodianEmail>
+<edrn:DataSetName>TSP Pre-validation using Prostate Rapid Pre-Validation Set.</edrn:DataSetName>
+<edrn:ProtocolID>286</edrn:ProtocolID>
+<edrn:DateDatasetFrozen>N/A</edrn:DateDatasetFrozen>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/286"/>
+<edrn:LeadPI>Brian Haab</edrn:LeadPI>
+<edrn:ResultsAndConclusionSummary>TSP did not perform and was not moved on for validation.
+       </edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>60 controls and 63 cases (half with Gleaason score &lt;7 and half with Gleason score greather than or equal to 7) were obtained from five participating 
+        centers. TSP came in both normalized and unnormalized format.  Each format had duplicate measures and the average was taken.
+      </edrn:MethodDetails>
+</edrn:BethIsraelSandaTSPPreval>
+<edrn:UPittWHIMassSpecUnprocessedIndividualData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:UPittWHIMassSpecUnprocessedIndividualData">
+<edrn:Date>2009-04-07T11:06:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/126"/>
+<edrn:DataCustodian>TBD</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Colon"/>
+<edrn:CollaborativeGroup>GI and Other Associated</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:UPittWHIMassSpecUnprocessedIndividualData</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>GI and Other Associated</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/65"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>University of Pittsburg Cancer Institute Unprocessed Individual Data</edrn:DataSetName>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/126"/>
+<edrn:LeadPI>William Bigbee</edrn:LeadPI>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:UPittWHIMassSpecUnprocessedIndividualData>
+<edrn:EVMSSELDIPhaseIIUnProcessedData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:EVMSSELDIPhaseIIUnProcessedData">
+<edrn:DataCustodian>Dale McLerran</edrn:DataCustodian>
+<edrn:LeadPI>John Semmes</edrn:LeadPI>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Prostate"/>
+<edrn:DataSetName>SELDI EVMS UnProcessed Data</edrn:DataSetName>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/142"/>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/110"/>
+<edrn:SpecificAims>Specific Aim Phase II - The overall goal of Phase II is to develop and evaluate an algorithm for classifying cases and controls using 			protein profiles produced from SELDI-TOF-MS using serum collected from prostate cancer cases and non-cancer controls.
+			Objective 1 - Identification of biorepositories
+			Objective 2 - Generate protein profiles
+			Objective 3 - Construction of classifiers and development of algorithm.
+			Objective 4 – Validate the classifier constructed in Objective 3. If Objective 3, Aim 1, is successfully met</edrn:SpecificAims>
+<edrn:PublishState>yes</edrn:PublishState>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<edrn:Date>2007-08-07T15:46:00.000Z</edrn:Date>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/110"/>
+<edrn:DatasetId>urn:edrn:EVMSSELDIPhaseIIUnProcessedData</edrn:DatasetId>
+<x:QAState>Accepted</x:QAState>
+<x:AccessGrantedTo>Prostate and Urologic</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<edrn:PlannedSampleSize>The EDRN-Prostate-SELDI Investigational Collaboration (EPSIC) will implement a process to synchronize 
+	         SELDI output at the seven participating institutions using a single source of pooled normal sera (QC). The 
+	         target was to recruit 100 healthy males and 100 healthy females to donate two tubes of blood. Pregnant 
+	         women and subjects less than 110 pounds were excluded from the blood collection. An IRB protocol was submitted 
+	         two months in advance of the project. After IRB approval, fliers were generated and posted at many locations 
+	         (e.g., EVMS, hospitals, doctor's offices). The blood was collected on November 6, 2002 from 7:30 am to 2:00 pm. 
+	         A total of 360 healthy people (154 male and 206 female) donated two tubes of blood each to make quality control 
+	         (QC) serum.</edrn:PlannedSampleSize>
+<edrn:CollaborativeGroup>Prostate and Urologic</edrn:CollaborativeGroup>
+<edrn:StudyObjective>It is then the goal of this collaborative project - EDRN-Prostate-SELDI Investigational 
+	         Collaboration (EPSIC) - to use state-of-the-art protein profiling technology to develop and 
+	         validate such screening methods</edrn:StudyObjective>
+</edrn:EVMSSELDIPhaseIIUnProcessedData>
+<edrn:HopkinsMeltzerBarrettMethylationProfiles rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:HopkinsMeltzerBarrettMethylationProfiles">
+<edrn:Date>2010-02-28T22:06:00.000Z</edrn:Date>
+<edrn:PubMedID>19435894</edrn:PubMedID>
+<edrn:DataCustodian>Stephen Meltzer</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+        NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+        NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+        In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Esophagus"/>
+<edrn:CollaborativeGroup>GI and Other Associated</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:HopkinsMeltzerBarrettMethylationProfiles</edrn:DatasetId>
+<x:AccessGrantedTo>GI and Other Associated</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/82"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>smeltzer@jhmi.edu</edrn:DataCustodianEmail>
+<edrn:DataSetName>Barrett's Esophagus Methylation Profile Dataset</edrn:DataSetName>
+<edrn:ProtocolID>137</edrn:ProtocolID>
+<edrn:DateDatasetFrozen>N/A</edrn:DateDatasetFrozen>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/137"/>
+<edrn:LeadPI>Stephen J. Meltzer, MD</edrn:LeadPI>
+<edrn:ResultsAndConclusionSummary>In the current study, with specificity at 0.9, sensitivities of progression prediction approached 50 percent based on both the 8-marker panel alone and 8-marker-plus-age panel in all three models. These findings indicate 
+        that even while performing at high specificity, these biomarker models predicted half of progressors to HGD and EAC that would not have been diagnosed earlier without using these biomarkers. 
+        
+        Based on age alone, with specificity at 90 percent, only 17.6 percent, 23.2 percent and 22.1 percent of progressors were predicted in the three models. However, with panels based on age plus biomarkers or on biomarkers alone, approximately 60 percent, 50 percent 
+        and 50 percent of progressors were accurately predicted in these three models. Predicted progressors represent patients in whom we can intercede earlier, resulting in higher cure rates. Finally, our combined risk model outperformed 
+        known risk in the general BE population (7.5 percent progression risk over 5 years), both in terms of negative predictive value (1.3 percent progression risk over 5 years for the low-risk group) and positive predictive value (27 percent progression 
+        risk over 5 years for the high-risk group).
+        
+        The current findings suggest that this 8-marker panel is more objective and quantifiable and possesses higher predictive sensitivity and specificity than do clinical features, including age.
+       </edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>Laboratory:
+        
+        One hundred ninety-five Barrett's Esophagus (BE) biopsies (145 nonprogressors and 50 progressors) were obtained from five participating 
+        centers: the Mayo Clinic at Rochester/Jacksonville, the University of Arizona, the University of North Carolina, and Johns Hopkins University. 
+        Bisulfite treatment was performed and promoter methylation levels of 8 genes (p16, HPP1, RUNX3, CDH13, TAC1, NELL1, AKAP12 and SST) were determined 
+        by qMSP on an ABI 7900 Sequence Detection (Taqman) System. beta-actin was used for normalization. A standard curve was generated using serial dilutions of 
+        CpGenome Universal Methylated DNA (CHEMICON, Temecula, CA). A normalized methylation value (NMV) for each gene of interest was defined as described.(11) 
+        Wetlab analysts (ZJ and YC) and all SJM laboratory personnel were blinded to specimen progressor or nonprogressor status.
+        
+        Statistical analysis:
+        
+        Associations between progression status and patient characteristics were tested using Student's t-test or Chi-squared testing. Relationships between biomarkers 
+        and patient progression status were examined using Wilcoxon rank-sum testing. To evaluate the predictive utility of the markers, we constructed receiver operating 
+        characteristic (ROC) curves. ROC curve analyses were first conducted on individual markers, then in combination to determine whether a panel performed better than 
+        any single marker. Our algorithm rendered a single composite score, using the linear predictor from a binary regression model justified under the linearity assumption. 
+        The predictive accuracy of composite scores was evaluated based on a resampling algorithm: we randomly split data into a learning set containing 2/3 and a test set including 
+        1/3 of observations. The combination rule derived from the learning set produced two ROC curves, from the learning and test sets, respectively. Vertical differences between 
+        these two ROC curves yielded the overestimation of sensitivities at given specificities. This procedure was repeated 200 times, and these 200 differences were averaged to 
+        estimate the expected overfitting. 
+        
+        We also utilized predictiveness curves to display risk distribution as a function of the combined marker in the population. This curve represents a plot of risk associated with the vth quantile of the marker, 
+        P{D=1|Y =F-1(v)} vs. v, with F(.) the cumulative distribution of the marker. These plots display population proportions at different risk levels more clearly than do other metrics (like ROC curves). Since a 
+        case-control sample was studied, we used an external progression prevalence rate to calculate risk in the targeted screening population. To calibrate for future samples, a shrinkage coefficient estimated 
+        from the logistic regression model was applied to the linear predictors from which risk was calculated. All analyses were performed in R (http://www.r-project.org). Statistical data analysts (Y.Z., W.G., and Z.F.) 
+        were blinded to the identities of the 8 biomarkers.
+      </edrn:MethodDetails>
+</edrn:HopkinsMeltzerBarrettMethylationProfiles>
+<edrn:JHU_MitochondrialDNAMutationSummarized rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:JHU_MitochondrialDNAMutationSummarized">
+<edrn:Date>2010-08-03T15:59:00.000Z</edrn:Date>
+<edrn:PubMedID>N/A</edrn:PubMedID>
+<edrn:DataCustodian>TBD</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+        NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+        NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+        In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Lung"/>
+<edrn:CollaborativeGroup>Lung and Upper Aerodigestive</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:JHU_MitochondrialDNAMutationSummarized</edrn:DatasetId>
+<x:AccessGrantedTo>Canary</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/77"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>JHU_MitochondrialDNAMutationSummarized</edrn:DataSetName>
+<edrn:ProtocolID>173</edrn:ProtocolID>
+<edrn:DateDatasetFrozen>N/A</edrn:DateDatasetFrozen>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/173"/>
+<edrn:LeadPI>Canary</edrn:LeadPI>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD
+      </edrn:MethodDetails>
+</edrn:JHU_MitochondrialDNAMutationSummarized>
+<edrn:UABSELDIPhaseIIProcessedData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:UABSELDIPhaseIIProcessedData">
+<edrn:Date>2007-08-07T15:46:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/110"/>
+<edrn:DataCustodian>Dale McLerran</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Prostate"/>
+<edrn:CollaborativeGroup>Prostate and Urologic</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:UABSELDIPhaseIIProcessedData</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>Prostate and Urologic</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/142"/>
+<edrn:SpecificAims>Specific Aim Phase II - The overall goal of Phase II is to develop and evaluate an algorithm for classifying cases and controls using 			protein profiles produced from SELDI-TOF-MS using serum collected from prostate cancer cases and non-cancer controls.
+			Objective 1 - Identification of biorepositories
+			Objective 2 - Generate protein profiles
+			Objective 3 - Construction of classifiers and development of algorithm.
+			Objective 4 – Validate the classifier constructed in Objective 3. If Objective 3, Aim 1, is successfully met</edrn:SpecificAims>
+<x:QAState>Accepted</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>SELDI UAB Processed Data</edrn:DataSetName>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<edrn:PlannedSampleSize>The EDRN-Prostate-SELDI Investigational Collaboration (EPSIC) will implement a process to synchronize SELDI output 
+	         at the seven participating institutions using a single source of pooled normal sera (QC). The target was to recruit 100 
+	         healthy males and 100 healthy females to donate two tubes of blood. Pregnant women and subjects less than 110 pounds were
+	         excluded from the blood collection. An IRB protocol was submitted two months in advance of the project. After IRB approval, 
+	         fliers were generated and posted at many locations (e.g., EVMS, hospitals, doctor's offices). The blood was collected on November 
+	         6, 2002 from 7:30 am to 2:00 pm. A total of 360 healthy people (154 male and 206 female) donated two tubes of blood each to make 
+	         quality control (QC) serum.</edrn:PlannedSampleSize>
+<edrn:LeadPI>Bill Grizzle</edrn:LeadPI>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/110"/>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:StudyObjective>It is then the goal of this collaborative project - EDRN-Prostate-SELDI Investigational Collaboration 
+	         (EPSIC) - to use state-of-the-art protein profiling technology to develop and validate such screening methods.</edrn:StudyObjective>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:UABSELDIPhaseIIProcessedData>
+<edrn:WSUCellularSequencingNormalized rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:WSUCellularSequencingNormalized">
+<edrn:Date>2009-02-10T18:24:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>555-555-5555</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/126"/>
+<edrn:DataCustodian>Bin Ye</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Colon"/>
+<edrn:CollaborativeGroup>GI and Other Associated</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:WSUCellularSequencingNormalized</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>GI and Other Associated</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/232"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>email address here</edrn:DataCustodianEmail>
+<edrn:DataSetName>WSU Cellular Sequencing Normalized Data</edrn:DataSetName>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/126"/>
+<edrn:LeadPI>Michael Tainsky</edrn:LeadPI>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:WSUCellularSequencingNormalized>
+<edrn:FHCRCMALDIDilutionProcessedData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:FHCRCMALDIDilutionProcessedData">
+<edrn:Date>2007-08-07T15:46:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/290"/>
+<edrn:DataCustodian>Dale McLerran</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer
+				Institute (NCI) are provided on an "AS IS" basis, without warranty
+				of any kind, including without limitation the warranties of
+				merchantability, fitness for a particular purpose and
+				non-infringement. Availability of this data and information does not
+				constitute scientific publication. Data and/or information may
+				contain errors or be incomplete.
+				NCI and its employees make no representation or warranty, express or
+				implied, including without limitation any warranties of
+				merchantability or fitness for a particular purpose or warranties as
+				to the identity or ownership of data or information, the quality,
+				accuracy or completeness of data or information, or that the use of
+				such data or information will not infringe any patent, intellectual
+				property or proprietary rights of any party.
+				NCI shall not be liable for any claim for any loss, harm, illness or
+				other damage or injury arising from access to or use of data or
+				information, including without limitation any direct, indirect,
+				incidental, exemplary, special or consequential damages, even if
+				advised of the possibility of such damages.
+				In accordance with scientific standards, appropriate acknowledgment of
+				NCI should be made in any publications or other disclosures
+				concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Prostate"/>
+<edrn:CollaborativeGroup>Prostate and Urologic</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:FHCRCMALDIDilutionProcessedData
+			</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>Prostate and Urologic</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/5"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>FHCRC MALDI Dilution Processed Data</edrn:DataSetName>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<edrn:PlannedSampleSize>The EDRN-Prostate-SELDI Investigational Collaboration (EPSIC)
+				will implement a process to
+				synchronize SELDI output at the seven participating institutions using a single
+				source of pooled
+				normal sera (QC). The target was to recruit 100 healthy males and 100
+				healthy females to donate
+				two tubes of blood. Pregnant women and subjects less than 110 pounds
+				were excluded from the blood
+				collection. An IRB protocol was submitted two months in advance of the project.
+				After IRB approval,
+				fliers were generated and posted at many locations (e.g., EVMS, hospitals,
+				doctor's offices). The
+				blood was collected on November 6, 2002 from 7:30 am to 2:00 pm. A total
+				of 360 healthy people (154
+				male and 206 female) donated two tubes of blood each to make quality
+				control (QC) serum.</edrn:PlannedSampleSize>
+<edrn:LeadPI>Timothy W. Randolph</edrn:LeadPI>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/290"/>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:StudyObjective>This work addresses the problem of extracting signal content
+				from protein mass spectrometry data.
+				A multiscale decomposition of these spectra is used to focus on local
+				scale-based structure by defining
+				scale-specific features. Quantification of features is accompanied by an efficient
+				method for calculating
+				the location of features which avoids estimation of signal-to-noise
+				ratios or bandwidths.</edrn:StudyObjective>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:FHCRCMALDIDilutionProcessedData>
+<edrn:eCASFile rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:eCASFile">
+<edrn:Date>2008-06-24T20:12:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Unknown"/>
+<edrn:DatasetId>urn:edrn:eCASFile</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/Unknown"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>Unclassified eCAS files.</edrn:DataSetName>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/Unknown"/>
+<edrn:LeadPI>Unknown</edrn:LeadPI>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:eCASFile>
+<edrn:UPittWHIMassSpecProcessedData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:UPittWHIMassSpecProcessedData">
+<edrn:Date>2009-04-07T11:06:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/126"/>
+<edrn:DataCustodian>TBD</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Colon"/>
+<edrn:CollaborativeGroup>GI and Other Associated</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:UPittWHIMassSpecProcessedData</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>GI and Other Associated</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/65"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>University of Pittsburg Cancer Institute WHI Mass Spectrometer</edrn:DataSetName>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/126"/>
+<edrn:LeadPI>William Bigbee</edrn:LeadPI>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:UPittWHIMassSpecProcessedData>
+<edrn:USC_MethylationRawData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:USC_MethylationRawData">
+<edrn:Date>2010-08-03T15:59:00.000Z</edrn:Date>
+<edrn:PubMedID>N/A</edrn:PubMedID>
+<edrn:DataCustodian>TBD</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+        NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+        NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+        In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Lung"/>
+<edrn:CollaborativeGroup>Lung and Upper Aerodigestive</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:USC_MethylationRawData</edrn:DatasetId>
+<x:AccessGrantedTo>Canary</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/420"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>USC_MethylationRawData</edrn:DataSetName>
+<edrn:ProtocolID>173</edrn:ProtocolID>
+<edrn:DateDatasetFrozen>N/A</edrn:DateDatasetFrozen>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/173"/>
+<edrn:LeadPI>Canary</edrn:LeadPI>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD
+      </edrn:MethodDetails>
+</edrn:USC_MethylationRawData>
+<edrn:JohnsHopkinsDanChan rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:JohnsHopkinsDanChan">
+<edrn:Date>2009-04-10T11:06:00.000Z</edrn:Date>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/126"/>
+<edrn:DataCustodian>TBD</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Colon"/>
+<edrn:CollaborativeGroup>GI and Other Associated</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:JohnsHopkinsDanChan</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>GI and Other Associated</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/200"/>
+<x:QAState>Under Review</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:DataSetName>John Hopkins Medical Institutions Mass Spectrometer Colon Unprocessed</edrn:DataSetName>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/126"/>
+<edrn:LeadPI>Daniel W. Chan</edrn:LeadPI>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:JohnsHopkinsDanChan>
+<edrn:UWashImmunohistochemistryData rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:UWashImmunohistochemistryData">
+<edrn:Date>2008-06-24T20:12:00.000Z</edrn:Date>
+<edrn:StudyDescription>We are investigating the molecular basis of cell-cell interaction in the 
+        differentiation of epithelial cells of the human bladder. Our approach involves 
+        cell-type identification by CD cell surface molecules, isolation of specific cell 
+        populations, gene expression analysis, and functional test of candidate genes in a 
+        cell culture system.
+        </edrn:StudyDescription>
+<edrn:DataCustodianPhone>TBD</edrn:DataCustodianPhone>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/201"/>
+<edrn:ResearchSupport>N.I.H., Extramural</edrn:ResearchSupport>
+<edrn:DataCustodian>Tina Xiao</edrn:DataCustodian>
+<edrn:DataDisclaimer>Data and information released from the National Cancer Institute (NCI) are provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. Availability of this data and information does not constitute scientific publication. Data and/or information may contain errors or be incomplete.
+NCI and its employees make no representation or warranty, express or implied, including without limitation any warranties of merchantability or fitness for a particular purpose or warranties as to the identity or ownership of data or information, the quality, accuracy or completeness of data or information, or that the use of such data or information will not infringe any patent, intellectual property or proprietary rights of any party.
+NCI shall not be liable for any claim for any loss, harm, illness or other damage or injury arising from access to or use of data or information, including without limitation any direct, indirect, incidental, exemplary, special or consequential damages, even if advised of the possibility of such damages.
+In accordance with scientific standards, appropriate acknowledgment of NCI should be made in any publications or other disclosures concerning data or information made available by NCI. 
+      	</edrn:DataDisclaimer>
+<x:organ rdf:resource="http://edrn.nci.nih.gov/data/body-systems/Prostate"/>
+<edrn:CollaborativeGroup>Prostate and Urologic</edrn:CollaborativeGroup>
+<edrn:DatasetId>urn:edrn:UWashImmunohistochemistryData</edrn:DatasetId>
+<edrn:StudyDesign>TBD</edrn:StudyDesign>
+<x:AccessGrantedTo>Prostate and Urologic</x:AccessGrantedTo>
+<x:AccessGrantedTo>Super User</x:AccessGrantedTo>
+<x:site rdf:resource="http://edrn.nci.nih.gov/data/sites/192"/>
+<x:QAState>Accepted</x:QAState>
+<edrn:DataCustodianEmail>TBD</edrn:DataCustodianEmail>
+<edrn:StudyConclusion>Our findings show that the histologically similar stromas of the prostate and bladder are phenotypically different, 
+        and express organ-specific genes. The importance of these genes in epithelial development is suggested by their abnormal 
+        expression in cancer. Among the candidates is the hormone PENK and the down-regulation of PENK expression in cancer suggests 
+        a possible association with cancer development.
+        </edrn:StudyConclusion>
+<edrn:DataSetName>University of Washington Immunohistochemistry Data</edrn:DataSetName>
+<edrn:StudyResults>The bladder stroma was phenotypically different from that of the prostate. Most notable was the presence 
+        of a layer of CD13  cells adjacent to the urothelium. This structural feature was also seen in the mouse bladder. The 
+        prostate stroma was uniformly CD13-. A number of differentially expressed genes between prostate and bladder stromal 
+        cells were identified. One prostate gene, proenkephalin (PENK), was of interest because it encodes a hormone. Secreted 
+        proteins such as hormones and bioactive peptides are known to mediate cell-cell signaling. Prostate stromal expression 
+        of PENK was verified by an antibody raised against a PENK peptide, by RT-PCR analysis of laser-capture microdissected 
+        stromal cells, and by database analysis. Gene expression analysis showed that PENK expression was down-regulated in prostate cancer.
+        </edrn:StudyResults>
+<edrn:AnalyticMethods>TBD</edrn:AnalyticMethods>
+<edrn:GrantSupport>CA85859/CA/NCI</edrn:GrantSupport>
+<edrn:GrantSupport>CA98699/CA/NCI</edrn:GrantSupport>
+<edrn:GrantSupport>DK63630/DK/NIDDK</edrn:GrantSupport>
+<edrn:GrantSupport>DK65260/DK/NIDDK</edrn:GrantSupport>
+<edrn:StudyBackground>Stromal mesenchyme cells play an important role in epithelial differentiation 
+        and likely in cancer as well. Induction of epithelial differentiation is organ-specific, and 
+        the genes responsible could be identified through a comparative genomic analysis of the stromal 
+        cells from two different organs. These genes might be aberrantly expressed in cancer since cancer 
+        could be viewed as due to a defect in stromal signaling. We propose to identify the prostate stromal 
+        genes by analysis of differentially expressed genes between prostate and bladder stromal cells, and 
+        to examine their expression in prostate cancer.
+        </edrn:StudyBackground>
+<edrn:StudyMethods>Immunohistochemistry using antibodies to cluster designation (CD) cell surface antigens was 
+        first used to characterize the stromas of the prostate and bladder. Stromal cells were prepared from 
+        either prostate or bladder tissue for cell culture. RNA was isolated from the cultured cells and analyzed 
+        by DNA microarrays. Expression of candidate genes in normal prostate and prostate cancer was examined by RT-PCR.
+        </edrn:StudyMethods>
+<edrn:LeadPI>Alvin Liu</edrn:LeadPI>
+<x:protocol rdf:resource="http://edrn.nci.nih.gov/data/protocols/201"/>
+<edrn:EligibilityCriteria>TBD</edrn:EligibilityCriteria>
+<edrn:ResultsAndConclusionSummary>TBD</edrn:ResultsAndConclusionSummary>
+<edrn:MethodDetails>TBD</edrn:MethodDetails>
+<edrn:PublishState>yes</edrn:PublishState>
+</edrn:UWashImmunohistochemistryData>
+</rdf:RDF>

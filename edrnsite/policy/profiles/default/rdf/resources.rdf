@@ -1,0 +1,379 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+         xmlns:bmdb="http://edrn.nci.nih.gov/rdf/rdfs/bmdb-1.0.0#"
+         xmlns:edrn="http://edrn.nci.nih.gov/rdf/schema.rdf#"
+         xmlns:edrntype="http://edrn.nci.nih.gov/rdf/types.rdf#" 
+         xmlns:dc="http://purl.org/dc/terms/">
+  <bmdb:ExternalResource rdf:about="http://www.genome.ad.jp/dbget-bin/www_bget?hsa+94025">
+    <bmdb:URI>http://www.genome.ad.jp/dbget-bin/www_bget?hsa+94025</bmdb:URI>
+    <bmdb:Description>KEGG entry 94025 Homo sapiens MUC16, cell surface associated</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://ca.expasy.org/uniprot/Q8WXI7">
+    <bmdb:URI>http://ca.expasy.org/uniprot/Q8WXI7</bmdb:URI>
+    <bmdb:Description>UniProtKB/Swiss-Prot entry Q8WXI7 Mucin-16</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=6367">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=6367</bmdb:URI>
+    <bmdb:Description>HGNC entry for kallikrein-related peptidase 6 (KLK6)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.expasy.org/cgi-bin/niceprot.pl?Q92876">
+    <bmdb:URI>http://www.expasy.org/cgi-bin/niceprot.pl?Q92876</bmdb:URI>
+    <bmdb:Description>SwissProt entry Q92876 for KLK6_HUMAN</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=28873">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=28873</bmdb:URI>
+    <bmdb:Description>HGNC entry 28873 forV-set domain containing T cell activation inhibitor 1 (VTCN1), also called B7-H4,FLJ22418, B7S1, B7X, B7H4</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.expasy.org/uniprot/Q7Z7D3">
+    <bmdb:URI>http://www.expasy.org/uniprot/Q7Z7D3</bmdb:URI>
+    <bmdb:Description>UniProtKB/Swiss-Prot entry Q7Z7D3 for VTCN1_HUMAN, also called Immune costimulatory protein B7-H4</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=15582">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=15582</bmdb:URI>
+    <bmdb:Description>HGNC entry 15582 for mucin 16, cell surface associated (MUC16), also called CA125, FLJ14303</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:5653">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:5653</bmdb:URI>
+    <bmdb:Description>KEGG entry 5653 for kallikrein-related peptidase 6, KLK6</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:79679">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:79679</bmdb:URI>
+    <bmdb:Description>KEGG entry 79679 for V-set domain containing T cell activation inhibitor 1 (VTCN1), also called B7-H4</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.expasy.org/uniprot/Q14508">
+    <bmdb:URI>http://www.expasy.org/uniprot/Q14508</bmdb:URI>
+    <bmdb:Description>UniProtKB/Swiss-Prot entry Q14508 for WFDC2_HUMAN, WAP four-disulfide core domain protein 2 [Precursor] also called HE4, WAP5</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=15939">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=15939</bmdb:URI>
+    <bmdb:Description>HGNC entry 15939 for WAP four-disulfide core domain 2, also called WFDC2, HE4, WAP5</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:10406">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:10406</bmdb:URI>
+    <bmdb:Description>KEGG entry 10406 for WAP four-disulfide core domain 2</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://expasy.org/uniprot/P10451">
+    <bmdb:URI>http://expasy.org/uniprot/P10451</bmdb:URI>
+    <bmdb:Description>UniProtKB/Swiss-Prot entry P10451 for Human Osteopontin</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:6696">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:6696</bmdb:URI>
+    <bmdb:Description>KEGG entry 6696 for SPP1 Human osteopontin</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=11255">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=11255</bmdb:URI>
+    <bmdb:Description>HGNC entry 11255 for SPP1 Human osteopontin</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=56">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=56</bmdb:URI>
+    <bmdb:Description>HGNC record 56 for SMRP, also called ABCC5</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.expasy.org/cgi-bin/niceprot.pl?O15440">
+    <bmdb:URI>http://www.expasy.org/cgi-bin/niceprot.pl?O15440</bmdb:URI>
+    <bmdb:Description>UniProtKB/Swiss-Prot entry O15440 for MRP5_HUMAN, also called SMRP</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.expasy.org/uniprot/P14780">
+    <bmdb:URI>http://www.expasy.org/uniprot/P14780</bmdb:URI>
+    <bmdb:Description>UniProtKB/Swiss-Prot entry P14780 for Human MMP9</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:4318">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:4318</bmdb:URI>
+    <bmdb:Description>KEGG entry 4318 for MMP9</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=7176">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=7176</bmdb:URI>
+    <bmdb:Description>HGNC entry 7176 for MMP9</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=2380">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=2380</bmdb:URI>
+    <bmdb:Description>HGNC entry for CRTL1, also called HAPLN1 (hyaluronan and proteoglycan link protein 1)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://ca.expasy.org/cgi-bin/niceprot.pl?P10915">
+    <bmdb:URI>http://ca.expasy.org/cgi-bin/niceprot.pl?P10915</bmdb:URI>
+    <bmdb:Description>UniProtKB/Swiss-Prot entry P10915 for Human HPLN1 (CRTL1)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:1404">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:1404</bmdb:URI>
+    <bmdb:Description>KEGG entry 1404 for Human HAPLN1, CRTL1</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.med.umich.edu/gi/staff/Marrero.htm">
+    <bmdb:URI>http://www.med.umich.edu/gi/staff/Marrero.htm</bmdb:URI>
+    <bmdb:Description>Jorge A. Marrero, M.D., M.S.</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.ncbi.nlm.nih.gov/entrez/viewer.fcgi?db=protein&amp;id=4502101">
+    <bmdb:URI>http://www.ncbi.nlm.nih.gov/entrez/viewer.fcgi?db=protein&amp;id=4502101</bmdb:URI>
+    <bmdb:Description>Entrez Protein Reference Sequence for annexin I [Homo sapiens]</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://ca.expasy.org/uniprot/P04083">
+    <bmdb:URI>http://ca.expasy.org/uniprot/P04083</bmdb:URI>
+    <bmdb:Description>UniProtKB/Swiss-Prot entry P04083 for ANXA1_HUMAN</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=533">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=533</bmdb:URI>
+    <bmdb:Description>HGNC entry for annexin A1 ANXA1</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:301">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:301</bmdb:URI>
+    <bmdb:Description>KEGG entry 301 for human annexin A1</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://ca.expasy.org/uniprot/P27348">
+    <bmdb:URI>http://ca.expasy.org/uniprot/P27348</bmdb:URI>
+    <bmdb:Description>UniProtKB/Swiss-Prot entry P27348 for 1433T_HUMAN</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=12854">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=12854</bmdb:URI>
+    <bmdb:Description>HGNC entry 12854 for tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, theta polypeptide, symbol YWHAQ, also know as 14-3-3 theta</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:10971">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:10971</bmdb:URI>
+    <bmdb:Description>KEGG entry 10971 for human tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, theta polypeptide</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://ca.expasy.org/cgi-bin/niceprot.pl?Q86VC0">
+    <bmdb:URI>http://ca.expasy.org/cgi-bin/niceprot.pl?Q86VC0</bmdb:URI>
+    <bmdb:Description>UniProtKB/Swiss-Prot entry P08865 for RSSA_HUMAN</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=6502">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=6502</bmdb:URI>
+    <bmdb:Description>HGNC entry 6502 for Human RPSA, also knows as LAMR1</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:3921">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:3921</bmdb:URI>
+    <bmdb:Description>KEGG entry 3921 for human RPSA, LAMR1</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=317">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=317</bmdb:URI>
+    <bmdb:Description>HGNC entry 317 for AFP, human alpha-fetoprotein.</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.uniprot.org/uniprot/P02771">
+    <bmdb:URI>http://www.uniprot.org/uniprot/P02771</bmdb:URI>
+    <bmdb:Description>UniProtKB/Swiss-Prot entry P02771 human Alpha-fetoprotein</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:174">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:174</bmdb:URI>
+    <bmdb:Description>KEGG entry 174 human alpha-fetoprotein</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.uniprot.org/uniprot/P09936">
+    <bmdb:URI>http://www.uniprot.org/uniprot/P09936</bmdb:URI>
+    <bmdb:Description>UniProtKB/Swiss-Prot entry P09936 for UCHL1_HUMAN </bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=12513">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=12513</bmdb:URI>
+    <bmdb:Description>HGNC entry 12513 for Human ubiquitin carboxyl-terminal esterase L1 (ubiquitin thiolesterase), also called PGP9.5</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:7345">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:7345</bmdb:URI>
+    <bmdb:Description>KEGG entry 7345 for ubiquitin carboxyl-terminal esterase L1 (ubiquitin thiolesterase)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.uniprot.org/uniprot/Q99497">
+    <bmdb:URI>http://www.uniprot.org/uniprot/Q99497</bmdb:URI>
+    <bmdb:Description>SwissProt/UniProt entry Q99497 for human DJ-1, also known as PARK7</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=16369">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=16369</bmdb:URI>
+    <bmdb:Description>HGNC entry 16369 for human DJ-1</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:11315">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:11315</bmdb:URI>
+    <bmdb:Description>KEGG entry 11315 for human PARK7, also known as protein DJ-1</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.uniprot.org/uniprot/P29508">
+    <bmdb:URI>http://www.uniprot.org/uniprot/P29508</bmdb:URI>
+    <bmdb:Description>SwissProt/UniProt entry P29508 for SPB3, also known as squamous cellular carcinoma antigen (SCCA)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=10569">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=10569</bmdb:URI>
+    <bmdb:Description>HGNC entry 10569 for human SERPINB3</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:6317">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:6317</bmdb:URI>
+    <bmdb:Description>KEGG entry 6317 for human SERPINB3</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=1753">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=1753</bmdb:URI>
+    <bmdb:Description>HGNC entry 1753 for human cadherin 13, CDH13</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.uniprot.org/uniprot/P55290">
+    <bmdb:URI>http://www.uniprot.org/uniprot/P55290</bmdb:URI>
+    <bmdb:Description>SwissProt/UniProt entry P55290 for Cadherin-13</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:1012">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:1012</bmdb:URI>
+    <bmdb:Description>KEGG entry 1012 for human CDH13</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.uniprot.org/uniprot/Q92832">
+    <bmdb:URI>http://www.uniprot.org/uniprot/Q92832</bmdb:URI>
+    <bmdb:Description>SwissProt/UniProt entry Q92832 for human NELL1</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=7750">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=7750</bmdb:URI>
+    <bmdb:Description>HGNC entry 7750 for human NELL1</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:4745">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:4745</bmdb:URI>
+    <bmdb:Description>KEGG entry 4745 for human NELL1</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.uniprot.org/uniprot/Q13761">
+    <bmdb:URI>http://www.uniprot.org/uniprot/Q13761</bmdb:URI>
+    <bmdb:Description>SwissProt/UniProt entry Q13761 for RUNX3, commonly known as CBF</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=10473">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=10473</bmdb:URI>
+    <bmdb:Description>HGNC entry 10473 for RUNX3</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:864">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:864</bmdb:URI>
+    <bmdb:Description>KEGG entry 864 for human RUNX3</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.uniprot.org/uniprot/P61278">
+    <bmdb:URI>http://www.uniprot.org/uniprot/P61278</bmdb:URI>
+    <bmdb:Description>SwissProt/UniProt entry P61278 for human somatostatin (SST)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=11329">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=11329</bmdb:URI>
+    <bmdb:Description>HGNC entry 11329 for human somatostatin (SST)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:6750">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:6750</bmdb:URI>
+    <bmdb:Description>KEGG entry 6750 for human somatostatin (SST)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=11867">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=11867</bmdb:URI>
+    <bmdb:Description>HGNC entry 11867 for human HPP1</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.uniprot.org/uniprot/Q9UIK5">
+    <bmdb:URI>http://www.uniprot.org/uniprot/Q9UIK5</bmdb:URI>
+    <bmdb:Description>SwissProt/UniProt entry Q9UIK5 for human HHP1 (TEFF2)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:23671">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:23671</bmdb:URI>
+    <bmdb:Description>KEGG entry 23671 for human HPP1 (TMEFF2)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=370">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=370</bmdb:URI>
+    <bmdb:Description>HGNC entry 370 for human AKAP12</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.uniprot.org/uniprot/Q02952">
+    <bmdb:URI>http://www.uniprot.org/uniprot/Q02952</bmdb:URI>
+    <bmdb:Description>SwissProt/UniProt entry Q02952 for human AKAP12</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:9590">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:9590</bmdb:URI>
+    <bmdb:Description>KEGG entry 9590 for human AKAP12, A kinase (PRKA) anchor protein 12 </bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.uniprot.org/uniprot/P42771">
+    <bmdb:URI>http://www.uniprot.org/uniprot/P42771</bmdb:URI>
+    <bmdb:Description>SwissProt/UniProt entry P42771 for CDKN2A (p16)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=1787">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=1787</bmdb:URI>
+    <bmdb:Description>HGNC entry 1787 for CDKN2A (p16)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=11785">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=11785</bmdb:URI>
+    <bmdb:Description>HGNC entry 11785 for human THBS1 (TSP)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.uniprot.org/uniprot/P07996">
+    <bmdb:URI>http://www.uniprot.org/uniprot/P07996</bmdb:URI>
+    <bmdb:Description>SwissProt/UniProt entry P07996 for human Thrombospondin-1 (TSP1)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:7057">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:7057</bmdb:URI>
+    <bmdb:Description>KEGG entry 7057 for human THBS1</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.uniprot.org/uniprot/P20366">
+    <bmdb:URI>http://www.uniprot.org/uniprot/P20366</bmdb:URI>
+    <bmdb:Description>SwissProt/UniProt entry P20366 for TKN1</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.uniprot.org/uniprot/P20151">
+    <bmdb:URI>http://www.uniprot.org/uniprot/P20151</bmdb:URI>
+    <bmdb:Description>SwissProt/UniProt entry P20151 for human KLK2 (hK2)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=6363">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=6363</bmdb:URI>
+    <bmdb:Description>KEGG entry 6363 for human KLK2 (hK2)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=6365">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=6365</bmdb:URI>
+    <bmdb:Description>HGNC entry 6365 for human KLK4 (hK4)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.uniprot.org/uniprot/Q9Y5K2">
+    <bmdb:URI>http://www.uniprot.org/uniprot/Q9Y5K2</bmdb:URI>
+    <bmdb:Description>SwissProt/UniProt entry Q9Y5K2 for human KLK4 (hK4)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:9622">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:9622</bmdb:URI>
+    <bmdb:Description>KEGG entry 9622 for human KLK4 (hK4)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:6863">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:6863</bmdb:URI>
+    <bmdb:Description>KEGG entry 6863 for Human TAC1</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=11517">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=11517</bmdb:URI>
+    <bmdb:Description>HGNC entry 11517 for Human TAC1</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genenames.org/data/hgnc_data.php?hgnc_id=6359">
+    <bmdb:URI>http://www.genenames.org/data/hgnc_data.php?hgnc_id=6359</bmdb:URI>
+    <bmdb:Description>HGNC entry 6359 for human KLK11 (hk11)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.uniprot.org/uniprot/Q9UBX7">
+    <bmdb:URI>http://www.uniprot.org/uniprot/Q9UBX7</bmdb:URI>
+    <bmdb:Description>SwissProt/UniProt entry Q9UBX7 for human KLK11 (hK11) </bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.genome.jp/dbget-bin/www_bget?hsa:11012">
+    <bmdb:URI>http://www.genome.jp/dbget-bin/www_bget?hsa:11012</bmdb:URI>
+    <bmdb:Description>KEGG entry 11012 for human KLK11 (hK11)</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:FHCRCHanashAnnexinLamr">
+    <bmdb:URI>http://edrn.jpl.nasa.gov/ecas/dataset.php?typeID=urn:edrn:FHCRCHanashAnnexinLamr</bmdb:URI>
+    <bmdb:Description>ROC curve for combined analysis of annexin 1, LAMR1 and 14-3-3 theta</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="http://www.compass.fhcrc.org/caretweb/">
+    <bmdb:URI>http://www.compass.fhcrc.org/caretweb/</bmdb:URI>
+    <bmdb:Description>CARET website, for additional information on the study population.</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="https://edrn.jpl.nasa.gov/ecas/product.php?productID=d446e41b-50e6-11df-973d-17ec13bf30a1">
+    <bmdb:URI>https://edrn.jpl.nasa.gov/ecas/product.php?productID=d446e41b-50e6-11df-973d-17ec13bf30a1</bmdb:URI>
+    <bmdb:Description>[1]  Clinicopathic features of biopsies</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="https://edrn.jpl.nasa.gov/ecas/product.php?productID=da8c6bbd-50e6-11df-973d-17ec13bf30a1">
+    <bmdb:URI>https://edrn.jpl.nasa.gov/ecas/product.php?productID=da8c6bbd-50e6-11df-973d-17ec13bf30a1</bmdb:URI>
+    <bmdb:Description>[2] Normalized methylation values of HPP1, p16 and RUNX3</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="https://edrn.jpl.nasa.gov/ecas/product.php?productID=b9c3b207-6a1d-11df-be96-f901d74aca33">
+    <bmdb:URI>https://edrn.jpl.nasa.gov/ecas/product.php?productID=b9c3b207-6a1d-11df-be96-f901d74aca33</bmdb:URI>
+    <bmdb:Description>[3] Logistic regression and overfitting correction for the 2 year, 4 year and combined models</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="https://edrn.jpl.nasa.gov/ecas/product.php?productID=ca45db18-50e6-11df-973d-17ec13bf30a1">
+    <bmdb:URI>https://edrn.jpl.nasa.gov/ecas/product.php?productID=ca45db18-50e6-11df-973d-17ec13bf30a1</bmdb:URI>
+    <bmdb:Description>[4] Receiver-operator characteristic (ROC) curves for the uncorrected 8-marker and 8-marker-plus-age panels, overfitting-corrected ROC curves for the 8-marker and 8-marker-plus-age panels, and ROC cur</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="https://edrn.jpl.nasa.gov/ecas/product.php?productID=bdc38f68-6a1d-11df-be96-f901d74aca33">
+    <bmdb:URI>https://edrn.jpl.nasa.gov/ecas/product.php?productID=bdc38f68-6a1d-11df-be96-f901d74aca33</bmdb:URI>
+    <bmdb:Description>[5] Incremental AUC values contributed by an eight-marker-plus-age biomarker panel to that of age alone</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="https://edrn.jpl.nasa.gov/ecas/product.php?productID=c06c1a29-6a1d-11df-be96-f901d74aca33">
+    <bmdb:URI>https://edrn.jpl.nasa.gov/ecas/product.php?productID=c06c1a29-6a1d-11df-be96-f901d74aca33</bmdb:URI>
+    <bmdb:Description>[6] Specificity and sensitivity for 2 year, 4 year and combined models</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="https://edrn.jpl.nasa.gov/ecas/product.php?productID=c315683a-6a1d-11df-be96-f901d74aca33">
+    <bmdb:URI>https://edrn.jpl.nasa.gov/ecas/product.php?productID=c315683a-6a1d-11df-be96-f901d74aca33</bmdb:URI>
+    <bmdb:Description>[7]  Overfitting-corrected predictiveness curve analyses in 2 year, 4 year and combined models</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="https://edrn.jpl.nasa.gov/ecas/product.php?productID=ce009929-50e6-11df-973d-17ec13bf30a1">
+    <bmdb:URI>https://edrn.jpl.nasa.gov/ecas/product.php?productID=ce009929-50e6-11df-973d-17ec13bf30a1</bmdb:URI>
+    <bmdb:Description>[8] Risk stratification of BE patients by predictiveness curves of 8-marker panel, age alone, and 8-marker-plus-age panel in combined, 2-year and 4-year prediction models.</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="https://edrn.jpl.nasa.gov/ecas/product.php?productID=dd5576ce-50e6-11df-973d-17ec13bf30a1">
+    <bmdb:URI>https://edrn.jpl.nasa.gov/ecas/product.php?productID=dd5576ce-50e6-11df-973d-17ec13bf30a1</bmdb:URI>
+    <bmdb:Description>[1] Receiver-operator characteristic curve analysis for the eight methylation biomarkers in 50 progressors and 145 non-progressors</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="https://edrn.jpl.nasa.gov/ecas/product.php?productID=0cef4927-50e7-11df-973d-17ec13bf30a1">
+    <bmdb:URI>https://edrn.jpl.nasa.gov/ecas/product.php?productID=0cef4927-50e7-11df-973d-17ec13bf30a1</bmdb:URI>
+    <bmdb:Description>[1]  Pre-PLCO dataset, all records unblinded.</bmdb:Description>
+  </bmdb:ExternalResource>
+  <bmdb:ExternalResource rdf:about="https://edrn.jpl.nasa.gov/ecas/product.php?productID=f8f637d2-50e6-11df-973d-17ec13bf30a1">
+    <bmdb:URI>https://edrn.jpl.nasa.gov/ecas/product.php?productID=f8f637d2-50e6-11df-973d-17ec13bf30a1</bmdb:URI>
+    <bmdb:Description>[1] Dataset containing the original values and the log transformed values for CA125, CA15.3, CA19.9, CA72.4, KLK6 (aka HK6), HE4, and OV110 (aka B7-H4). Created by Allison Vitonis. </bmdb:Description>
+  </bmdb:ExternalResource>
+</rdf:RDF>
