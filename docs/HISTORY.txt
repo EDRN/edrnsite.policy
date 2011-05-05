@@ -6,6 +6,11 @@ about the issues mentioned here can be found at the issue tracker, at::
 
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
+1.1.0 - Plone 4
+---------------
+
+This release makes edrnsite.policy compatible with Plone 4.
+
 
 1.0.5 - NCI Hates Cookies
 -------------------------

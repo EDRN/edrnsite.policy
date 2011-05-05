@@ -86,25 +86,25 @@ def connectLDAP(portal):
     ldapConfig.servers['ldapserver-1'] = LDAPServer(
         'cancer.jpl.nasa.gov', connection_type=1, connection_timeout=5, operation_timeout=15, enabled=True
     )
-    p = ldapConfig.schema['ldapproperty-1']
+    p = ldapConfig.schema['uid']
     p.ldap_name, p.plone_name, p.description, p.multi_valued = 'uid', '', u'User ID', False
-    p = ldapConfig.schema['ldapproperty-2']
+    p = ldapConfig.schema['mail']
     p.ldap_name, p.plone_name, p.description, p.multi_valued = 'mail', 'email', u'Email Address', False
-    p = ldapConfig.schema['ldapproperty-3']
+    p = ldapConfig.schema['cn']
     p.ldap_name, p.plone_name, p.description, p.multi_valued = 'cn', 'fullname', u'Full Name', False
-    p = ldapConfig.schema['ldapproperty-4']
+    p = ldapConfig.schema['sn']
     p.ldap_name, p.plone_name, p.description, p.multi_valued = 'sn', '', u'Surname', False
-    ldapConfig.schema['ldapproperty-5'] = LDAPProperty('description', 'description', u'Description', False)
-    ldapConfig.userid_attribute = 'ldapproperty-1'
-    ldapConfig.rdn_attribute = 'ldapproperty-1'
-    ldapConfig.login_attribute = 'ldapproperty-1'
+    ldapConfig.schema['description'] = LDAPProperty('description', 'description', u'Description', False)
+    ldapConfig.userid_attribute = 'uid'
+    ldapConfig.rdn_attribute = 'uid'
+    ldapConfig.login_attribute = 'uid'
     ldapConfig.group_scope = 1
     ldapConfig.group_base = 'dc=edrn,dc=jpl,dc=nasa,dc=gov'
     ldapConfig.bind_password = '70ve4edrn!'
     ldapConfig.bind_dn = 'uid=admin,ou=system'
     guaranteePluginExists()
     # To enable accurate counts of failed attempts by LoginLockout:
-    portal.acl_users.ldap.acl_users.setCacheTimeout('negative', 0)
+    portal.acl_users['ldap-plugin'].acl_users.setCacheTimeout('negative', 0)
 
 def _doPublish(item, wfTool):
     try:
@@ -428,65 +428,11 @@ def empowerSuperUserGroup(context):
     groupsTool = getToolByName(context, 'portal_groups')
     superUser = groupsTool.getGroupById('Super User')
     if superUser is None or 'Manager' not in superUser.getRoles():
-        groupsTool.editGroup('Super User', roles=['Manager'])
+        try:
+            groupsTool.editGroup('Super User', roles=['Manager'])
+        except KeyError:
+            pass
 
-def configureVisualEditor(context):
-    '''Set up the Kupu Visual Editor with additional types.'''
-    editorLibraryTool = getToolByName(context, 'kupu_library_tool')
-    collectionTypes = list(editorLibraryTool.getPortalTypesForResourceType('collection'))
-    if 'Biomarker Folder' not in collectionTypes:
-        # Not yet configured, configure it:
-        collectionTypes += [
-            'Biomarker Folder',
-            'Dataset Folder',
-            'Funding Folder',
-            'Knowledge Folder',
-            'Publication Folder',
-            'Site Folder',
-        ]
-        collection = {
-            'newtypes': 0,
-            'old_type': 'collection',
-            'portal_types': collectionTypes,
-            'resource_type': 'collection'
-        }
-        containsanchors = {
-            'newtypes': 1,
-            'old_type': 'containsanchors',
-            'portal_types': editorLibraryTool.getPortalTypesForResourceType('containsanchors'),
-            'resource_type': 'containsanchors'
-        }
-        linkableTypes = list(editorLibraryTool.getPortalTypesForResourceType('linkable'))
-        linkableTypes += [
-            'Biomarker Folder',
-            'Biomarker Panel',
-            'Elemental Biomarker',
-            'Dataset Folder',
-            'Dataset',
-            'Funding Folder',
-            'Funding Opportunity',
-            'Knowledge Folder',
-            'Person',
-            'Protocol',
-            'Publication',
-            'Publication Folder',
-            'Review Listing',
-            'Site',
-            'Site Folder',
-        ]
-        linkable = {
-            'newtypes': 1,
-            'old_type': 'linkable',
-            'portal_types': linkableTypes,
-            'resource_type': 'linkable',
-        }
-        mediaobject = {
-            'newtypes': 0,
-            'old_type': 'mediaobject',
-            'portal_types': editorLibraryTool.getPortalTypesForResourceType('mediaobject'),
-            'resource_type': 'mediaobject'
-        }
-        editorLibraryTool.updateResourceTypes([collection, containsanchors, linkable, mediaobject])
 
 def disableDiscussion(context):
     '''Per http://oodt.jpl.nasa.gov/jira/browse/CA-435, no discussion allowed anywhere'''
@@ -787,7 +733,6 @@ def setupVarious(context):
     orderFolderTabs(portal)
     setIngestURLs(portal)
     empowerSuperUserGroup(portal)
-    configureVisualEditor(portal)
     disableDiscussion(portal)
     disablePasswordEmails(portal)
     assignContentRules(portal)

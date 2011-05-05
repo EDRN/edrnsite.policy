@@ -9,7 +9,7 @@ import os.path
 # ------------
 
 _name        = 'edrnsite.policy'
-_version     = '1.0.6'
+_version     = '1.1.0'
 _description = 'EDRN Public Portal Site Policy and Component Orchestration'
 _url         = 'http://cancer.jpl.nasa.gov/products/edrnsite-policy'
 _downloadURL = 'http://oodt.jpl.nasa.gov/dist/edrnsite'
@@ -22,10 +22,10 @@ _zipSafe     = False
 _keywords    = 'web zope plone edrn cancer biomarkers policy'
 _requirements = [
     'setuptools',
+    'Plone',
     'Products.PloneHotfix20110720',
     'Products.LoginLockout',
-    # 'Products.CacheSetup', leak?
-    'plone.app.ldap ==1.1',
+    'plone.app.ldap',
     'plone.app.contentrules',
     'p4a.subtyper',
     'eea.facetednavigation',
