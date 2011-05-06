@@ -229,13 +229,6 @@ class TestSetup(EDRNSitePolicyTestCase):
             'http://ginger.fhcrc.org/dmcc/rdf-data/committees/rdf',
             self.portal['committees'].rdfDataSource
         )
-    def testSuperUserGroup(self):
-        '''Ensure the Super User group has the Manager role'''
-        groupTool = getToolByName(self.portal, 'portal_groups')
-        superUserGroup = groupTool.getGroupById('Super User')
-        if superUserGroup:
-            roles = superUserGroup.getRoles()
-            self.failUnless('Manager' in roles)
     def testVideoEmbeddingSettings(self):
         '''Ensure we can embed YouTube videos'''
         safeHTMLxform = getToolByName(self.portal, 'portal_transforms')['safe_html']
