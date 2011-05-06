@@ -430,7 +430,7 @@ def empowerSuperUserGroup(context):
     if superUser is None or 'Manager' not in superUser.getRoles():
         try:
             groupsTool.editGroup('Super User', roles=['Manager'])
-        except KeyError:
+        except (KeyError, NotImplementedError):
             pass
 
 
