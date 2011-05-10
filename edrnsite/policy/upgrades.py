@@ -1,5 +1,5 @@
 # encoding: utf-8
-# Copyright 2010 California Institute of Technology. ALL RIGHTS
+# Copyright 2010-2011 California Institute of Technology. ALL RIGHTS
 # RESERVED. U.S. Government Sponsorship acknowledged.
 
 from plone.i18n.normalizer.interfaces import IIDNormalizer
@@ -9,8 +9,8 @@ from setuphandlers import orderFolderTabs, createSpecimenSearchPage, ingestSpeci
 from zope.component import getUtility
 import transaction, re
 
-# Dependent packages.
-_dependencies = (
+# Dependent packages in profile 0
+_dependencies0 = (
     'Products.CacheSetup',
     'LoginLockout',
     'edrn.theme',
@@ -26,9 +26,27 @@ _dependencies = (
     'eke.ecas',
     'eke.review',
 )
+# Dependent packages in profile 4
+_dependencies4 = (
+    'LoginLockout',
+    'edrn.theme',
+    'edrnsite.portlets',
+    'edrnsite.funding',
+    'edrnsite.search',
+    'edrnsite.misccontent',
+    'eke.knowledge',
+    'eke.publications',
+    'eke.site',
+    'eke.study',
+    'eke.biomarker',
+    'eke.ecas',
+    'eke.review',
+    'eke.committees',
+    'eke.specimens',
+)
 
-# New packages.
-_newPackages = (
+# New packages in profile 0
+_newPackages0 = (
     'eke.committees',
 )
 
@@ -67,7 +85,7 @@ def setAutoIngestProperties(portal):
 
 def installNewPackages(portal):
     quickInstaller = getToolByName(portal, 'portal_quickinstaller')
-    for package in _newPackages:
+    for package in _newPackages0:
         if quickInstaller.isProductInstalled(package):
             continue
         else:
@@ -113,7 +131,7 @@ def upgrade0to1(setupTool):
     catalog.clearFindAndRebuild()
     qi = getToolByName(portal, 'portal_quickinstaller')
     qi.reinstallProducts(_dependencies)
-    for product in _dependencies:
+    for product in _dependencies0:
         qi.upgradeProduct(product)
         transaction.commit()
     qi.installProducts(['p4a.subtyper', 'eea.facetednavigation', 'eke.specimens'])
@@ -130,4 +148,15 @@ def upgrade0to1(setupTool):
     removeGoogleAnalytics(portal)
     catalog.clearFindAndRebuild()
     _setPurging(portal, True)
+
+def upgrade1to4(setupTool):
+    portal = _getPortal(setupTool)
+    catalog = getToolByName(portal, 'portal_catalog')
+    catalog.clearFindAndRebuild()
+    qi = getToolByName(portal, 'portal_quickinstaller')
+    qi.reinstallProducts(_dependencies)
+    for product in _dependencies:
+        qi.upgradeProduct(product)
+        transaction.commit()
+    qi.installProducts(['p4a.subtyper', 'eea.facetednavigation', 'eke.specimens'])
     
