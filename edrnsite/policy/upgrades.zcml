@@ -15,5 +15,14 @@ RESERVED. U.S. Government Sponsorship acknowledged.
         handler='edrnsite.policy.upgrades.upgrade0to1'
         sortkey='1'
     />
+    <genericsetup:upgradeStep
+        source='1'
+        destination='4'
+        title='Upgrade 1 to 4'
+        description='Upgrade the EDRN default profile from version 1 to version 4'
+        profile='edrnsite.policy:default'
+        handler='edrnsite.policy.upgrades.upgrade1to4'
+        sortkey='1'
+    />
 </configure>
 
