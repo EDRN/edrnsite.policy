@@ -7,6 +7,7 @@ from Products.CMFCore.utils import getToolByName
 from setuphandlers import enableEmbeddableVideos, createCommitteesFolder
 from setuphandlers import orderFolderTabs, createSpecimenSearchPage, ingestSpecimens, createMembersListSearchPage
 from zope.component import getUtility
+from plone.app.viewletmanager.interfaces import IViewletSettingsStorage
 import transaction, re
 
 # Dependent packages in profile 0
@@ -28,7 +29,6 @@ _dependencies0 = (
 )
 # Dependent packages in profile 4
 _dependencies4 = (
-    'LoginLockout',
     'edrn.theme',
     'edrnsite.portlets',
     'edrnsite.funding',
@@ -41,12 +41,15 @@ _dependencies4 = (
     'eke.biomarker',
     'eke.ecas',
     'eke.review',
-    'eke.committees',
     'eke.specimens',
 )
 
-# New packages in profile 0
+# New packages in profile 0 (but never made it into 3.6 which is at NCI)
 _newPackages0 = (
+    'eke.committees',
+)
+# So we'll get it this time:
+_newPackages4 = (
     'eke.committees',
 )
 
@@ -83,9 +86,9 @@ def setAutoIngestProperties(portal):
         )
         portal.manage_addProperty('edrnIngestPaths', ingestPaths, 'lines')
 
-def installNewPackages(portal):
+def installNewPackages(portal, packageList):
     quickInstaller = getToolByName(portal, 'portal_quickinstaller')
-    for package in _newPackages0:
+    for package in packageList:
         if quickInstaller.isProductInstalled(package):
             continue
         else:
@@ -130,7 +133,7 @@ def upgrade0to1(setupTool):
     catalog = getToolByName(portal, 'portal_catalog')
     catalog.clearFindAndRebuild()
     qi = getToolByName(portal, 'portal_quickinstaller')
-    qi.reinstallProducts(_dependencies)
+    qi.reinstallProducts(_dependencies0)
     for product in _dependencies0:
         qi.upgradeProduct(product)
         transaction.commit()
@@ -141,7 +144,7 @@ def upgrade0to1(setupTool):
     orderFolderTabs(portal)
     createMembersListSearchPage(portal)
     enableEmbeddableVideos(portal)
-    installNewPackages(portal)
+    installNewPackages(portal, _newPackages0)
     createCommitteesFolder(portal)
     fixSiteIDs(portal)
     updateGoogleSiteVerification(portal)
@@ -149,14 +152,43 @@ def upgrade0to1(setupTool):
     catalog.clearFindAndRebuild()
     _setPurging(portal, True)
 
+def nukeCustomizedLoginForm(portal):
+    skinsTool = getToolByName(portal, 'portal_skins')
+    if 'login_form' in skinsTool.custom.keys():
+        skinsTool.custom.manage_delObjects(['login_form'])
+
+def removeExtraViewlets(portal):
+    storage = getUtility(IViewletSettingsStorage)
+    skinname = portal.getCurrentSkinName()
+    for manager, viewlet in (
+        ('plone.contentviews', 'edrn.path_bar'),
+        ('plone.portalfooter', 'plone.site_actions'),
+        ('plone.portaltop', 'plone.personal_bar'),
+    ):
+        hidden = storage.getHidden(manager, skinname)
+        if viewlet not in hidden:
+            hidden = hidden + (viewlet,)
+            storage.setHidden(manager, skinname, hidden)
+    
 def upgrade1to4(setupTool):
     portal = _getPortal(setupTool)
     catalog = getToolByName(portal, 'portal_catalog')
     catalog.clearFindAndRebuild()
     qi = getToolByName(portal, 'portal_quickinstaller')
-    qi.reinstallProducts(_dependencies)
-    for product in _dependencies:
+    qi.reinstallProducts(_dependencies4)
+    for product in _dependencies4:
         qi.upgradeProduct(product)
         transaction.commit()
     qi.installProducts(['p4a.subtyper', 'eea.facetednavigation', 'eke.specimens'])
+    installNewPackages(portal, _newPackages4)
+    nukeCustomizedLoginForm(portal)
+    # Viewlets issue with duplicate colophon?
+    # customized login_form issue
+    # remove all customized items and migrate into svn code
+    # remove DMCC ldap? (to be re-instated by hand later)
+    # … or remove both?
+    # And finally, upgrade from Plone 3.3 to Plone 4:
+    migrationTool = getToolByName(portal, 'portal_migration')
+    migrationTool.upgrade(dry_run=False)
+    removeExtraViewlets(portal)
     
