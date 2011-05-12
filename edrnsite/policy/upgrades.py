@@ -187,8 +187,5 @@ def upgrade1to4(setupTool):
     # remove all customized items and migrate into svn code
     # remove DMCC ldap? (to be re-instated by hand later)
     # … or remove both?
-    # And finally, upgrade from Plone 3.3 to Plone 4:
-    migrationTool = getToolByName(portal, 'portal_migration')
-    migrationTool.upgrade(dry_run=False)
     removeExtraViewlets(portal)
     
