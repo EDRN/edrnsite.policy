@@ -153,6 +153,10 @@ def upgrade0to1(setupTool):
     _setPurging(portal, True)
 
 def nukeCustomizedLoginForm(portal):
+    '''The login_form was customized TTW at NCI to add a long and boring disclaimer,
+    as well as forgotten and change password links that link to the awful DMCC.
+    In this profile, the modified login_form is part of edrn.theme and we
+    can get rid of the one in custom.'''
     skinsTool = getToolByName(portal, 'portal_skins')
     if 'login_form' in skinsTool.custom.keys():
         skinsTool.custom.manage_delObjects(['login_form'])
@@ -170,10 +174,34 @@ def removeExtraViewlets(portal):
             hidden = hidden + (viewlet,)
             storage.setHidden(manager, skinname, hidden)
     
+def nukeCustomizedCSS(portal):
+    '''The CSS was customized TTW at NCI because of some IE7 issue.  It turns out
+    it was totally unrelated to the CSS customization.  So in this profile, we
+    get rid of it.'''
+    skinsTool = getToolByName(portal, 'portal_skins')
+    if 'ploneCustom.css' in skinsTool.custom.keys():
+        skinsTool.custom.manage_delObjects(['ploneCustom.css'])
+
+def nukeCustomizedViews(portal):
+    '''The logo viewlet was customized TTW at NCI because of some IE7 issue.  We've
+    since brought that modified HTML into edrn.theme, so we can now get rid
+    of the view customization.
+    '''
+    viewCustomizationTool = getToolByName(portal, 'portal_view_customizations')
+    if 'zope.interface.interface-edrn.logo' in viewCustomizationTool.keys():
+        viewCustomizationTool.manage_delObjects(['zope.interface.interface-edrn.logo'])
+
 def upgrade1to4(setupTool):
     portal = _getPortal(setupTool)
+    # I do not comprehend why we still have old-style site IDs.  Kill 'em all
+    # and let re-ingest bring 'em back
+    portal.sites.manage_delObjects(portal.sites.keys())
+
+    # Recatalog
     catalog = getToolByName(portal, 'portal_catalog')
     catalog.clearFindAndRebuild()
+
+    # Reinstall
     qi = getToolByName(portal, 'portal_quickinstaller')
     qi.reinstallProducts(_dependencies4)
     for product in _dependencies4:
@@ -181,11 +209,19 @@ def upgrade1to4(setupTool):
         transaction.commit()
     qi.installProducts(['p4a.subtyper', 'eea.facetednavigation', 'eke.specimens'])
     installNewPackages(portal, _newPackages4)
+
+    # Remove customizations that made it into software
     nukeCustomizedLoginForm(portal)
-    # Viewlets issue with duplicate colophon?
-    # customized login_form issue
-    # remove all customized items and migrate into svn code
-    # remove DMCC ldap? (to be re-instated by hand later)
-    # … or remove both?
+    nukeCustomizedCSS(portal)
+    nukeCustomizedViews(portal)
+
+    # remove all customized items and migrate into svn code (view_customizations?)
     removeExtraViewlets(portal)
     
+    # Recreate faceted pages
+    createSpecimenSearchPage(portal)
+    ingestSpecimens(portal, setupTool)
+    createMembersListSearchPage(portal)
+    
+    # Re-ingest and that should do it!
+    portal.unrestrictedTraverse('@@ingestEverythingFully')()
