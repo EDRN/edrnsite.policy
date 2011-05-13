@@ -6,6 +6,18 @@ about the issues mentioned here can be found at the issue tracker, at::
 
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
+
+1.1.1 - Upgrade Cleanup
+-----------------------
+
+This release includes the following:
+
+* Cleaned up upgrade path for profile version 0-to-1 and 1-to-4.
+* Removal of TTW customizations from operational database that are now
+  captured in software.
+* Removal of framework upgrade since that's out of this package's purview.
+
+
 1.1.0 - Plone 4
 ---------------
 
