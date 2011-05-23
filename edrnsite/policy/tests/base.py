@@ -39,6 +39,7 @@ def setupEDRNSitePolicy():
     ztc.installPackage('edrnsite.search')
     ztc.installPackage('edrnsite.funding')
     ztc.installPackage('edrnsite.misccontent')
+    ztc.installPackage('edrnsite.collaborations')
     ztc.installPackage('edrn.theme')
     ztc.installPackage('edrnsite.policy')
     

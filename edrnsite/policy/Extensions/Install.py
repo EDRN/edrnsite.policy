@@ -18,6 +18,7 @@ PRODUCT_DEPENDENCIES = (
     'edrnsite.funding',
     'edrnsite.search',
     'edrnsite.misccontent',
+    'edrnsite.collaborations',
     'eke.knowledge',
     'eke.publications',
     'eke.site',
