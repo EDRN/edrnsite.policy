@@ -7,6 +7,17 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
+1.1.2 - TBD
+-----------
+
+This release includes:
+
+* Collaborative groups, provided by the edrnsite.collaborations package.
+* A default collaborative group container at /collaborative-groups.
+* UI improvements to users & groups by enabling Plone's "many_users" and
+  "many_groups" properties.
+
+
 1.1.1 - Upgrade Cleanup
 -----------------------
 
