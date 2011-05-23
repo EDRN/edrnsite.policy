@@ -150,9 +150,12 @@ class TestSetup(EDRNSitePolicyTestCase):
         self.failUnless(about < biomarkers < protocols < scienceData < specimens < pubs < resources)
     def testNavigationExcludedItems(self):
         '''Check that items to be excluded from the navigation are actually excluded'''
-        for i in ('advocates', 'colops', 'docs', 'funding-opportunities', 'researchers', 'sites', 'admin', 'committees'):
+        for i in (
+            'advocates', 'colops', 'docs', 'funding-opportunities', 'researchers', 'sites', 'admin', 'committees',
+            'collaborative-groups',
+        ):
             item = self.portal[i]
-            self.failUnless(item.getExcludeFromNav())
+            self.failUnless(item.getExcludeFromNav(), 'Item "%s" should be excluded from navigation' % i)
     def testAdministrativeImages(self):
         '''Ensure images for the administrivia section are present'''
         images = self.portal['admin']['images'].objectIds()
@@ -282,6 +285,11 @@ class TestSetup(EDRNSitePolicyTestCase):
         '''CA-681 doesn't like the word "staffers"; it wants just "staff"'''
         membersList = self.portal['members-list']
         self.failIf(u'staffers' in membersList.Description())
+    def testManyMany(self):
+        '''Ensure that both many_users and many_groups are enabled, otherwise the user control panel will take forever.'''
+        props = getToolByName(self.portal, 'portal_properties')
+        self.failUnless(props.site_properties.getProperty('many_users'))
+        self.failUnless(props.site_properties.getProperty('many_groups'))
 
 def test_suite():
     suite = unittest.TestSuite()
