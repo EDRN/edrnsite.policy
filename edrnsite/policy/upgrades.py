@@ -228,5 +228,9 @@ def upgrade1to4(setupTool):
     # Add a container for Collaborative Groups (the QuickLinks portlet already has a link to it)
     createCollaborationsFolder(portal)
     
+    # Set up the many_users/many_groups properties
+    props = getToolByName(portal, 'portal_properties')
+    props.site_properties.manage_changeProperties(many_users=True, many_groups=True)
+
     # Re-ingest and that should do it!
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
