@@ -684,6 +684,18 @@ def createKnowledgeFolders(portal):
         obj.setDescription(desc)
         obj.reindexObject()
 
+def createCollaborationsFolder(portal):
+    # New in profile version 4 (software version 1.1.2)
+    if 'collaborative-groups' in portal.keys():
+        f = portal['collaborative-groups']
+        if f.portal_type == 'Collaborations Folder': return
+        portal.manage_delObjects('collaborative-groups')
+    f = portal[portal.invokeFactory('Collaborations Folder', 'collaborative-groups')]
+    f.setTitle(u'Collaborative Groups')
+    f.setDescription(u'Collaborative groups are people that work together.')
+    _doPublish(f, getToolByName(portal, 'portal_workflow'))
+    f.reindexObject()
+
 def createCommitteesFolder(portal):
     # New in profile version 1 (software version 1.0.3)
     if 'committees' in portal.objectIds():
@@ -740,3 +752,4 @@ def setupVarious(context):
     createWelcomePage(portal)
     createMembersListSearchPage(portal)
     enableEmbeddableVideos(portal)
+    createCollaborationsFolder(portal)
