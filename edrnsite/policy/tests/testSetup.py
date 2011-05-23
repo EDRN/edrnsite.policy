@@ -60,6 +60,10 @@ class TestSetup(EDRNSitePolicyTestCase):
         types = getToolByName(self.portal, 'portal_types')
         self.failUnless('EDRN Home' in types.objectIds())
         self.failUnless('FormFolder' in types.objectIds())
+    def testForCollaborations(self):
+        '''Check if the EDRN Site Collaborative Groups package is installed'''
+        types = getToolByName(self.portal, 'portal_types')
+        self.failUnless('Collaborations Folder' in types.objectIds())
     def testVersionableTypes(self):
         repository = getToolByName(self.portal, 'portal_repository')
         versionableTypes = repository.getVersionableContentTypes()
@@ -125,6 +129,7 @@ class TestSetup(EDRNSitePolicyTestCase):
             ('specimens',),
             ('specimens', 'bank'),
             ('committees',),
+            ('collaborative-groups',),
         ):
             target = root + path
             item = self.portal.restrictedTraverse(target)
