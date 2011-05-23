@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
-Copyright 2009 California Institute of Technology. ALL RIGHTS
+Copyright 2009-2011 California Institute of Technology. ALL RIGHTS
 RESERVED. U.S. Government Sponsorship acknowledged.
 -->
 <object name='portal_properties' meta_type='Plone Properties Tool'>
@@ -22,5 +22,7 @@ RESERVED. U.S. Government Sponsorship acknowledged.
             <!-- edrnsite.misccontent -->
             <element value='EDRN Home' />
         </property>
+        <property name='many_users'  type='boolean'>True</property>
+        <property name='many_groups' type='boolean'>True</property>
     </object>
 </object>
