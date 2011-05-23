@@ -693,6 +693,7 @@ def createCollaborationsFolder(portal):
     f = portal[portal.invokeFactory('Collaborations Folder', 'collaborative-groups')]
     f.setTitle(u'Collaborative Groups')
     f.setDescription(u'Collaborative groups are people that work together.')
+    f.setExcludeFromNav(True)
     _doPublish(f, getToolByName(portal, 'portal_workflow'))
     f.reindexObject()
 
