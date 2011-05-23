@@ -4,7 +4,7 @@
 
 from plone.i18n.normalizer.interfaces import IIDNormalizer
 from Products.CMFCore.utils import getToolByName
-from setuphandlers import enableEmbeddableVideos, createCommitteesFolder
+from setuphandlers import enableEmbeddableVideos, createCommitteesFolder, createCollaborationsFolder
 from setuphandlers import orderFolderTabs, createSpecimenSearchPage, ingestSpecimens, createMembersListSearchPage
 from zope.component import getUtility
 from plone.app.viewletmanager.interfaces import IViewletSettingsStorage
@@ -51,6 +51,8 @@ _newPackages0 = (
 # So we'll get it this time:
 _newPackages4 = (
     'eke.committees',
+    # As well as this new one:
+    'edrnsite.collaborations',
 )
 
 # Old site ID format
@@ -222,6 +224,9 @@ def upgrade1to4(setupTool):
     createSpecimenSearchPage(portal)
     ingestSpecimens(portal, setupTool)
     createMembersListSearchPage(portal)
+
+    # Add a container for Collaborative Groups (the QuickLinks portlet already has a link to it)
+    createCollaborationsFolder(portal)
     
     # Re-ingest and that should do it!
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
