@@ -4,6 +4,7 @@
 
 from eea.facetednavigation.interfaces import ICriteria
 from eke.site.interfaces import IPerson
+from eke.committees.interfaces import ICommittee
 from eke.specimens import SPECIMEN_TYPE_VOCAB_NAME, STORAGE_VOCAB_NAME
 from eke.specimens.interfaces import ISpecimenRecord
 from p4a.subtyper.interfaces import ISubtyper
@@ -686,6 +687,7 @@ def createKnowledgeFolders(portal):
 
 def createCollaborationsFolder(portal):
     # New in profile version 4 (software version 1.1.2)
+    wfTool = getToolByName(portal, 'portal_workflow')
     if 'collaborative-groups' in portal.keys():
         f = portal['collaborative-groups']
         if f.portal_type == 'Collaborations Folder': return
@@ -694,8 +696,28 @@ def createCollaborationsFolder(portal):
     f.setTitle(u'Collaborative Groups')
     f.setDescription(u'Collaborative groups are people that work together.')
     f.setExcludeFromNav(True)
-    _doPublish(f, getToolByName(portal, 'portal_workflow'))
+    _doPublish(f, wfTool)
     f.reindexObject()
+    # Populate it: find all Committee objects that are of type "Collaborative Group" and use that to
+    # create the Collaborative Group objects
+    catalog = getToolByName(portal, 'portal_catalog')
+    results = catalog(object_provides=ICommittee.__identifier__, committeeType='Collaborative Group')
+    results = [i.getObject() for i in results]
+    if len(results) == 0 and 'committees' in portal.keys() and 'collaborative-groups' in portal['committees'].keys():
+        # Not found via catalog? Ugh, this must be an upgrade and our catalog is out of date.
+        # In that case, do it the manual way.
+        cbfolder = portal['committees']['collaborative-groups']
+        for i in cbfolder.keys():
+            cb = cbfolder[i]
+            results.append(cb)
+    for i in results:
+        cbg = f[f.invokeFactory('Collaborative Group', i.id)]
+        cbg.setTitle(i.title)
+        cbg.setDescription(i.description)
+        # TODO: add ECAS data links, members.
+        _doPublish(cbg, wfTool)
+        cbg.reindexObject()
+    # C'est tout.
 
 def createCommitteesFolder(portal):
     # New in profile version 1 (software version 1.0.3)
