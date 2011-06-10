@@ -714,7 +714,13 @@ def createCollaborationsFolder(portal):
         cbg = f[f.invokeFactory('Collaborative Group', i.id)]
         cbg.setTitle(i.title)
         cbg.setDescription(i.description)
-        # TODO: add ECAS data links, members.
+        members = []
+        members.extend(i.member)
+        members.extend(i.consultant)
+        members.extend(i.coChair)
+        members.extend(i.chair)
+        cbg.setMembers(members)
+        # TODO: add ECAS data links.
         _doPublish(cbg, wfTool)
         cbg.reindexObject()
     # C'est tout.

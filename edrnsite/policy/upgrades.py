@@ -221,7 +221,7 @@ def upgrade1to4(setupTool):
     # Recatalog
     catalog = getToolByName(portal, 'portal_catalog')
     catalog.clearFindAndRebuild()
-
+    
     # Reinstall
     qi = getToolByName(portal, 'portal_quickinstaller')
     qi.reinstallProducts(_dependencies4)
@@ -230,13 +230,11 @@ def upgrade1to4(setupTool):
         transaction.commit()
     qi.installProducts(['p4a.subtyper', 'eea.facetednavigation', 'eke.specimens'])
     installNewPackages(portal, _newPackages4)
-
+    
     # Remove customizations that made it into software
     nukeCustomizedLoginForm(portal)
     nukeCustomizedCSS(portal)
     nukeCustomizedViews(portal)
-
-    # remove all customized items and migrate into svn code (view_customizations?)
     removeExtraViewlets(portal)
     
     # Recreate faceted pages
@@ -244,9 +242,14 @@ def upgrade1to4(setupTool):
     ingestSpecimens(portal, setupTool)
     createMembersListSearchPage(portal)
 
-    # Set up the new committees
+    # Create the eke.committees-provided Committees Folder
     createCommitteesFolder(portal)
-    ingestCommittees(portal)
+
+    # Update ingest paths, then ingest the committees folder—and everything else too
+    ingestPaths = portal.getProperty('edrnIngestPaths')
+    ingestPaths += ('committees',)
+    portal.manage_changeProperties(edrnIngestPaths=ingestPaths)
+    portal.unrestrictedTraverse('@@ingestEverythingFully')()
     
     # Add a container for Collaborative Groups (the QuickLinks portlet already has a link to it)
     # The new committees must already be ingested because the collaborative groups are built
@@ -258,6 +261,5 @@ def upgrade1to4(setupTool):
     props.site_properties.manage_changeProperties(many_users=True, many_groups=True)
 
     # Re-ingest and restore annoying link integrity checking
-    portal.unrestrictedTraverse('@@ingestEverythingFully')()
     propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=origLinkIntegrityMode)
     
