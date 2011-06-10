@@ -2,12 +2,14 @@
 # Copyright 2010-2011 California Institute of Technology. ALL RIGHTS
 # RESERVED. U.S. Government Sponsorship acknowledged.
 
+from plone.app.viewletmanager.interfaces import IViewletSettingsStorage
 from plone.i18n.normalizer.interfaces import IIDNormalizer
 from Products.CMFCore.utils import getToolByName
-from setuphandlers import enableEmbeddableVideos, createCommitteesFolder, createCollaborationsFolder
+from setuphandlers import enableEmbeddableVideos, createCommitteesFolder, createCollaborationsFolder, _doPublish
 from setuphandlers import orderFolderTabs, createSpecimenSearchPage, ingestSpecimens, createMembersListSearchPage
+from zope.component import getMultiAdapter
 from zope.component import getUtility
-from plone.app.viewletmanager.interfaces import IViewletSettingsStorage
+from zope.publisher.browser import TestRequest
 import transaction, re
 
 # Dependent packages in profile 0
@@ -193,12 +195,29 @@ def nukeCustomizedViews(portal):
     if 'zope.interface.interface-edrn.logo' in viewCustomizationTool.keys():
         viewCustomizationTool.manage_delObjects(['zope.interface.interface-edrn.logo'])
 
+def ingestCommittees(portal):
+    if 'committees' not in portal.objectIds(): return
+    committees = portal['committees']
+    ingestor = getMultiAdapter((committees, TestRequest()), name=u'ingest')
+    ingestor.render = False
+    try:
+        ingestor()
+    except:
+        pass
+    _doPublish(committees, getToolByName(portal, 'portal_workflow'))
+
 def upgrade1to4(setupTool):
     portal = _getPortal(setupTool)
+    
+    # Disable annoying link integrity checking
+    propTool = getToolByName(portal, 'portal_properties')
+    origLinkIntegrityMode = propTool.site_properties.getProperty('enable_link_integrity_checks', True)
+    propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
+    
     # I do not comprehend why we still have old-style site IDs.  Kill 'em all
     # and let re-ingest bring 'em back
     portal.sites.manage_delObjects(portal.sites.keys())
-
+    
     # Recatalog
     catalog = getToolByName(portal, 'portal_catalog')
     catalog.clearFindAndRebuild()
@@ -225,12 +244,20 @@ def upgrade1to4(setupTool):
     ingestSpecimens(portal, setupTool)
     createMembersListSearchPage(portal)
 
+    # Set up the new committees
+    createCommitteesFolder(portal)
+    ingestCommittees(portal)
+    
     # Add a container for Collaborative Groups (the QuickLinks portlet already has a link to it)
+    # The new committees must already be ingested because the collaborative groups are built
+    # from them (from committees whose type == 'Collaborative Group', specifically)
     createCollaborationsFolder(portal)
     
     # Set up the many_users/many_groups properties
     props = getToolByName(portal, 'portal_properties')
     props.site_properties.manage_changeProperties(many_users=True, many_groups=True)
 
-    # Re-ingest and that should do it!
+    # Re-ingest and restore annoying link integrity checking
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
+    propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=origLinkIntegrityMode)
+    
