@@ -3,6 +3,8 @@
 # RESERVED. U.S. Government Sponsorship acknowledged.
 
 from eea.facetednavigation.interfaces import ICriteria
+from eke.biomarker.interfaces import IBiomarker
+from eke.biomarker.utils import COLLABORATIVE_GROUP_BMDB_IDS_TO_NAMES
 from eke.committees.interfaces import ICommittee
 from eke.ecas.interfaces import IDataset
 from eke.ecas.utils import COLLABORATIVE_GROUP_ECAS_IDS_TO_NAMES
@@ -706,6 +708,9 @@ def createCollaborationsFolder(portal):
     datasets = [i.getObject() for i in catalog(object_provides=IDataset.__identifier__)]
     if len(datasets) == 0:
         _logger.warn('No datasets found via catalog. Cannot link collaborative groups to them.')
+    biomarkers = [i.getObject() for i in catalog(object_provides=IBiomarker.__identifier__)]
+    if len(biomarkers) == 0:
+        _logger.warn('No biomarkers found via catalog. Cannot link collaborative groups to them.')
     results = [i.getObject() for i in catalog(object_provides=ICommittee.__identifier__, committeeType='Collaborative Group')]
     _logger.info('Found %d Committee objects of type "Collaborative Group" via the catalog', len(results))
     if len(results) == 0 and 'committees' in portal.keys() and 'collaborative-groups' in portal['committees'].keys():
@@ -734,6 +739,16 @@ def createCollaborationsFolder(portal):
             if cbName == committee.title:
                 groupDatasets.append(dataset)
         cbg.setDatasets(groupDatasets)
+        # And the biomarkers being studied by this group
+        groupBiomarkers = []
+        for biomarker in biomarkers:
+            groupNames = [i[0] for i in biomarker.get_local_roles()]
+            for groupName in groupNames:
+                cbName = COLLABORATIVE_GROUP_BMDB_IDS_TO_NAMES.get(groupName, None)
+                if cbName == committee.title:
+                    groupBiomarkers.append(biomarker)
+                    break
+        cbg.setBiomarkers(groupBiomarkers)
         _doPublish(cbg, wfTool)
         cbg.reindexObject()
     # C'est tout.
