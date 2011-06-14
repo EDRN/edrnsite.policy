@@ -3,8 +3,10 @@
 # RESERVED. U.S. Government Sponsorship acknowledged.
 
 from eea.facetednavigation.interfaces import ICriteria
-from eke.site.interfaces import IPerson
 from eke.committees.interfaces import ICommittee
+from eke.ecas.interfaces import IDataset
+from eke.ecas.utils import COLLABORATIVE_GROUP_ECAS_IDS_TO_NAMES
+from eke.site.interfaces import IPerson
 from eke.specimens import SPECIMEN_TYPE_VOCAB_NAME, STORAGE_VOCAB_NAME
 from eke.specimens.interfaces import ISpecimenRecord
 from p4a.subtyper.interfaces import ISubtyper
@@ -701,8 +703,11 @@ def createCollaborationsFolder(portal):
     # Populate it: find all Committee objects that are of type "Collaborative Group" and use that to
     # create the Collaborative Group objects
     catalog = getToolByName(portal, 'portal_catalog')
-    results = catalog(object_provides=ICommittee.__identifier__, committeeType='Collaborative Group')
-    results = [i.getObject() for i in results]
+    datasets = [i.getObject() for i in catalog(object_provides=IDataset.__identifier__)]
+    if len(datasets) == 0:
+        _logger.warn('No datasets found via catalog. Cannot link collaborative groups to them.')
+    results = [i.getObject() for i in catalog(object_provides=ICommittee.__identifier__, committeeType='Collaborative Group')]
+    _logger.info('Found %d Committee objects of type "Collaborative Group" via the catalog', len(results))
     if len(results) == 0 and 'committees' in portal.keys() and 'collaborative-groups' in portal['committees'].keys():
         # Not found via catalog? Ugh, this must be an upgrade and our catalog is out of date.
         # In that case, do it the manual way.
@@ -710,17 +715,25 @@ def createCollaborationsFolder(portal):
         for i in cbfolder.keys():
             cb = cbfolder[i]
             results.append(cb)
-    for i in results:
-        cbg = f[f.invokeFactory('Collaborative Group', i.id)]
-        cbg.setTitle(i.title)
-        cbg.setDescription(i.description)
+        _logger.info('OK, found %d Committee collaborative groups directly in the expected folder instead', len(results))
+    for committee in results:
+        cbg = f[f.invokeFactory('Collaborative Group', committee.id)]
+        cbg.setTitle(committee.title)
+        cbg.setDescription(committee.description)
         members = []
-        members.extend(i.member)
-        members.extend(i.consultant)
-        members.extend(i.coChair)
-        members.extend(i.chair)
+        members.extend(committee.member)
+        members.extend(committee.consultant)
+        members.extend(committee.coChair)
+        members.extend(committee.chair)
+        # Add the members of the group
         cbg.setMembers(members)
-        # TODO: add ECAS data links.
+        # Add the datasets that belong to this group
+        groupDatasets = []
+        for dataset in datasets:
+            cbName = COLLABORATIVE_GROUP_ECAS_IDS_TO_NAMES.get(dataset.collaborativeGroup, None)
+            if cbName == committee.title:
+                groupDatasets.append(dataset)
+        cbg.setDatasets(groupDatasets)
         _doPublish(cbg, wfTool)
         cbg.reindexObject()
     # C'est tout.
