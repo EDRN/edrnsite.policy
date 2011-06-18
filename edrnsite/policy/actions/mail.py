@@ -9,7 +9,8 @@ from Products.CMFCore.utils import getToolByName
 from plone.app.contentrules.actions.mail import IMailAction, MailAction, MailActionExecutor, MailAddForm, MailEditForm
 from Products.CMFPlone import PloneMessageFactory as _
 from zope.formlib import form
-from zope.interface import implements
+from zope.interface import implements, Interface
+from zope.component import adapts
 import socket, smtplib
 
 _initiatingGroup = u'National Cancer Institute'
@@ -26,6 +27,7 @@ class EDRNMailAction(MailAction):
 class EDRNMailActionExecutor(MailActionExecutor):
     '''Executor that actually sends email (ignoring errors) on behalf of EDRN, and only when it's an NCI staff
     member who initiated the action.'''
+    adapts(Interface, IEDRNMailAction, Interface)
     def __call__(self):
         try:
             context = aq_inner(self.context)
