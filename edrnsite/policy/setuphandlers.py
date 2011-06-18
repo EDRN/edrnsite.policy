@@ -771,6 +771,7 @@ def createCommitteesFolder(portal):
     committees.setTitle(u'Committees')
     committees.setDescription(u'The following describes the committees, subcommittees, and other components of EDRN.')
     committees.rdfDataSource = u'http://ginger.fhcrc.org/dmcc/rdf-data/committees/rdf'
+    committees.setExcludeFromNav(True)
     committees.reindexObject()
     
 def rebuildCatalog(portal):
