@@ -725,20 +725,23 @@ def createCollaborationsFolder(portal):
         cbg = f[f.invokeFactory('Collaborative Group', committee.id)]
         cbg.setTitle(committee.title)
         cbg.setDescription(committee.description)
+        index = cbg[cbg.invokeFactory('Collaborative Group Index', 'index_html')]
+        index.setTitle(committee.title)
+        index.setDescription(committee.description)
         members = []
         members.extend(committee.member)
         members.extend(committee.consultant)
         members.extend(committee.coChair)
         members.extend(committee.chair)
         # Add the members of the group
-        cbg.setMembers(members)
+        index.setMembers(members)
         # Add the datasets that belong to this group
         groupDatasets = []
         for dataset in datasets:
             cbName = COLLABORATIVE_GROUP_ECAS_IDS_TO_NAMES.get(dataset.collaborativeGroup, None)
             if cbName == committee.title:
                 groupDatasets.append(dataset)
-        cbg.setDatasets(groupDatasets)
+        index.setDatasets(groupDatasets)
         # And the biomarkers being studied by this group
         groupBiomarkers = []
         for biomarker in biomarkers:
@@ -748,7 +751,7 @@ def createCollaborationsFolder(portal):
                 if cbName == committee.title:
                     groupBiomarkers.append(biomarker)
                     break
-        cbg.setBiomarkers(groupBiomarkers)
+        index.setBiomarkers(groupBiomarkers)
         _doPublish(cbg, wfTool)
         cbg.reindexObject()
     # C'est tout.
