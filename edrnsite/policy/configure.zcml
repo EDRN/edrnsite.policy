@@ -17,6 +17,7 @@ RESERVED. U.S. Government Sponsorship acknowledged.
     <include package='eea.facetednavigation' file='overrides.zcml'/>
     <include package='eea.facetednavigation' />
     <include package='plone.app.ldap' />
+    <include package='plone.app.discussion' />
     <include package='edrn.theme' />
     <include package='edrnsite.portlets'/>
     <include package='edrnsite.funding'/>

@@ -10,9 +10,9 @@ import transaction
 PRODUCT_DEPENDENCIES = (
     'p4a.subtyper',
     'eea.facetednavigation',
-    # 'Products.CacheSetup', Leak?
     'LoginLockout',
     'plone.app.ldap',
+    'plone.app.discussion',
     'edrn.theme',
     'edrnsite.portlets',
     'edrnsite.funding',
