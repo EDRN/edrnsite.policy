@@ -23,7 +23,6 @@ def setupEDRNSitePolicy():
     import edrnsite.policy
     zcml.load_config('configure.zcml', edrnsite.policy)
     fiveconfigure.debug_mode = False
-    ztc.installPackage('p4a.subtyper')
     ztc.installPackage('eea.facetednavigation')
     ztc.installPackage('plone.app.ldap')
     ztc.installPackage('eke.specimens')

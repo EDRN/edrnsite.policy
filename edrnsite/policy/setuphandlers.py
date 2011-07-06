@@ -11,7 +11,6 @@ from eke.ecas.utils import COLLABORATIVE_GROUP_ECAS_IDS_TO_NAMES
 from eke.site.interfaces import IPerson
 from eke.specimens import SPECIMEN_TYPE_VOCAB_NAME, STORAGE_VOCAB_NAME
 from eke.specimens.interfaces import ISpecimenRecord
-from p4a.subtyper.interfaces import ISubtyper
 from plone.app.contentrules.rule import get_assignments
 from plone.app.ldap.engine.interfaces import ILDAPConfiguration
 from plone.app.ldap.engine.schema import LDAPProperty
@@ -490,6 +489,7 @@ def assignContentRules(portal):
 def createMembersListSearchPage(portal):
     '''Create the members list page'''
     # New in profile version 1 (software version 1.0.2):
+    request = portal.REQUEST
     if 'members-list' in portal.objectIds():
         portal.manage_delObjects('members-list')
     membersList = portal[portal.invokeFactory('Folder', 'members-list')]
@@ -497,8 +497,8 @@ def createMembersListSearchPage(portal):
     membersList.setDescription('EDRN member sites, investigators, and staff.')
     membersList.setExcludeFromNav(True)
     _doPublish(membersList, getToolByName(portal, 'portal_workflow'))
-    subtyper = getUtility(ISubtyper)
-    subtyper.change_type(membersList, 'eea.facetednavigation.FolderFacetedNavigable')
+    subtyper = getMultiAdapter((membersList, request), name=u'faceted_subtyper')
+    subtyper.enable()
     criteria = ICriteria(membersList)
     for cid in criteria.keys():
         criteria.delete(cid)
@@ -570,6 +570,7 @@ def createMembersListSearchPage(portal):
 
 def createSpecimenSearchPage(portal):
     '''Create the specimen search page'''
+    request = portal.REQUEST
     # New in profile version 1 (software version 1.0.2):
     if 'specimens' in portal.objectIds():
         portal.manage_delObjects('specimens')
@@ -577,8 +578,8 @@ def createSpecimenSearchPage(portal):
     specimens.setTitle('Specimens')
     specimens.setDescription('Search for specimens collected by EDRN members.')
     _doPublish(specimens, getToolByName(portal, 'portal_workflow'))
-    subtyper = getUtility(ISubtyper)
-    subtyper.change_type(specimens, 'eea.facetednavigation.FolderFacetedNavigable')
+    subtyper = getMultiAdapter((specimens, request), name=u'faceted_subtyper')
+    subtyper.enable()
     criteria = ICriteria(specimens)
     for cid in criteria.keys():
         criteria.delete(cid)

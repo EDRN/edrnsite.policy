@@ -12,7 +12,7 @@ import unittest
 from edrnsite.policy.tests.base import EDRNSitePolicyTestCase
 from Products.CMFCore.permissions import MailForgottenPassword
 from Products.CMFCore.utils import getToolByName
-from zope.component import queryMultiAdapter, getUtility
+from zope.component import queryMultiAdapter
 from zope.publisher.browser import TestRequest
 
 _typesNotSearched = frozenset((
@@ -274,13 +274,10 @@ class TestSetup(EDRNSitePolicyTestCase):
         fullIngestor = queryMultiAdapter((self.portal, TestRequest()), name=u'ingestEverythingFully')
         self.failUnless(fullIngestor is not None)
     def testFacetedNavigation(self):
-        '''See if eea.facetednavigation is installed, as well as the P4A Subtyper (which it ought to install
-        on its own, but fails to).'''
+        '''See if eea.facetednavigation is installed.'''
         from Products.ATContentTypes.content.folder import ATFolder
         from eea.facetednavigation.interfaces import IPossibleFacetedNavigable
         self.failUnless(IPossibleFacetedNavigable.implementedBy(ATFolder))
-        from p4a.subtyper.interfaces import ISubtyper
-        self.failUnless(getUtility(ISubtyper) is not None)
     def testForStaffNotStaffers(self):
         '''CA-681 doesn't like the word "staffers"; it wants just "staff"'''
         membersList = self.portal['members-list']

@@ -12,7 +12,6 @@ RESERVED. U.S. Government Sponsorship acknowledged.
 
     <five:registerPackage package='.' initialize='.initialize' />
 
-    <include package='p4a.subtyper' />
     <include package='eea.facetednavigation' file='meta.zcml'/>
     <include package='eea.facetednavigation' file='overrides.zcml'/>
     <include package='eea.facetednavigation' />

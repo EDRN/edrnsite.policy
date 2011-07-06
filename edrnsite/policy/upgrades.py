@@ -141,7 +141,7 @@ def upgrade0to1(setupTool):
     for product in _dependencies0:
         qi.upgradeProduct(product)
         transaction.commit()
-    qi.installProducts(['p4a.subtyper', 'eea.facetednavigation', 'eke.specimens'])
+    qi.installProducts(['eea.facetednavigation', 'eke.specimens'])
     setAutoIngestProperties(portal)
     createSpecimenSearchPage(portal)
     ingestSpecimens(portal, setupTool)
@@ -228,7 +228,7 @@ def upgrade1to4(setupTool):
     for product in _dependencies4:
         qi.upgradeProduct(product)
         transaction.commit()
-    qi.installProducts(['p4a.subtyper', 'eea.facetednavigation', 'eke.specimens'])
+    qi.installProducts(['eea.facetednavigation', 'eke.specimens'])
     installNewPackages(portal, _newPackages4)
     
     # Remove customizations that made it into software

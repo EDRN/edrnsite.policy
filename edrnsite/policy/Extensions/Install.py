@@ -8,7 +8,6 @@ from Products.CMFCore.utils import getToolByName
 import transaction
 
 PRODUCT_DEPENDENCIES = (
-    'p4a.subtyper',
     'eea.facetednavigation',
     'LoginLockout',
     'plone.app.ldap',

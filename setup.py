@@ -28,7 +28,6 @@ _externalRequirements = [
     'Products.LoginLockout',
     'plone.app.ldap',
     'plone.app.contentrules',
-    'p4a.subtyper',
     'eea.facetednavigation',
     'plone.app.discussion',
 ]
