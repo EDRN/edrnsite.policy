@@ -11,6 +11,8 @@ from eke.ecas.utils import COLLABORATIVE_GROUP_ECAS_IDS_TO_NAMES
 from eke.site.interfaces import IPerson
 from eke.specimens import SPECIMEN_TYPE_VOCAB_NAME, STORAGE_VOCAB_NAME
 from eke.specimens.interfaces import ISpecimenRecord
+from eke.study.interfaces import IProtocol
+from eke.study.utils import COLLABORATIVE_GROUP_DMCC_IDS_TO_NAMES
 from plone.app.contentrules.rule import get_assignments
 from plone.app.ldap.engine.interfaces import ILDAPConfiguration
 from plone.app.ldap.engine.schema import LDAPProperty
@@ -712,6 +714,9 @@ def createCollaborationsFolder(portal):
     biomarkers = [i.getObject() for i in catalog(object_provides=IBiomarker.__identifier__)]
     if len(biomarkers) == 0:
         _logger.warn('No biomarkers found via catalog. Cannot link collaborative groups to them.')
+    protocols = [i.getObject() for i in catalog(object_provides=IProtocol.__identifier__)]
+    if len(protocols) == 0:
+        _logger.warn('No protocols found via catalog. Cannot link protocols to them.')
     results = [i.getObject() for i in catalog(object_provides=ICommittee.__identifier__, committeeType='Collaborative Group')]
     _logger.info('Found %d Committee objects of type "Collaborative Group" via the catalog', len(results))
     if len(results) == 0 and 'committees' in portal.keys() and 'collaborative-groups' in portal['committees'].keys():
@@ -753,6 +758,17 @@ def createCollaborationsFolder(portal):
                     groupBiomarkers.append(biomarker)
                     break
         index.setBiomarkers(groupBiomarkers)
+        # And the protocols
+        groupProtocols = []
+        for protocol in protocols:
+            cbtext = protocol.collaborativeGroupText
+            if not cbtext: continue
+            cbtext = cbtext.strip() # DMCC sometimes has a single space in DB
+            for cbID in cbtext.split(', '):
+                cbName = COLLABORATIVE_GROUP_DMCC_IDS_TO_NAMES.get(cbID)
+                if cbName == committee.title:
+                    groupProtocols.append(protocol)
+        index.setProtocols(groupProtocols)
         _doPublish(cbg, wfTool)
         cbg.reindexObject()
     # C'est tout.
