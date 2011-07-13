@@ -7,8 +7,8 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
-1.1.2 - TBD
------------
+1.1.2 - Let's Collaborate!
+--------------------------
 
 This release includes:
 
@@ -16,6 +16,7 @@ This release includes:
 * A default collaborative group container at /collaborative-groups.
 * UI improvements to users & groups by enabling Plone's "many_users" and
   "many_groups" properties.
+* Upgrade improvements.
 
 
 1.1.1 - Upgrade Cleanup
