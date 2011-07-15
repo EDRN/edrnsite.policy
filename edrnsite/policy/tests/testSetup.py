@@ -288,10 +288,18 @@ class TestSetup(EDRNSitePolicyTestCase):
         self.failUnless(props.site_properties.getProperty('many_users'))
         self.failUnless(props.site_properties.getProperty('many_groups'))
     def testTableSorting(self):
-        u'''Check if everyone—not just authenticated users—can benefit from table sorting by clicking on column headers.'''
+        u'''Check if everyone—not just authenticated users—can benefit from table sorting by clicking on column headers.
+        Also, add a note about this feature and ensure it's published.
+        '''
         javascripts = getToolByName(self.portal, 'portal_javascripts')
         self.failIf(javascripts.getResource('table_sorter.js').getAuthenticated(),
             'table_sorter.js should not be for authenticated users only')
+        # Ensure the note about this function is available
+        adminFolder = self.portal['admin']
+        self.failUnless('viewing-tables' in adminFolder.keys(), 'Table viewing note is missing')
+        viewingTables = adminFolder['viewing-tables']
+        wfTool = getToolByName(self.portal, 'portal_workflow')
+        self.assertEquals('published', wfTool.getInfoFor(viewingTables, 'review_state'))
 
 def test_suite():
     suite = unittest.TestSuite()
