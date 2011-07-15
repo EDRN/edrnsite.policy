@@ -7,6 +7,7 @@ from plone.i18n.normalizer.interfaces import IIDNormalizer
 from Products.CMFCore.utils import getToolByName
 from setuphandlers import enableEmbeddableVideos, createCommitteesFolder, createCollaborationsFolder, _doPublish
 from setuphandlers import orderFolderTabs, createSpecimenSearchPage, ingestSpecimens, createMembersListSearchPage
+from setuphandlers import addTableSortingNote
 from zope.component import getMultiAdapter
 from zope.component import getUtility
 from zope.publisher.browser import TestRequest
@@ -270,6 +271,7 @@ def upgrade1to4(setupTool):
     # Enable table sorting for everyone
     javascripts = getToolByName(portal, 'portal_javascripts')
     javascripts.getResource('table_sorter.js').setAuthenticated(False)
+    addTableSortingNote(portal)
     transaction.commit()
 
     # Restore annoying link integrity checking

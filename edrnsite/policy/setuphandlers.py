@@ -41,6 +41,10 @@ _edrnHomePageBodyHTML = u'''<table><tbody>
 <td><a href="researchers">&#x25ba;&#x00a0;For Researchers</a></td></tr>
 </tbody></table>'''
 
+_viewingTablesNote = u'''<p>Most of the tables in this site support sorting through your browser. Just click on a heading in a table to sort by that heading.</p>
+<p>For example, if you're viewing the <a title="Biomarkers" class="internal-link" href="../biomarkers">Biomarkers</a> table, click on the "Type" column to sort all the biomarkers by alphabetical type. Click on the "Type" column again to reverse the sort order.</p>
+<p class="discreet">Note that this sorting function requires Javascript to be enabled in your browser.</p>'''
+
 _staticResourcesBaseURL = 'http://cancer.jpl.nasa.gov/static/'
 _edrnContentEvents = ('edrn-add-event', 'edrn-mod-event', 'edrn-del-event', 'edrn-pub-event')
 _edrnContentEventFolders = (
@@ -793,7 +797,26 @@ def createCommitteesFolder(portal):
     committees.rdfDataSource = u'http://ginger.fhcrc.org/dmcc/rdf-data/committees/rdf'
     committees.setExcludeFromNav(True)
     committees.reindexObject()
-    
+
+def addTableSortingNote(portal):
+    '''Add a note about how you can sort tables by clicking on the headings'''
+    wfTool = getToolByName(portal, 'portal_workflow')
+    if 'admin' not in portal.keys():
+        adminFolder = portal[portal.invokeFactory('Folder', 'admin')]
+        adminFolder.setTitle(u'Administrative Information')
+        adminFolder.setDescription(u'Miscellaneous administrative trivia such as site policies and other mandated information.')
+        _doPublish(adminFolder, wfTool)
+        adminFolder.reindexObject()
+    else:
+        adminFolder = portal['admin']
+    if 'viewing-tables' not in adminFolder.keys():
+        viewingTables = adminFolder[adminFolder.invokeFactory('Document', 'viewing-tables')]
+        viewingTables.setTitle(u'Viewing Tables')
+        viewingTables.setDescription(u'Tabular information may be sorted by clicking on column headings.')
+        viewingTables.setText(_viewingTablesNote)
+        _doPublish(viewingTables, wfTool)
+        viewingTables.reindexObject()
+
 def rebuildCatalog(portal):
     # Don't trust the catalog as delivered from NCI
     catalog = getToolByName(portal, 'portal_catalog')
@@ -831,3 +854,4 @@ def setupVarious(context):
     createMembersListSearchPage(portal)
     enableEmbeddableVideos(portal)
     createCollaborationsFolder(portal)
+    addTableSortingNote(portal)
