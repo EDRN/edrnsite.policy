@@ -287,6 +287,11 @@ class TestSetup(EDRNSitePolicyTestCase):
         props = getToolByName(self.portal, 'portal_properties')
         self.failUnless(props.site_properties.getProperty('many_users'))
         self.failUnless(props.site_properties.getProperty('many_groups'))
+    def testTableSorting(self):
+        u'''Check if everyone—not just authenticated users—can benefit from table sorting by clicking on column headers.'''
+        javascripts = getToolByName(self.portal, 'portal_javascripts')
+        self.failIf(javascripts.getResource('table_sorter.js').getAuthenticated(),
+            'table_sorter.js should not be for authenticated users only')
 
 def test_suite():
     suite = unittest.TestSuite()
