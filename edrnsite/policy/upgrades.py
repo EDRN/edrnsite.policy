@@ -230,36 +230,49 @@ def upgrade1to4(setupTool):
         transaction.commit()
     qi.installProducts(['eea.facetednavigation', 'eke.specimens'])
     installNewPackages(portal, _newPackages4)
+    transaction.commit()
     
     # Remove customizations that made it into software
     nukeCustomizedLoginForm(portal)
     nukeCustomizedCSS(portal)
     nukeCustomizedViews(portal)
     removeExtraViewlets(portal)
+    transaction.commit()
     
     # Recreate faceted pages
     createSpecimenSearchPage(portal)
     ingestSpecimens(portal, setupTool)
     createMembersListSearchPage(portal)
+    transaction.commit()
 
     # Create the eke.committees-provided Committees Folder
     createCommitteesFolder(portal)
+    transaction.commit()
 
     # Update ingest paths, then ingest the committees folder—and everything else too
     ingestPaths = portal.getProperty('edrnIngestPaths')
     ingestPaths += ('committees',)
     portal.manage_changeProperties(edrnIngestPaths=ingestPaths)
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
+    transaction.commit()
     
     # Add a container for Collaborative Groups (the QuickLinks portlet already has a link to it)
     # The new committees must already be ingested because the collaborative groups are built
     # from them (from committees whose type == 'Collaborative Group', specifically)
     createCollaborationsFolder(portal)
+    transaction.commit()
     
     # Set up the many_users/many_groups properties
     props = getToolByName(portal, 'portal_properties')
     props.site_properties.manage_changeProperties(many_users=True, many_groups=True)
+    transaction.commit()
 
-    # Re-ingest and restore annoying link integrity checking
+    # Enable table sorting for everyone
+    javascripts = getToolByName(portal, 'portal_javascripts')
+    javascripts.getResource('table_sorter.js').setAuthenticated(False)
+    transaction.commit()
+
+    # Restore annoying link integrity checking
     propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=origLinkIntegrityMode)
+    transaction.commit()
     
