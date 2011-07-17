@@ -232,7 +232,13 @@ def upgrade1to4(setupTool):
     qi.installProducts(['eea.facetednavigation', 'eke.specimens'])
     installNewPackages(portal, _newPackages4)
     transaction.commit()
-    
+ 
+    # FIXME: OK, the above allegedly did a reinstall of eke.publications which was a profile 0
+    # to profile 4. However, tracing through, I found it was already at profile 4! WTF?!
+    # Until I can figure that out, I'm manually calling eke.publications's upgrade step:
+    from eke.publications.upgrades import setUpFacetedNavigation
+    setUpFacetedNavigation(setupTool)
+   
     # Remove customizations that made it into software
     nukeCustomizedLoginForm(portal)
     nukeCustomizedCSS(portal)
