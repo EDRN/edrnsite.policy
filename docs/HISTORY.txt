@@ -6,6 +6,14 @@ about the issues mentioned here can be found at the issue tracker, at::
 
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
+1.1.3 - Smoother Edges
+----------------------
+
+This release includes:
+
+* Table sorting enabled for all users, not just authenticated users
+* Upgrades to the Publications tab with AJAX filtering
+
 
 1.1.2 - Let's Collaborate!
 --------------------------
