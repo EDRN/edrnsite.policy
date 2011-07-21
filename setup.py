@@ -1,5 +1,5 @@
 # encoding: utf-8
-# Copyright 2009-2010 California Institute of Technology. ALL RIGHTS
+# Copyright 2009-2011 California Institute of Technology. ALL RIGHTS
 # RESERVED. U.S. Government Sponsorship acknowledged.
 
 from setuptools import setup, find_packages
@@ -10,7 +10,7 @@ import os.path
 # ------------
 
 _name        = 'edrnsite.policy'
-_version     = '1.1.3'
+_version     = '1.1.4'
 _description = 'EDRN Public Portal Site Policy and Component Orchestration'
 _url         = 'http://cancer.jpl.nasa.gov/products/edrnsite-policy'
 _downloadURL = 'http://oodt.jpl.nasa.gov/dist/edrnsite'
