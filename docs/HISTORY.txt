@@ -6,6 +6,15 @@ about the issues mentioned here can be found at the issue tracker, at::
 
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
+1.1.4 - TBD
+-----------
+
+This release:
+
+* Leaves Collaborative Group objects as "private".
+* Adds sharing permissions to Collaborative Groups.
+
+
 1.1.3 - Smoother Edges
 ----------------------
 

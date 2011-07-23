@@ -30,6 +30,18 @@ from zope.component import getMultiAdapter, getUtility, queryUtility
 from zope.publisher.browser import TestRequest
 import urllib2, os, sys, logging
 
+# Mapping of DMCC-provided names of collaborative groups to the common name of the matching group in LDAP:
+COLLABORATIVE_GROUP_DMCC_IDS_TO_LDAP_GROUPS = {
+    u'Breast and Gynecologic Cancers Research Group': u'Breast and Gynecologic',
+    u'Lung and Upper Aerodigestive Cancers Research Group': u'Lung and Upper Aerodigestive',
+    u'G.I. and Other Associated Cancers Research Group': u'G.I. and Other Associated',
+    u'Prostate and Urologic Cancers Research Group': u'Prostate and Urologic',
+}
+# DMCC LDAP group name:
+FENG_FRED_LDAP_GROUP = u'Feng Fred Hutchinson Cancer Research Center'
+# NCI LDAP group name:
+NCI_LDAP_GROUP = u'National Cancer Institute'
+
 _logger = logging.getLogger('Plone')
 
 _edrnHomePageDescription = u'''The Early Detection Research Network (EDRN), an initiative of the National Cancer Institute (NCI), brings together dozens of institutions to help accelerate the translation of biomarker information into clinical applications and to evaluate new ways of testing cancer in its earliest stages and for cancer risk.
@@ -696,6 +708,17 @@ def createKnowledgeFolders(portal):
         obj.setDescription(desc)
         obj.reindexObject()
 
+def setCollaborativeGroupPermissions(collabGroup):
+    '''Enable sharing permissions on the given collaborative group.'''
+    ldapGroupName = COLLABORATIVE_GROUP_DMCC_IDS_TO_LDAP_GROUPS[collabGroup.Title()]    
+    settings = [
+        dict(type='group', id=ldapGroupName,        roles=[u'Reader', u'Editor', u'Contributor', u'Reviewer']), # Full rights
+        dict(type='group', id=FENG_FRED_LDAP_GROUP, roles=[u'Reader']), # Read only
+        dict(type='group', id=NCI_LDAP_GROUP,       roles=[u'Reader']), # Read only
+    ]
+    sharing = getMultiAdapter((collabGroup, TestRequest()), name=u'sharing')
+    sharing.update_role_settings(settings)
+
 def createCollaborationsFolder(portal):
     # New in profile version 4 (software version 1.1.2)
     wfTool = getToolByName(portal, 'portal_workflow')
@@ -735,6 +758,7 @@ def createCollaborationsFolder(portal):
         cbg = f[f.invokeFactory('Collaborative Group', committee.id)]
         cbg.setTitle(committee.title)
         cbg.setDescription(committee.description)
+        setCollaborativeGroupPermissions(cbg)
         index = cbg[cbg.invokeFactory('Collaborative Group Index', 'index_html')]
         index.setTitle(committee.title)
         index.setDescription(committee.description)
