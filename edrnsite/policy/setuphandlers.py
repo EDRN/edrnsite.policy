@@ -762,12 +762,17 @@ def createCollaborationsFolder(portal):
         index = cbg[cbg.invokeFactory('Collaborative Group Index', 'index_html')]
         index.setTitle(committee.title)
         index.setDescription(committee.description)
+        # Set the chair and co-chair
+        if len(committee.chair) > 0:
+            index.setChair(committee.chair[0])
+        if len(committee.coChair) > 0:
+            index.setCoChair(committee.coChair[0])
+        # Add the members of the group
         members = []
         members.extend(committee.member)
         members.extend(committee.consultant)
         members.extend(committee.coChair)
         members.extend(committee.chair)
-        # Add the members of the group
         index.setMembers(members)
         # Add the datasets that belong to this group
         groupDatasets = []

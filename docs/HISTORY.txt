@@ -13,6 +13,7 @@ This release:
 
 * Leaves Collaborative Group objects as "private".
 * Adds sharing permissions to Collaborative Groups.
+* Initially sets the chair and co-chair of Collaborative Groups.
 
 
 1.1.3 - Smoother Edges
