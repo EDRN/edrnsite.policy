@@ -277,6 +277,7 @@ def upgrade1to4(setupTool):
     # Enable table sorting for everyone
     javascripts = getToolByName(portal, 'portal_javascripts')
     javascripts.getResource('table_sorter.js').setAuthenticated(False)
+    javascripts.moveResourceBefore('table_sorter.js', 'dropdown.js')
     addTableSortingNote(portal)
     transaction.commit()
 
