@@ -771,8 +771,6 @@ def createCollaborationsFolder(portal):
         members = []
         members.extend(committee.member)
         members.extend(committee.consultant)
-        members.extend(committee.coChair)
-        members.extend(committee.chair)
         index.setMembers(members)
         # Add the datasets that belong to this group
         groupDatasets = []
