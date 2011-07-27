@@ -6,8 +6,8 @@ about the issues mentioned here can be found at the issue tracker, at::
 
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
-1.1.4 - TBD
------------
+1.1.4 — Edges So Smooth They Squeak
+-----------------------------------
 
 This release:
 
@@ -17,7 +17,7 @@ This release:
 * Honestly enables table sorting for all users.
 
 
-1.1.3 - Smoother Edges
+1.1.3 — Smoother Edges
 ----------------------
 
 This release includes:
@@ -26,7 +26,7 @@ This release includes:
 * Upgrades to the Publications tab with AJAX filtering
 
 
-1.1.2 - Let's Collaborate!
+1.1.2 — Let's Collaborate!
 --------------------------
 
 This release includes:
@@ -38,7 +38,7 @@ This release includes:
 * Upgrade improvements.
 
 
-1.1.1 - Upgrade Cleanup
+1.1.1 — Upgrade Cleanup
 -----------------------
 
 This release includes the following:
@@ -49,13 +49,13 @@ This release includes the following:
 * Removal of framework upgrade since that's out of this package's purview.
 
 
-1.1.0 - Plone 4
+1.1.0 — Plone 4
 ---------------
 
 This release makes edrnsite.policy compatible with Plone 4.
 
 
-1.0.5 - NCI Hates Cookies
+1.0.5 — NCI Hates Cookies
 -------------------------
 
 The following issues were addressed in this release:
@@ -65,7 +65,7 @@ The following issues were addressed in this release:
 * CA-597 - Add clock event to update sign-in secret
 
 
-1.0.4 - The Googles, They Do Nothing
+1.0.4 — The Googles, They Do Nothing
 ------------------------------------
 
 The following issue was addressed in this release:
@@ -73,7 +73,7 @@ The following issue was addressed in this release:
 * CA-726 - Google verification now requires specific page content
 
 
-1.0.3 - A Mixed Bag
+1.0.3 — A Mixed Bag
 -------------------
 
 The following issues were addressed in this release:
@@ -82,7 +82,7 @@ The following issues were addressed in this release:
 * CA-698 - "Structural" objects appear in searches
 
 
-1.0.2 - Specimen Search
+1.0.2 — Specimen Search
 -----------------------
 
 This time around, the policy package implements a dynamic search page for EDRN
@@ -96,7 +96,7 @@ The following issues are also addressed by this release:
 * CA-667 - Organ and title edits that were added were lost when re-ingesting
 
 
-1.0.1 - Ingest Cleanup
+1.0.1 — Ingest Cleanup
 ----------------------
 
 This release addresses the following:
@@ -109,7 +109,7 @@ embedded in portal pages.  See the issue tracker at
 https://oodt.jpl.nasa.gov/jira/browse/CA for more details.
 
 
-1.0.0 - Automation Spam
+1.0.0 — Automation Spam
 -----------------------
 
 This release addresses several issues: the automatic periodic ingest of RDF
@@ -130,7 +130,7 @@ member of the "National Cancer Institute" group.  For more details on this
 update, see https://oodt.jpl.nasa.gov/jira/browse/CA-644.
 
 
-0.0.7 - The Eleventh Hour
+0.0.7 — The Eleventh Hour
 -------------------------
 
 After viewing the new look-and-feel for EDRN across a variety of applications,
@@ -138,7 +138,7 @@ management suddenly realizes they don't like it.  This release attempts to
 satisfy them.  See https://oodt.jpl.nasa.gov/jira/browse/CA-599 for more.
 
 
-0.0.6 - Jackie Hates Our Content
+0.0.6 — Jackie Hates Our Content
 --------------------------------
 
 In release 0.0.6 of this component, we've addressed the following issues:
@@ -150,7 +150,7 @@ In release 0.0.6 of this component, we've addressed the following issues:
 * https://oodt.jpl.nasa.gov/jira/browse/CA-582 - Publications missing authors
 
 
-0.0.5 - Content in Four Part Harmony
+0.0.5 — Content in Four Part Harmony
 ------------------------------------
 
 The following issues are addressed in this release:
@@ -170,7 +170,7 @@ The following issues are addressed in this release:
 * https://oodt.jpl.nasa.gov/jira/browse/CA-563 - Remove CDE Links from Portal
 
 
-0.0.4 - To Be Named At Release Time
+0.0.4 — To Be Named At Release Time
 -----------------------------------
 
 The following issues are addressed in this release:
@@ -179,7 +179,7 @@ The following issues are addressed in this release:
   deployed as part of portal setup
 
 
-0.0.3 - EDRN SC Meeting 2010 RDF-ification
+0.0.3 — EDRN SC Meeting 2010 RDF-ification
 ------------------------------------------
 * http://oodt.jpl.nasa.gov/jira/browse/CA-521 - Load EDRN SC Mar 2010 meeting RDF into portal cache
 * http://oodt.jpl.nasa.gov/jira/browse/CA-498 - Disable mailing of
@@ -188,7 +188,7 @@ The following issues are addressed in this release:
 * http://oodt.jpl.nasa.gov/jira/browse/CA-509 - Research Tools need updating
 
 
-0.0.2 - Starting Content & Polish
+0.0.2 — Starting Content & Polish
 ---------------------------------
 
 This release includes a refresh cache of knowledge from the EDRN Catalog and
@@ -211,7 +211,7 @@ addition, this release addresses the following issues:
   Dates, and Review - Contact Investigator Link - Page Doesn't Exist
 
 
-0.0.1 - Content Updates and Broken Links
+0.0.1 — Content Updates and Broken Links
 ----------------------------------------
 
 The following issues have been addressed in this release:
@@ -224,7 +224,7 @@ The following issues have been addressed in this release:
   page
 
 
-0.0.0 - Unreleased
+0.0.0 — Unreleased
 ------------------
 
 Initial release into beta.
