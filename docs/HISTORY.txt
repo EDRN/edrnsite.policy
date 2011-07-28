@@ -6,6 +6,15 @@ about the issues mentioned here can be found at the issue tracker, at::
 
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
+
+1.1.5 — Members List Improvements
+---------------------------------
+
+This release covers:
+
+* CA-789 - Members list improvements
+
+
 1.1.4 — Edges So Smooth They Squeak
 -----------------------------------
 

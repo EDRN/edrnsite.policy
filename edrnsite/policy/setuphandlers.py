@@ -512,7 +512,7 @@ def createMembersListSearchPage(portal):
         portal.manage_delObjects('members-list')
     membersList = portal[portal.invokeFactory('Folder', 'members-list')]
     membersList.setTitle('Members List')
-    membersList.setDescription('EDRN member sites, investigators, and staff.')
+    membersList.setDescription('A directory of the people that comprise EDRN.')
     membersList.setExcludeFromNav(True)
     _doPublish(membersList, getToolByName(portal, 'portal_workflow'))
     subtyper = getMultiAdapter((membersList, request), name=u'faceted_subtyper')
@@ -560,7 +560,7 @@ def createMembersListSearchPage(portal):
     )
     criteria.add(
         'checkbox', 'left', 'default',
-        title='Sites',
+        title='Institution',
         hidden=False,
         index='siteName',
         operator='or',
@@ -572,13 +572,13 @@ def createMembersListSearchPage(portal):
     )
     criteria.add(
         'checkbox', 'left', 'default',
-        title='Type',
+        title='Member Type',
         hidden=False,
         index='memberType',
         operator='or',
         vocabulary=u'eke.site.MemberType',
         count=True,
-        maxitems=8,
+        maxitems=20,
         sortreversed=False,
         hidezerocount=False
     )
