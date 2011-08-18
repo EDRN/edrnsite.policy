@@ -30,6 +30,7 @@ _externalRequirements = [
     'plone.app.contentrules',
     'eea.facetednavigation',
     'plone.app.discussion',
+    'plone.app.caching',
 ]
 _classifiers = [
     'Development Status :: 4 - Beta',

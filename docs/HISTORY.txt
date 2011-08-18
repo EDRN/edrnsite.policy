@@ -12,7 +12,8 @@ about the issues mentioned here can be found at the issue tracker, at::
 
 This release covers:
 
-* CA-786 - Signing secrets not updated in P4 version of Portal
+* CA-786 - Signing secrets not updated in P4
+* CA-782 - plone.app.caching not including in EDRN Portal 4
 
 
 1.1.5 — Members List Improvements
