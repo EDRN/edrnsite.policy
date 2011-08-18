@@ -2,8 +2,9 @@
 # Copyright 2011 California Institute of Technology. ALL RIGHTS
 # RESERVED. U.S. Government Sponsorship acknowledged.
 
-from zope.app.component.hooks import getSite
+from plone.keyring.interfaces import IKeyManager
 from Products.Five.browser import BrowserView
+from zope.component import getUtility
 
 class SecretGenerator(BrowserView):
     '''
@@ -11,7 +12,5 @@ class SecretGenerator(BrowserView):
     and http://markmail.org/message/ps3mzznxiek6snnz.
     '''
     def __call__(self):
-        portal = getSite()
-        session = portal.unrestrictedTraverse(('acl_users', 'session'))
-        session.source.createNewSecret() # POS
-    
+        keyManager = getUtility(IKeyManager)
+        keyManager.rotate()

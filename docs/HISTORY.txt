@@ -7,6 +7,14 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
+1.1.6 — Signing Secrets
+-----------------------
+
+This release covers:
+
+* CA-786 - Signing secrets not updated in P4 version of Portal
+
+
 1.1.5 — Members List Improvements
 ---------------------------------
 
