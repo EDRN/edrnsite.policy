@@ -47,7 +47,7 @@ class TestSetup(EDRNSitePolicyTestCase):
             'Protocol',
             'Publication',
             'Site',
-            'Specimen Folder',
+            'Specimen Collection Folder',
             'Committee',
         ):
             self.failUnless(t in types.objectIds(), 'Content type "%s" missing' % t)
@@ -127,7 +127,6 @@ class TestSetup(EDRNSitePolicyTestCase):
             ('admin',),
             ('members-list',),
             ('specimens',),
-            ('specimens', 'bank'),
             ('committees',),
             ('collaborative-groups',),
         ):
