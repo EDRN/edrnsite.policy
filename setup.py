@@ -31,6 +31,8 @@ _externalRequirements = [
     'eea.facetednavigation',
     'plone.app.discussion',
     'plone.app.caching',
+    'plone.app.dexterity',
+    'Pillow',
 ]
 _classifiers = [
     'Development Status :: 4 - Beta',

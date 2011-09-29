@@ -9,8 +9,6 @@ from eke.committees.interfaces import ICommittee
 from eke.ecas.interfaces import IDataset
 from eke.ecas.utils import COLLABORATIVE_GROUP_ECAS_IDS_TO_NAMES
 from eke.site.interfaces import IPerson
-from eke.specimens import SPECIMEN_TYPE_VOCAB_NAME, STORAGE_VOCAB_NAME
-from eke.specimens.interfaces import ISpecimenRecord
 from eke.study.interfaces import IProtocol
 from eke.study.utils import COLLABORATIVE_GROUP_DMCC_IDS_TO_NAMES
 from plone.app.contentrules.rule import get_assignments
@@ -138,24 +136,6 @@ def _doPublish(item, wfTool):
         subItem = item[i]
         _doPublish(subItem, wfTool)
 
-def ingestSpecimens(portal, context):
-    # New in profile version 1 (software version 1.0.2)
-    targetFolder = portal['specimens']
-    if 'bank' in targetFolder.objectIds():
-        request = getattr(targetFolder, 'REQUEST')
-        getattr(request, 'environ')[ILinkIntegrityInfo(request).getEnvMarker()] = 'all'
-        targetFolder.manage_delObjects('bank')
-    specimensFolder = targetFolder[targetFolder.invokeFactory('Specimen Folder', 'bank')]
-    specimensFolder.title = 'Bank'
-    specimensFolder.description = 'Medical samples and other specimens from both cancer-positive and cancer-negative participants, as well as reference sets of specimens.'
-    _doPublish(specimensFolder, getToolByName(portal, 'portal_workflow'))
-    specimensFolder.reindexObject()
-    ingestor = getMultiAdapter((specimensFolder, TestRequest()), name=u'ingest')
-    ingestor.render = False
-    try:
-        ingestor()
-    except:
-        pass
 
 def _ingest(rootPath, path, traverse, url, force=False):
     '''Ingest into a folder at path rooted at rootPath using given traverse function. Set the RDF data source
@@ -586,86 +566,6 @@ def createMembersListSearchPage(portal):
     criteria.add('criteria', 'top', 'default', title='Current Search')
     membersList.reindexObject()
 
-def createSpecimenSearchPage(portal):
-    '''Create the specimen search page'''
-    request = portal.REQUEST
-    # New in profile version 1 (software version 1.0.2):
-    if 'specimens' in portal.objectIds():
-        portal.manage_delObjects('specimens')
-    specimens = portal[portal.invokeFactory('Folder', 'specimens')]
-    specimens.setTitle('Specimens')
-    specimens.setDescription('Search for specimens collected by EDRN members.')
-    _doPublish(specimens, getToolByName(portal, 'portal_workflow'))
-    subtyper = getMultiAdapter((specimens, request), name=u'faceted_subtyper')
-    subtyper.enable()
-    criteria = ICriteria(specimens)
-    for cid in criteria.keys():
-        criteria.delete(cid)
-    criteria.add('resultsperpage', 'bottom', 'default', title='Results per page', hidden=True, start=0, end=50, step=5, default=20)
-    criteria.add('sorting', 'bottom', 'default', title='Sort on', hidden=True, default='sortable_title(reverse)')
-    criteria.add(
-        'checkbox', 'bottom', 'default',
-        title='Obj provides',
-        hidden=True,
-        index='object_provides',
-        operator='or',
-        vocabulary=u'eea.faceted.vocabularies.ObjectProvides',
-        default=[ISpecimenRecord.__identifier__],
-        count=False,
-        maxitems=0,
-        sortreversed=False,
-        hidezerocount=False
-    )
-    criteria.add(
-        'checkbox', 'left', 'default',
-        title='Site',
-        hidden=False,
-        index='siteName',
-        operator='or',
-        vocabulary='eke.specimens.ERNESites',
-        count=False,
-        maxitems=6,
-        sortreversed=False,
-        hidezerocount=False
-    )
-    criteria.add(
-        'checkbox', 'left', 'default',
-        title='Collection',
-        hidden=False,
-        index='specimenType',
-        operator='or',
-        vocabulary=SPECIMEN_TYPE_VOCAB_NAME,
-        count=False,
-        maxitems=6,
-        sortreversed=False,
-        hidezerocount=False
-    )
-    criteria.add(
-        'checkbox', 'left', 'default',
-        title='Storage',
-        index='storageType',
-        operator='or',
-        vocabulary=STORAGE_VOCAB_NAME,
-        count=False,
-        maxitems=6,
-        sortreversed=False,
-        hidezerocount=False
-    )
-    criteria.add(
-        'checkbox', 'left', 'default',
-        title='Cancer Diagnosis',
-        index='cancerDiagnosis',
-        operator='or',
-        vocabulary=u'eke.specimens.CancerDiagnosisVocabulary',
-        count=False,
-        maxitems=0,
-        sortreversed=False,
-        hidezerocount=False
-    )
-    criteria.add('debug', 'top', 'default', title='Debug Criteria', user='kelly')
-    criteria.add('criteria', 'top', 'default', title='Current Search')
-    specimens.reindexObject()
-
 
 def enableEmbeddableVideos(portal):
     '''Allow use of YouTube tags'''
@@ -850,6 +750,17 @@ def rebuildCatalog(portal):
     catalog.clearFindAndRebuild()
 
 
+def createSpecimensPage(portal):
+    '''Create the new specimens page.'''
+    if 'specimens' in portal.keys(): return
+    specimens = portal[portal.invokeFactory('Specimen Collection Folder', 'specimens')]
+    specimens.setTitle(u'Specimens')
+    specimens.setDescription(u'Specimens collected by EDRN and shared with EDRN.')
+    specimens.setText(u'<p>This folder contains specimens available to EDRN and collected in EDRN protocols.</p>')
+    specimens.reindexObject()
+    _doPublish(specimens, getToolByName(portal, 'portal_workflow'))
+
+
 def setupVarious(context):
     '''Miscellaneous import steps.'''
     if context.readDataFile('edrnsite.policy.flag.txt') is None:
@@ -866,8 +777,7 @@ def setupVarious(context):
     connectLDAP(portal)
     createCommitteesFolder(portal)
     ingestInitially(portal, context)
-    createSpecimenSearchPage(portal)
-    ingestSpecimens(portal, context)
+    createSpecimensPage(portal)
     deleteDefaultPortlets(portal)
     publishKnowledge(portal)
     orderFolderTabs(portal)

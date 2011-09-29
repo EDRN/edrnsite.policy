@@ -18,6 +18,7 @@ RESERVED. U.S. Government Sponsorship acknowledged.
     <include package='plone.app.ldap' />
     <include package='plone.app.discussion' />
     <include package='plone.app.caching' />
+    <include package='plone.app.dexterity' />
     <include package='edrn.theme' />
     <include package='edrnsite.portlets'/>
     <include package='edrnsite.funding'/>

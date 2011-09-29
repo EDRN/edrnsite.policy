@@ -6,7 +6,7 @@ from plone.app.viewletmanager.interfaces import IViewletSettingsStorage
 from plone.i18n.normalizer.interfaces import IIDNormalizer
 from Products.CMFCore.utils import getToolByName
 from setuphandlers import enableEmbeddableVideos, createCommitteesFolder, createCollaborationsFolder, _doPublish
-from setuphandlers import orderFolderTabs, createSpecimenSearchPage, ingestSpecimens, createMembersListSearchPage
+from setuphandlers import orderFolderTabs, createMembersListSearchPage, createSpecimensPage
 from setuphandlers import addTableSortingNote
 from zope.component import getMultiAdapter
 from zope.component import getUtility
@@ -87,7 +87,6 @@ def setAutoIngestProperties(portal):
             'science-data',
             'biomarkers',
             'committees',
-            'specimens/bank',
         )
         portal.manage_addProperty('edrnIngestPaths', ingestPaths, 'lines')
 
@@ -144,8 +143,6 @@ def upgrade0to1(setupTool):
         transaction.commit()
     qi.installProducts(['eea.facetednavigation', 'eke.specimens'])
     setAutoIngestProperties(portal)
-    createSpecimenSearchPage(portal)
-    ingestSpecimens(portal, setupTool)
     orderFolderTabs(portal)
     createMembersListSearchPage(portal)
     enableEmbeddableVideos(portal)
@@ -207,6 +204,11 @@ def ingestCommittees(portal):
         pass
     _doPublish(committees, getToolByName(portal, 'portal_workflow'))
 
+def resetIngestPaths(portal):
+    if portal.hasProperty('edrnIngestPaths'):
+        portal.manage_delProperties(['edrnIngestPaths'])
+    setAutoIngestProperties(portal)
+
 def upgrade1to4(setupTool):
     portal = _getPortal(setupTool)
     
@@ -218,6 +220,10 @@ def upgrade1to4(setupTool):
     # I do not comprehend why we still have old-style site IDs.  Kill 'em all
     # and let re-ingest bring 'em back
     portal.sites.manage_delObjects(portal.sites.keys())
+    
+    # Kill the old specimens tab
+    if 'specimens' in portal.keys():
+        portal.manage_delObjects('specimens')
     
     # Recatalog
     catalog = getToolByName(portal, 'portal_catalog')
@@ -247,15 +253,18 @@ def upgrade1to4(setupTool):
     transaction.commit()
     
     # Recreate faceted pages
-    createSpecimenSearchPage(portal)
-    ingestSpecimens(portal, setupTool)
     createMembersListSearchPage(portal)
     transaction.commit()
-
+    
     # Create the eke.committees-provided Committees Folder
     createCommitteesFolder(portal)
     transaction.commit()
-
+    
+    # Create the new specimens folder
+    createSpecimensPage(portal)
+    resetIngestPaths(portal)
+    transaction.commit()
+    
     # Update ingest paths, then ingest the committees folder—and everything else too
     ingestPaths = portal.getProperty('edrnIngestPaths')
     ingestPaths += ('committees',)

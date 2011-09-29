@@ -7,6 +7,13 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
+1.1.7 — Fresh Specimens
+-----------------------
+
+This release includes the brand new eke.specimens package which simplifies
+specimens for reference sets, PRoBE, and ERNE.
+
+
 1.1.6 — Signing Secrets
 -----------------------
 

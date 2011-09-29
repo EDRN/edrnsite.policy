@@ -300,6 +300,12 @@ class TestSetup(EDRNSitePolicyTestCase):
         viewingTables = adminFolder['viewing-tables']
         wfTool = getToolByName(self.portal, 'portal_workflow')
         self.assertEquals('published', wfTool.getInfoFor(viewingTables, 'review_state'))
+    def testAddons(self):
+        '''Check that dependent packages are installed'''
+        qi = getToolByName(self.portal, 'portal_quickinstaller')
+        # For the future:
+        # self.failUnless(qi.isProductInstalled('plone.app.dexterity'), "Dexterity wasn't installed")
+
 
 def test_suite():
     suite = unittest.TestSuite()
