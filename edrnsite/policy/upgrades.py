@@ -245,8 +245,10 @@ def upgrade1to4(setupTool):
     from eke.publications.upgrades import setUpFacetedNavigation
     setUpFacetedNavigation(setupTool)
     # Same with specimens:
-    from eke.specimens.upgrades import addSampleSpecimenSets
+    from eke.specimens.upgrades import addSampleSpecimenSets, addFacetedSearch, updateDiagnosisIndex
     addSampleSpecimenSets(setupTool)
+    addFacetedSearch(setupTool)
+    updateDiagnosisIndex(setupTool)
    
     # Remove customizations that made it into software
     nukeCustomizedLoginForm(portal)
