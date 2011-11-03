@@ -19,7 +19,8 @@ from plone.app.ldap.ploneldap.util import guaranteePluginExists
 from plone.app.linkintegrity.interfaces import ILinkIntegrityInfo
 from plone.contentrules.engine.assignments import RuleAssignment
 from plone.contentrules.engine.interfaces import IRuleStorage, IRuleAssignmentManager
-from plone.portlets.interfaces import IPortletManager, IPortletAssignmentMapping
+from plone.portlets.constants import CONTEXT_CATEGORY
+from plone.portlets.interfaces import IPortletManager, IPortletAssignmentMapping, ILocalPortletAssignmentManager
 from Products.CMFCore.permissions import MailForgottenPassword
 from Products.CMFCore.utils import getToolByName
 from Products.CMFCore.WorkflowCore import WorkflowException
@@ -760,6 +761,14 @@ def createSpecimensPage(portal):
     specimens.reindexObject()
     _doPublish(specimens, getToolByName(portal, 'portal_workflow'))
 
+def disableSpecimenPortlets(portal):
+    '''Disable portlets on the right side of the Specimens page.'''
+    if 'specimens' not in portal.keys(): return
+    specimens = portal['specimens']
+    column = getUtility(IPortletManager, name=u'plone.rightcolumn')
+    assignmentMgr = getMultiAdapter((specimens, column), ILocalPortletAssignmentManager)
+    assignmentMgr.setBlacklistStatus(CONTEXT_CATEGORY, True)
+
 
 def setupVarious(context):
     '''Miscellaneous import steps.'''
@@ -778,6 +787,7 @@ def setupVarious(context):
     createCommitteesFolder(portal)
     ingestInitially(portal, context)
     createSpecimensPage(portal)
+    disableSpecimenPortlets(portal)
     deleteDefaultPortlets(portal)
     publishKnowledge(portal)
     orderFolderTabs(portal)

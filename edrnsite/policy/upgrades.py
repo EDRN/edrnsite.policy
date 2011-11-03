@@ -6,7 +6,7 @@ from plone.app.viewletmanager.interfaces import IViewletSettingsStorage
 from plone.i18n.normalizer.interfaces import IIDNormalizer
 from Products.CMFCore.utils import getToolByName
 from setuphandlers import enableEmbeddableVideos, createCommitteesFolder, createCollaborationsFolder, _doPublish
-from setuphandlers import orderFolderTabs, createMembersListSearchPage, createSpecimensPage
+from setuphandlers import orderFolderTabs, createMembersListSearchPage, createSpecimensPage, disableSpecimenPortlets
 from setuphandlers import addTableSortingNote
 from zope.component import getMultiAdapter
 from zope.component import getUtility
@@ -267,6 +267,7 @@ def upgrade1to4(setupTool):
     
     # Create the new specimens folder
     createSpecimensPage(portal)
+    disableSpecimenPortlets(portal)
     resetIngestPaths(portal)
     transaction.commit()
     
