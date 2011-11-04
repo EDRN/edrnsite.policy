@@ -15,11 +15,11 @@ import logging
 _logger = logging.getLogger(__name__)
 
 # These folders set their publication state based on security directives in their
-# RDF streams, and therefore don't need a manual publication step.
-_doNotPublish = ('biomarkers', 'science-data')
+# RDF streams (or in their ingest code), and therefore don't need a manual publication step.
+_doNotPublish = ('biomarkers', 'science-data', 'specimens')
 
 # These folders update their contents and require no deletion beforehand
-_doNotDelete = ('sites',)
+_doNotDelete = ('sites', 'specimens')
 
 class FullIngestor(BrowserView):
     '''Perform a full ingest from our external data sources'''
