@@ -20,6 +20,6 @@ RESERVED. U.S. Government Sponsorship acknowledged.
         <element value='protocols'/>
         <element value='science-data'/>
         <element value='biomarkers'/>
-        <element value='specimens/bank'/>
+        <element value='specimens'/>
     </property>
 </site>
