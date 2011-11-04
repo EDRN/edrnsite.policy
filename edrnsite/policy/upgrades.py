@@ -271,9 +271,9 @@ def upgrade1to4(setupTool):
     resetIngestPaths(portal)
     transaction.commit()
     
-    # Update ingest paths, then ingest the committees folder—and everything else too
+    # Update ingest paths, then ingest the committees & specimens folder—and everything else too
     ingestPaths = portal.getProperty('edrnIngestPaths')
-    ingestPaths += ('committees',)
+    ingestPaths += ('committees', 'specimens')
     portal.manage_changeProperties(edrnIngestPaths=ingestPaths)
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
     transaction.commit()
