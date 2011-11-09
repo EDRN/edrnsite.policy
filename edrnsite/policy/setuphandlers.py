@@ -778,6 +778,15 @@ def setEditorProperties(portal):
     props = propsTool.site_properties
     if props.getProperty('default_editor') == 'Kupu':
         props.manage_changeProperties(default_editor='TinyMCE')
+
+def makeFilesVersionable(portal):
+    repo = getToolByName(portal, 'portal_repository')
+    versionableTypes = repo.getVersionableContentTypes()
+    if 'File' in versionableTypes: return
+    versionableTypes.append('File')
+    repo.addPolicyForContentType('File', 'at_edit_autoversion')
+    repo.addPolicyForContentType('File', 'version_on_revert')
+    repo.setVersionableContentTypes(versionableTypes)
     
 
 def setupVarious(context):
@@ -786,6 +795,7 @@ def setupVarious(context):
         return
     portal = context.getSite()
     setEditorProperties(portal)
+    makeFilesVersionable(portal)
     rebuildCatalog(portal)
     importOtherContent(portal, context)
     addAdminstriviaImages(portal, context)

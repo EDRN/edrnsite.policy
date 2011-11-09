@@ -67,7 +67,7 @@ class TestSetup(EDRNSitePolicyTestCase):
     def testVersionableTypes(self):
         repository = getToolByName(self.portal, 'portal_repository')
         versionableTypes = repository.getVersionableContentTypes()
-        # TODO: for typeID in ...; or in other words, what should be versionable in the EDRN public portal?
+        self.failUnless('File' in versionableTypes)
     def testPresentationMode(self):
         '''Make sure presentation mode is turned off for the welcome page.'''
         frontPage = self.portal['front-page']

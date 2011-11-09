@@ -7,7 +7,7 @@ from plone.i18n.normalizer.interfaces import IIDNormalizer
 from Products.CMFCore.utils import getToolByName
 from setuphandlers import enableEmbeddableVideos, createCommitteesFolder, createCollaborationsFolder, _doPublish
 from setuphandlers import orderFolderTabs, createMembersListSearchPage, createSpecimensPage, disableSpecimenPortlets
-from setuphandlers import addTableSortingNote, setEditorProperties
+from setuphandlers import addTableSortingNote, setEditorProperties, makeFilesVersionable
 from zope.component import getMultiAdapter
 from zope.component import getUtility
 from zope.publisher.browser import TestRequest
@@ -284,8 +284,10 @@ def upgrade1to4(setupTool):
     
     # Add a container for Collaborative Groups (the QuickLinks portlet already has a link to it)
     # The new committees must already be ingested because the collaborative groups are built
-    # from them (from committees whose type == 'Collaborative Group', specifically)
+    # from them (from committees whose type == 'Collaborative Group', specifically).
+    # Also, we expect Collaborative Groups to upload & download files, so make them versionable.
     createCollaborationsFolder(portal)
+    makeFilesVersionable(portal)
     transaction.commit()
     
     # Set up the many_users/many_groups properties

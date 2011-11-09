@@ -13,6 +13,7 @@ about the issues mentioned here can be found at the issue tracker, at::
 This release addresses the following:
 
 * CA-812 - WYSIWYG editor is set to "Kupu" in Portal 4, should be "TinyMCE"
+* CA-770 - Enable versioning on files
 
 
 1.1.7 — Fresh Specimens
