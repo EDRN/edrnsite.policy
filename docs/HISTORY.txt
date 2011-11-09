@@ -7,6 +7,14 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
+1.1.8 — TBD
+-----------
+
+This release addresses the following:
+
+* CA-812 - WYSIWYG editor is set to "Kupu" in Portal 4, should be "TinyMCE"
+
+
 1.1.7 — Fresh Specimens
 -----------------------
 

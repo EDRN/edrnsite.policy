@@ -7,7 +7,7 @@ from plone.i18n.normalizer.interfaces import IIDNormalizer
 from Products.CMFCore.utils import getToolByName
 from setuphandlers import enableEmbeddableVideos, createCommitteesFolder, createCollaborationsFolder, _doPublish
 from setuphandlers import orderFolderTabs, createMembersListSearchPage, createSpecimensPage, disableSpecimenPortlets
-from setuphandlers import addTableSortingNote
+from setuphandlers import addTableSortingNote, setEditorProperties
 from zope.component import getMultiAdapter
 from zope.component import getUtility
 from zope.publisher.browser import TestRequest
@@ -255,6 +255,10 @@ def upgrade1to4(setupTool):
     nukeCustomizedCSS(portal)
     nukeCustomizedViews(portal)
     removeExtraViewlets(portal)
+    transaction.commit()
+    
+    # Make sure we're using the Plone 4 editor, TinyMCE, and not the Plone 3 editor, Kupu
+    setEditorProperties(portal)
     transaction.commit()
     
     # Recreate faceted pages

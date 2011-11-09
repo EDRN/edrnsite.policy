@@ -769,12 +769,23 @@ def disableSpecimenPortlets(portal):
     assignmentMgr = getMultiAdapter((specimens, column), ILocalPortletAssignmentManager)
     assignmentMgr.setBlacklistStatus(CONTEXT_CATEGORY, True)
 
+def setEditorProperties(portal):
+    '''Get rid of Kupu and use TinyMCE'''
+    qi = getToolByName(portal, 'portal_quickinstaller')
+    if qi.isProductInstalled('kupu'):
+        qi.uninstallProducts(['kupu'])
+    propsTool = getToolByName(portal, 'portal_properties')
+    props = propsTool.site_properties
+    if props.getProperty('default_editor') == 'Kupu':
+        props.manage_changeProperties(default_editor='TinyMCE')
+    
 
 def setupVarious(context):
     '''Miscellaneous import steps.'''
     if context.readDataFile('edrnsite.policy.flag.txt') is None:
         return
     portal = context.getSite()
+    setEditorProperties(portal)
     rebuildCatalog(portal)
     importOtherContent(portal, context)
     addAdminstriviaImages(portal, context)
