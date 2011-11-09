@@ -304,7 +304,11 @@ class TestSetup(EDRNSitePolicyTestCase):
         qi = getToolByName(self.portal, 'portal_quickinstaller')
         # For the future:
         # self.failUnless(qi.isProductInstalled('plone.app.dexterity'), "Dexterity wasn't installed")
-
+    def testEditingSettings(self):
+        '''Ensure editor settings are correct'''
+        props = self.portal.portal_properties.site_properties
+        self.failIf('Kupu' in props.getProperty('available_editors'))
+        self.assertEquals('TinyMCE', props.getProperty('default_editor'))
 
 def test_suite():
     suite = unittest.TestSuite()
