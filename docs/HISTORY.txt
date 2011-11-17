@@ -7,8 +7,8 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
-1.1.8 — TBD
------------
+1.1.8 — Misc
+------------
 
 This release addresses the following:
 
