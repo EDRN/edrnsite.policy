@@ -10,7 +10,11 @@ about the issues mentioned here can be found at the issue tracker, at::
 1.1.9 — TBD
 -----------
 
-This release locks some versions of dependent components.
+This release includes the following:
+
+* CA-841 - Project flags cleared and disassociated from Collaborative Groups
+  (from Kincaid via IM)
+* Locks some versions of dependent components
 
 
 1.1.8 — Misc

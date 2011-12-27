@@ -19,7 +19,7 @@ _logger = logging.getLogger(__name__)
 _doNotPublish = ('biomarkers', 'science-data', 'specimens')
 
 # These folders update their contents and require no deletion beforehand
-_doNotDelete = ('sites', 'specimens')
+_doNotDelete = ('protocols', 'sites', 'specimens')
 
 class FullIngestor(BrowserView):
     '''Perform a full ingest from our external data sources'''
