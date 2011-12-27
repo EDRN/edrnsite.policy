@@ -309,6 +309,11 @@ class TestSetup(EDRNSitePolicyTestCase):
         props = self.portal.portal_properties.site_properties
         self.failIf('Kupu' in props.getProperty('available_editors'))
         self.assertEquals('TinyMCE', props.getProperty('default_editor'))
+    def testAutoIngestDeletionList(self):
+        '''Verify that "protocols" is included in the list of ingest paths that we don't delete first (CA-841).'''
+        from edrnsite.policy.browser.ingest import _doNotDelete
+        self.failUnless('protocols' in _doNotDelete, 'Protocols must appear in the _doNotDelete sequence')
+    
 
 def test_suite():
     suite = unittest.TestSuite()
