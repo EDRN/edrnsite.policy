@@ -306,3 +306,7 @@ def upgrade1to4(setupTool):
     propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=origLinkIntegrityMode)
     transaction.commit()
     
+
+def upgrade4to5(setupTool):
+    # Nothing custom needs to be done (yet)
+    pass
