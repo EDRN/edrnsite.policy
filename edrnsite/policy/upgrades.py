@@ -308,5 +308,12 @@ def upgrade1to4(setupTool):
     
 
 def upgrade4to5(setupTool):
-    # Nothing custom needs to be done (yet)
-    pass
+    portal = _getPortal(setupTool)
+    # Disable annoying link integrity checking
+    propTool = getToolByName(portal, 'portal_properties')
+    origLinkIntegrityMode = propTool.site_properties.getProperty('enable_link_integrity_checks', True)
+    propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
+    # TODO: nuke the login lockout db
+    # Restore annoying link integrity checking
+    propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=origLinkIntegrityMode)
+    transaction.commit()

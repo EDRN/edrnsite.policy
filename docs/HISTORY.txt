@@ -7,7 +7,7 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
-1.1.9 — TBD
+1.2.0 — TBD
 -----------
 
 This release includes the following:
@@ -17,6 +17,7 @@ This release includes the following:
 * Locks some versions of dependent components
 * Updates portal database from profile 4 to 5.  Profile 4 corresponds to
   edrn.nci.nih.gov-4.1-FINAL and was deployed at NCI in December 2011.
+* Upgrades to Plone 4.1 and EEA's Faceted Navigation 4.1
 
 
 1.1.8 — Misc

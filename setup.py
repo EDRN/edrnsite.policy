@@ -28,11 +28,11 @@ _externalRequirements = [
     'Products.LoginLockout',
     'plone.app.ldap',
     'plone.app.contentrules',
-    'eea.facetednavigation',
     'plone.app.discussion',
     'plone.app.caching',
     'plone.app.dexterity',
     'Pillow',
+    'eea.facetednavigation',
 ]
 _classifiers = [
     'Development Status :: 4 - Beta',
