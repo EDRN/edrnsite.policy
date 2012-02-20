@@ -25,7 +25,7 @@ from Products.CMFCore.permissions import MailForgottenPassword
 from Products.CMFCore.utils import getToolByName
 from Products.CMFCore.WorkflowCore import WorkflowException
 from ZODB.DemoStorage import DemoStorage
-from zope.component import getMultiAdapter, getUtility, queryUtility
+from zope.component import getMultiAdapter, getUtility, queryUtility, ComponentLookupError
 from zope.publisher.browser import TestRequest
 import urllib2, os, sys, logging
 
@@ -72,8 +72,9 @@ _edrnContentEventFolders = (
 
 def disablePresentationMode(portal):
     '''Turn off front page's presentation mode.'''
-    if portal['front-page'].presentation:
-        portal['front-page'].presentation = False
+    if 'front-page' in portal.keys():
+        if portal['front-page'].presentation:
+            portal['front-page'].presentation = False
 
 def privatizePloneFolders(portal):
     '''Make Plone's default folders of Members, News, and Events private.'''
@@ -87,14 +88,20 @@ def privatizePloneFolders(portal):
 def addGoogleVerificationPage(portal):
     '''Add a verification page for Google Webmaster tools.'''
     if 'google6303b8e42ec16379.html' not in portal.objectIds():
-        portal.manage_addProduct['PageTemplates'].manage_addPageTemplate(
-            id='google6303b8e42ec16379.html', title='Google Verification',
-            text=u"<tal:content replace='string:google-site-verification: google6303b8e42ec16379.html'/>"
-        )
+        try:
+            portal.manage_addProduct['PageTemplates'].manage_addPageTemplate(
+                id='google6303b8e42ec16379.html', title='Google Verification',
+                text=u"<tal:content replace='string:google-site-verification: google6303b8e42ec16379.html'/>"
+            )
+        except AttributeError:
+            pass
 
 def connectLDAP(portal):
     '''Set up LDAP parameters.'''
-    ldapConfig = getUtility(ILDAPConfiguration)
+    try:
+        ldapConfig = getUtility(ILDAPConfiguration)
+    except ComponentLookupError:
+        return
     if ldapConfig.user_object_classes == 'edrnPerson':
         # Already configured
         return
@@ -158,6 +165,9 @@ def _ingest(rootPath, path, traverse, url, force=False):
         return False
 
 def ingestInitially(portal, context):
+    if isinstance(portal._p_jar.db()._storage, DemoStorage):
+        # Don't bother ingesting if we're just testing.
+        return
     # FIXME: need to touch import profile context's _profile_path to construct URLs to our RDF data
     didIngests = False
     urlPrefix = u'file:%s/rdf/' % context._profile_path
@@ -215,19 +225,28 @@ def publishKnowledge(portal):
         if i not in items:
             continue
         item = portal[i]
-        if wfTool.getInfoFor(item, 'review_state') != 'published':
-            _doPublish(item, wfTool)
+        try:
+            if wfTool.getInfoFor(item, 'review_state') != 'published':
+                _doPublish(item, wfTool)
+        except WorkflowException:
+            pass
     # Biomarkers get their publication state during ingest, so all we have to do is
     # publish the biomarker folder:
     if 'biomarkers' in items:
         bmFolder = portal['biomarkers']
-        if wfTool.getInfoFor(bmFolder, 'review_state') != 'published':
-            wfTool.doActionFor(bmFolder, 'publish')
+        try:
+            if wfTool.getInfoFor(bmFolder, 'review_state') != 'published':
+                wfTool.doActionFor(bmFolder, 'publish')
+        except WorkflowException:
+            pass
     # Same with science data
     if 'science-data' in items:
         ecasFolder = portal['science-data']
-        if wfTool.getInfoFor(ecasFolder, 'review_state') != 'published':
-            wfTool.doActionFor(ecasFolder, 'publish')
+        try:
+            if wfTool.getInfoFor(ecasFolder, 'review_state') != 'published':
+                wfTool.doActionFor(ecasFolder, 'publish')
+        except WorkflowException:
+            pass
     # These folders shouldn't appear as tabs, though:
     for i in (
         'advocates', 'colops', 'docs', 'funding-opportunities', 'researchers', 'sites', 'admin', 'committees'
@@ -341,6 +360,8 @@ def orderFolderTabs(portal):
 
 def setupLoginLockout(portal):
     '''Configure the login-lockout mechanism to lockout accounts with too many failures'''
+    if 'login_lockout_plugin' not in portal.acl_users.keys():
+        return
     lockoutPlugin = portal.acl_users.login_lockout_plugin
     if lockoutPlugin.getProperty('_max_attempts', 0) != 6 or lockoutPlugin.getProperty('_reset_period', 0.0) != 0.25:
         # Not yet configured; configure it:
@@ -382,8 +403,11 @@ def createWelcomePage(portal):
     frontPage.setDescription(_edrnHomePageDescription)
     frontPage.setText(_edrnHomePageBodyHTML)
     frontPage.showGarishSearchBox = True
-    wfTool = getToolByName(portal, 'portal_workflow')
-    wfTool.doActionFor(frontPage, action='publish')
+    try:
+        wfTool = getToolByName(portal, 'portal_workflow')
+        wfTool.doActionFor(frontPage, action='publish')
+    except WorkflowException:
+        pass
     frontPage.reindexObject()
 
 def addAdminstriviaImages(portal, context):
@@ -789,6 +813,25 @@ def makeFilesVersionable(portal):
     repo.setVersionableContentTypes(versionableTypes)
     
 
+def enableJQuery(portal):
+    '''Make sure jquery.js is present in the JavaScripts registry and is the topmost item in it.'''
+    javascripts = getToolByName(portal, 'portal_javascripts')
+    jqueryIndex = javascripts.getResourcePosition('jquery.js')
+    if jqueryIndex >= 0:
+        # Found.  Is it on?
+        jqueryJS = javascripts.getResource('jquery.js')
+        if not jqueryJS.getEnabled():
+            # Turn it on.
+            jqueryJS.setEnabled(True)
+        # And is it at the top?
+        if jqueryIndex > 0:
+            javascripts.moveResourceToTop('jquery.js')
+    else:
+        # Not found. Create it and bump it up.
+        javascripts.registerScript('jquery.js', enabled=True, compression='none')
+        javascripts.moveResourceToTop('jquery.js')
+
+
 def setupVarious(context):
     '''Miscellaneous import steps.'''
     if context.readDataFile('edrnsite.policy.flag.txt') is None:
@@ -823,3 +866,4 @@ def setupVarious(context):
     enableEmbeddableVideos(portal)
     createCollaborationsFolder(portal)
     addTableSortingNote(portal)
+    enableJQuery(portal)

@@ -18,6 +18,10 @@ This release includes the following:
 * Updates portal database from profile 4 to 5.  Profile 4 corresponds to
   edrn.nci.nih.gov-4.1-FINAL and was deployed at NCI in December 2011.
 * Upgrades to Plone 4.1 and EEA's Faceted Navigation 4.1
+* CA-872 - Tabs gone from Collaborative Groups post-4.1.4.
+* CA-873 - Login Lockout database should be cleared on upgrade
+* Updating to the plone.app.testing fixtures.
+
 
 
 1.1.8 — Misc
