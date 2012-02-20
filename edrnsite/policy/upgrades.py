@@ -5,9 +5,12 @@
 from plone.app.viewletmanager.interfaces import IViewletSettingsStorage
 from plone.i18n.normalizer.interfaces import IIDNormalizer
 from Products.CMFCore.utils import getToolByName
-from setuphandlers import enableEmbeddableVideos, createCommitteesFolder, createCollaborationsFolder, _doPublish
-from setuphandlers import orderFolderTabs, createMembersListSearchPage, createSpecimensPage, disableSpecimenPortlets
-from setuphandlers import addTableSortingNote, setEditorProperties, makeFilesVersionable
+from setuphandlers import (
+    enableEmbeddableVideos, createCommitteesFolder, createCollaborationsFolder, _doPublish,
+    orderFolderTabs, createMembersListSearchPage, createSpecimensPage, disableSpecimenPortlets,
+    addTableSortingNote, setEditorProperties, makeFilesVersionable,
+    enableJQuery
+)
 from zope.component import getMultiAdapter
 from zope.component import getUtility
 from zope.publisher.browser import TestRequest
@@ -130,6 +133,12 @@ def removeGoogleAnalytics(portal):
     '''For CA-743, disable Google Analytics since NCI doesn't like long term cookies.'''
     props = getToolByName(portal, 'portal_properties').site_properties
     props.manage_changeProperties(webstats_js=u'')
+
+def clearLoginLockoutTable(portal):
+    '''Clears the login-lockout table. Fixes CA-873.'''
+    loginLockoutTool = getToolByName(portal, 'loginlockout_tool')
+    lockedAccounts = [i['login'] for i in loginLockoutTool.listAttempts()]
+    loginLockoutTool.manage_resetUsers(lockedAccounts)
 
 def upgrade0to1(setupTool):
     portal = _getPortal(setupTool)
@@ -313,7 +322,8 @@ def upgrade4to5(setupTool):
     propTool = getToolByName(portal, 'portal_properties')
     origLinkIntegrityMode = propTool.site_properties.getProperty('enable_link_integrity_checks', True)
     propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
-    # TODO: nuke the login lockout db
+    enableJQuery(portal) # Enable jquery.js. Fixes CA-872.
+    clearLoginLockoutTable(portal) # CA-873
     # Restore annoying link integrity checking
     propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=origLinkIntegrityMode)
     transaction.commit()
