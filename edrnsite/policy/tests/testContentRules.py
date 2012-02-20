@@ -1,12 +1,12 @@
 # encoding: utf-8
-# Copyright 2010 California Institute of Technology. ALL RIGHTS
+# Copyright 2010–2012 California Institute of Technology. ALL RIGHTS
 # RESERVED. U.S. Government Sponsorship acknowledged.
 
 '''Tests for the EDRN site's content rules.
 '''
 
-import unittest
-from edrnsite.policy.tests.base import EDRNSitePolicyTestCase
+import unittest2 as unittest
+from edrnsite.policy.testing import EDRNSITE_POLICY_INTEGRATION_TESTING
 from zope.component import getUtility
 from plone.contentrules.engine.interfaces import IRuleStorage, IRuleAssignmentManager
 from plone.app.contentrules.actions.mail import IMailAction
@@ -30,11 +30,13 @@ _foldersToCheck = (
 # Rules we want installed in top-level folders and the PloneSite object:
 _rulesToCheck = ('edrn-add-event', 'edrn-mod-event', 'edrn-del-event', 'edrn-pub-event')
 
-class TestContentRuleEvents(EDRNSitePolicyTestCase):
+class ContentRuleEventsTest(unittest.TestCase):
     '''Unit tests of the setup of content rule events for the EDRN site policy'''
+    layer = EDRNSITE_POLICY_INTEGRATION_TESTING
     def setUp(self):
-        super(TestContentRuleEvents, self).setUp()
+        super(ContentRuleEventsTest, self).setUp()
         self.ruleStorage = getUtility(IRuleStorage)
+        self.portal = self.layer['portal']
     def testActiveRules(self):
         '''Ensure content rules are enabled globally'''
         self.failUnless(self.ruleStorage.active)
@@ -83,8 +85,12 @@ class TestContentRuleEvents(EDRNSitePolicyTestCase):
         self.assertEquals(_email, a.recipients)
         self.failUnless(u'had its publication state changed' in a.message)
 
-class TestContentRuleInstantiation(EDRNSitePolicyTestCase):
+class ContentRuleInstantiationTest(unittest.TestCase):
     '''Test installation of content rules into various folders within the EDRN portal'''
+    layer = EDRNSITE_POLICY_INTEGRATION_TESTING
+    def setUp(self):
+        super(ContentRuleInstantiationTest, self).setUp()
+        self.portal = self.layer['portal']
     def testRootContentRules(self):
         '''Ensure content rules are installed at the top (root) of the portal'''
         # At the root, all four of our rules should be instantiated and enabled, however none should bubble down.
@@ -107,8 +113,7 @@ class TestContentRuleInstantiation(EDRNSitePolicyTestCase):
                 self.failUnless(rule.bubbles)
             
 def test_suite():
-    suite = unittest.TestSuite()
-    suite.addTest(unittest.makeSuite(TestContentRuleEvents))
-    suite.addTest(unittest.makeSuite(TestContentRuleInstantiation))
-    return suite
-    
+    return unittest.defaultTestLoader.loadTestsFromName(__name__)
+
+if __name__ == '__main__':
+    unittest.main(defaultTest='test_suite')
