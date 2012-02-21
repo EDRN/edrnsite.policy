@@ -18,12 +18,8 @@ _author      = 'Sean Kelly'
 _authorEmail = 'sean.kelly@jpl.nasa.gov'
 _license     = 'Proprietary'
 _namespaces  = ['edrnsite']
-_entryPoints = {}
-_extras = {
-    'test': [
-        'plone.app.testing',
-    ],
-}
+_entryPoints = {'z3c.autoinclude.plugin': ['target=plone']}
+_extras      = {'test': ['plone.app.testing',]}
 _zipSafe     = False
 _keywords    = 'web zope plone edrn cancer biomarkers policy'
 _externalRequirements = [
