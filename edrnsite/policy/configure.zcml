@@ -11,15 +11,9 @@ RESERVED. U.S. Government Sponsorship acknowledged.
     i18n_domain='edrnsite.policy'>
 
     <include package='z3c.autoinclude' file='meta.zcml' />
-    <includeDependenciesOverrides package='.' />
     <includeDependencies package='.' />
 
-    <!-- <include package='eea.facetednavigation' file='overrides.zcml'/>
-    <include package='eea.facetednavigation' file='meta.zcml'/> -->
-
     <five:registerPackage package='.' initialize='.initialize' />
-
-    
 
     <!-- <include package='plone.app.ldap' />
     <include package='plone.app.discussion' />
