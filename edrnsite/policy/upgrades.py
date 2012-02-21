@@ -60,6 +60,10 @@ _newPackages4 = (
     # As well as this new one:
     'edrnsite.collaborations',
 )
+# New packages in profile 5:
+_newPackages5 = (
+    'eea.facetednavigation', # Not really new, but uninstalled prior to 5 so new setup code can take affect
+)
 
 # Old site ID format
 _oldSiteIDRegexp = re.compile(r'^([a-z-]+)-([0-9]+)$')
@@ -324,6 +328,7 @@ def upgrade4to5(setupTool):
     propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
     enableJQuery(portal) # Enable jquery.js. Fixes CA-872.
     clearLoginLockoutTable(portal) # CA-873
+    installNewPackages(portal, _newPackages5)
     # Restore annoying link integrity checking
     propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=origLinkIntegrityMode)
     transaction.commit()
