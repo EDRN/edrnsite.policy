@@ -2,6 +2,7 @@
 # Copyright 2010-2011 California Institute of Technology. ALL RIGHTS
 # RESERVED. U.S. Government Sponsorship acknowledged.
 
+from plone.contentrules.engine.interfaces import IRuleStorage
 from plone.app.viewletmanager.interfaces import IViewletSettingsStorage
 from plone.i18n.normalizer.interfaces import IIDNormalizer
 from Products.CMFCore.utils import getToolByName
@@ -63,6 +64,7 @@ _newPackages4 = (
 # New packages in profile 5:
 _newPackages5 = (
     'eea.facetednavigation', # Not really new, but uninstalled prior to 5 so new setup code can take affect
+    'eke.specimens', # Not really new, but upgraded the heck out of it
 )
 
 # Old site ID format
@@ -325,10 +327,24 @@ def upgrade4to5(setupTool):
     # Disable annoying link integrity checking
     propTool = getToolByName(portal, 'portal_properties')
     origLinkIntegrityMode = propTool.site_properties.getProperty('enable_link_integrity_checks', True)
-    propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
-    enableJQuery(portal) # Enable jquery.js. Fixes CA-872.
-    clearLoginLockoutTable(portal) # CA-873
-    installNewPackages(portal, _newPackages5)
-    # Restore annoying link integrity checking
-    propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=origLinkIntegrityMode)
-    transaction.commit()
+    contentRuleStorage = getUtility(IRuleStorage)
+    origContentRuleMode = contentRuleStorage.active
+    try:
+        propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
+        contentRuleStorage.active = False
+        enableJQuery(portal) # Enable jquery.js. Fixes CA-872.
+        clearLoginLockoutTable(portal) # CA-873
+        installNewPackages(portal, _newPackages5)
+        portal.manage_delObjects('specimens')
+        # portal.unrestrictedTraverse('@@ingestEverythingFully')()
+        catalog = getToolByName(portal, 'portal_catalog')
+        catalog.clearFindAndRebuild()
+        uidCatalog = getToolByName(portal, 'uid_catalog')
+        uidCatalog.manage_rebuildCatalog()
+        # TODO: create new specimens page
+        transaction.commit()
+    finally:
+        # Restore annoying link integrity checking
+        propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=origLinkIntegrityMode)
+        contentRuleStorage.active = origContentRuleMode
+    
