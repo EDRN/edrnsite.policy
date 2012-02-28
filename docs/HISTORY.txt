@@ -21,7 +21,8 @@ This release includes the following:
 * CA-872 - Tabs gone from Collaborative Groups post-4.1.4.
 * CA-873 - Login Lockout database should be cleared on upgrade
 * Updating to the plone.app.testing fixtures.
-
+* CA-879 - Emails from Collaborative Groups occasionally have ${fields} with
+  no substituted information
 
 
 1.1.8 — Misc

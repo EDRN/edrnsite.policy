@@ -8,7 +8,8 @@ from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
 from Products.CMFCore.WorkflowCore import WorkflowException
 from Products.Five.browser import BrowserView
-from zope.component import getMultiAdapter
+from zope.component import getMultiAdapter, getUtility
+from plone.contentrules.engine.interfaces import IRuleStorage
 from plone.app.linkintegrity.interfaces import ILinkIntegrityInfo
 import logging
 
@@ -34,7 +35,12 @@ class FullIngestor(BrowserView):
             self._publish(wfTool, subItem)
     def __call__(self):
         _logger.info('INGEST EVERYTHING FULLY')
-
+        
+        # Turn OFF content rules during ingest
+        contentRules = getUtility(IRuleStorage)
+        contentRulesState = contentRules.active
+        contentRules.active = False
+        
         # Find out what paths to ingest
         context = aq_inner(self.context)
         portal = getToolByName(context, 'portal_url').getPortalObject()
@@ -71,6 +77,9 @@ class FullIngestor(BrowserView):
                     _logger.info('Skipping publishing of "%s" since it takes care of its own publication state', path)
             except:
                 _logger.exception('Ingest failed for "%s"', path)
+        
+        # OK, now we can restore whatever the content rule state was
+        contentRules.active = contentRulesState
         _logger.info('All ingestion completed')
     
 
