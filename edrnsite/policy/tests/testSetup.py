@@ -51,7 +51,7 @@ class SetupTest(unittest.TestCase):
             'Protocol',
             'Publication',
             'Site',
-            'Specimen Collection Folder',
+            'Specimen System Folder',
             'Committee',
         ):
             self.failUnless(t in types.objectIds(), 'Content type "%s" missing' % t)
