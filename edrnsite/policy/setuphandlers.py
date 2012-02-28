@@ -778,7 +778,7 @@ def rebuildCatalog(portal):
 def createSpecimensPage(portal):
     '''Create the new specimens page.'''
     if 'specimens' in portal.keys(): return
-    specimens = portal[portal.invokeFactory('Specimen Collection Folder', 'specimens')]
+    specimens = portal[portal.invokeFactory('Specimen System Folder', 'specimens')]
     specimens.setTitle(u'Specimens')
     specimens.setDescription(u'Specimens collected by EDRN and shared with EDRN.')
     specimens.setText(u'<p>This folder contains specimens available to EDRN and collected in EDRN protocols.</p>')
