@@ -100,7 +100,7 @@ def setAutoIngestProperties(portal):
             'science-data',
             'biomarkers',
             'committees',
-            'specimens',
+            'specimens/erne',
         )
         portal.manage_addProperty('edrnIngestPaths', ingestPaths, 'lines')
 
