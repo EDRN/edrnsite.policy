@@ -66,6 +66,10 @@ _newPackages5 = (
     'eea.facetednavigation', # Not really new, but uninstalled prior to 5 so new setup code can take affect
     'eke.specimens', # Not really new, but upgraded the heck out of it
 )
+_dependencies5 = (
+    'eea.jquery',
+    'eke.specimens', # Not really new, but upgraded the heck out of it
+)
 
 # Old site ID format
 _oldSiteIDRegexp = re.compile(r'^([a-z-]+)-([0-9]+)$')
@@ -325,6 +329,7 @@ def upgrade1to4(setupTool):
 def upgrade4to5(setupTool):
     portal = _getPortal(setupTool)
     # Disable annoying link integrity checking
+    qi = getToolByName(portal, 'portal_quickinstaller')
     propTool = getToolByName(portal, 'portal_properties')
     origLinkIntegrityMode = propTool.site_properties.getProperty('enable_link_integrity_checks', True)
     contentRuleStorage = getUtility(IRuleStorage)
@@ -332,16 +337,26 @@ def upgrade4to5(setupTool):
     try:
         propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
         contentRuleStorage.active = False
+        # Clear the catalog
+        catalog = getToolByName(portal, 'portal_catalog')
+        catalog.manage_catalogClear()
         enableJQuery(portal) # Enable jquery.js. Fixes CA-872.
         clearLoginLockoutTable(portal) # CA-873
         installNewPackages(portal, _newPackages5)
-        portal.manage_delObjects('specimens')
+        qi.reinstallProducts(_dependencies5)
+        for product in _dependencies5:
+            qi.upgradeProduct(product)
+            transaction.commit()
+        if 'specimens' in portal.keys():
+            portal.manage_delObjects('specimens')
+        createSpecimensPage(portal)
+        disableSpecimenPortlets(portal)
+        # FIXME: enable this
         # portal.unrestrictedTraverse('@@ingestEverythingFully')()
         catalog = getToolByName(portal, 'portal_catalog')
         catalog.clearFindAndRebuild()
         uidCatalog = getToolByName(portal, 'uid_catalog')
         uidCatalog.manage_rebuildCatalog()
-        # TODO: create new specimens page
         transaction.commit()
     finally:
         # Restore annoying link integrity checking

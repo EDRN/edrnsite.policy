@@ -782,6 +782,8 @@ def createSpecimensPage(portal):
     specimens.setTitle(u'Specimens')
     specimens.setDescription(u'Specimens collected by EDRN and shared with EDRN.')
     specimens.setText(u'<p>This folder contains specimens available to EDRN and collected in EDRN protocols.</p>')
+    from eke.specimens.utils import setFacetedNavigation
+    setFacetedNavigation(specimens, portal.REQUEST)
     specimens.reindexObject()
     _doPublish(specimens, getToolByName(portal, 'portal_workflow'))
 
