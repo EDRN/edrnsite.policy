@@ -100,6 +100,7 @@ def setAutoIngestProperties(portal):
             'science-data',
             'biomarkers',
             'committees',
+            'specimens',
         )
         portal.manage_addProperty('edrnIngestPaths', ingestPaths, 'lines')
 
@@ -352,6 +353,8 @@ def upgrade4to5(setupTool):
         from eke.specimens.upgrades import addSampleSpecimenSets
         addSampleSpecimenSets(setupTool)
         disableSpecimenPortlets(portal)
+        portal.manage_delProperties(['edrnIngestPaths'])
+        setAutoIngestProperties(portal)
         portal.unrestrictedTraverse('@@ingestEverythingFully')()
         catalog = getToolByName(portal, 'portal_catalog')
         catalog.clearFindAndRebuild()
