@@ -349,10 +349,10 @@ def upgrade4to5(setupTool):
             transaction.commit()
         if 'specimens' in portal.keys():
             portal.manage_delObjects('specimens')
-        createSpecimensPage(portal)
+        from eke.specimens.upgrades import addSampleSpecimenSets
+        addSampleSpecimenSets(setupTool)
         disableSpecimenPortlets(portal)
-        # FIXME: enable this
-        # portal.unrestrictedTraverse('@@ingestEverythingFully')()
+        portal.unrestrictedTraverse('@@ingestEverythingFully')()
         catalog = getToolByName(portal, 'portal_catalog')
         catalog.clearFindAndRebuild()
         uidCatalog = getToolByName(portal, 'uid_catalog')
