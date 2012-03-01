@@ -7,8 +7,8 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
-1.2.0 — TBD
------------
+1.2.0 — Third Time's the Charm
+------------------------------
 
 This release includes the following:
 
