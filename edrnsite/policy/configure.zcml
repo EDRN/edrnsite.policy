@@ -15,26 +15,6 @@ RESERVED. U.S. Government Sponsorship acknowledged.
 
     <five:registerPackage package='.' initialize='.initialize' />
 
-    <!-- <include package='plone.app.ldap' />
-    <include package='plone.app.discussion' />
-    <include package='plone.app.caching' />
-    <include package='plone.app.dexterity' />
-    <include package='edrn.theme' />
-    <include package='edrnsite.portlets'/>
-    <include package='edrnsite.funding'/>
-    <include package='edrnsite.misccontent' />
-    <include package='edrnsite.collaborations' />
-    <include package='edrnsite.search'/>
-    <include package='eke.knowledge'/>
-    <include package='eke.publications'/>
-    <include package='eke.site'/>
-    <include package='eke.study'/>
-    <include package='eke.biomarker' />
-    <include package='eke.committees' />
-    <include package='eke.ecas' />
-    <include package='eke.review' />
-    <include package='eke.specimens' />
-    <include package='eea.facetednavigation' /> -->
     <include package='.actions' />
     <include package='.browser' />
 
