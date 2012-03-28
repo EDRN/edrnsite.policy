@@ -7,6 +7,16 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
+1.2.1 — Screw Staging
+---------------------
+
+This release includes:
+
+* CA-917 - A framework for migrating content from duplicate-but-unofficial
+  instances of the EDRN public portal to future official deployments of the
+  EDRN public portal.
+
+
 1.2.0 — Third Time's the Charm
 ------------------------------
 

@@ -14,6 +14,7 @@ _testDeps = (
     'plone.app.ldap',
     'plone.app.discussion',
     'edrn.theme',
+    'edrnsite.content',
     'edrnsite.portlets',
     'edrnsite.funding',
     'edrnsite.misccontent',

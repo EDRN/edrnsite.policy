@@ -9,6 +9,7 @@ RESERVED. U.S. Government Sponsorship acknowledged.
     <dependencies>
         <dependency>profile-eea.facetednavigation:default</dependency>
         <dependency>profile-edrn.theme:default</dependency>
+        <dependency>profile-edrnsite.content:default</dependency>
         <dependency>profile-edrnsite.funding:default</dependency>
         <dependency>profile-edrnsite.search:default</dependency>
         <dependency>profile-edrnsite.portlets:default</dependency>
