@@ -15,6 +15,7 @@ This release includes:
 * CA-917 - A framework for migrating content from duplicate-but-unofficial
   instances of the EDRN public portal to future official deployments of the
   EDRN public portal.
+* CA-927 - Science Data tab broken on latest EDRN Public Portal
 
 
 1.2.0 — Third Time's the Charm

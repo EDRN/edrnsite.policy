@@ -70,6 +70,7 @@ _newPackages5 = (
 _dependencies5 = (
     'eea.jquery',
     'eke.specimens', # Not really new, but upgraded the heck out of it
+    'eke.ecas', # Added indexes
 )
 
 # Old site ID format
