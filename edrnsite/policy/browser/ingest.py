@@ -45,7 +45,9 @@ class FullIngestor(BrowserView):
         context = aq_inner(self.context)
         portal = getToolByName(context, 'portal_url').getPortalObject()
         paths = portal.getProperty('edrnIngestPaths', [])
-        
+        doNotPublish = portal.getProperty('nonPublishedIngestPaths', _doNotPublish)
+        doNotDelete = portal.getProperty('nonClearedIngestPaths', _doNotDelete)
+
         # No paths?  No need to continue.
         if len(paths) == 0:
             _logger.info("There are no ingest paths, so there's nothing to ingest.")
@@ -63,14 +65,14 @@ class FullIngestor(BrowserView):
             try:
                 _logger.info('Starting ingest of "%s"', path)
                 obj = portal.restrictedTraverse(path.split('/'))
-                if path not in _doNotDelete:
+                if path not in doNotDelete:
                     obj.manage_delObjects(obj.objectIds())
                 ingestor = getMultiAdapter((obj, self.request), name=u'ingest')
                 ingestor.render = False
                 ingestor()
                 _logger.info('Ingest of "%s" completed', path)
                 # Some paths don't need publication
-                if path not in _doNotPublish:
+                if path not in doNotPublish:
                     self._publish(wfTool, obj)
                     _logger.info('And published all of "%s" too', path)
                 else:
