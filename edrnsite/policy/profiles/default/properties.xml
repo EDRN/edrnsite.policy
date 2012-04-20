@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
-Copyright 2009-2010 California Institute of Technology. ALL RIGHTS
+Copyright 2009–2012 California Institute of Technology. ALL RIGHTS
 RESERVED. U.S. Government Sponsorship acknowledged.
 -->
 <site>
@@ -20,6 +20,16 @@ RESERVED. U.S. Government Sponsorship acknowledged.
         <element value='protocols'/>
         <element value='science-data'/>
         <element value='biomarkers'/>
+        <element value='specimens'/>
+    </property>
+    <property name='nonPublishedIngestPaths' type='lines'>
+        <element value='biomarkers'/>
+        <element value='science-data'/>
+        <element value='specimens'/>
+    </property>
+    <property name='nonClearedIngestPaths' type='lines'>
+        <element value='protocols'/>
+        <element value='sites'/>
         <element value='specimens'/>
     </property>
 </site>
