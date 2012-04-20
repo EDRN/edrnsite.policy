@@ -105,6 +105,14 @@ def setAutoIngestProperties(portal):
             'specimens/erne',
         )
         portal.manage_addProperty('edrnIngestPaths', ingestPaths, 'lines')
+    if not portal.hasProperty('nonPublishedIngestPaths'):
+        nonPublishedIngestPaths = ('biomarkers', 'science-data')
+        portal.manage_addProperty('nonPublishedIngestPaths', nonPublishedIngestPaths, 'lines')
+    if not portal.hasProperty('nonClearedIngestPaths'):
+        nonClearedIngestPaths = ('protocols', 'sites', 'specimens/erne')
+        portal.manage_addProperty('nonClearedIngestPaths', nonClearedIngestPaths, 'lines')
+
+
 
 def installNewPackages(portal, packageList):
     quickInstaller = getToolByName(portal, 'portal_quickinstaller')
@@ -331,6 +339,18 @@ def upgrade1to4(setupTool):
 
 def upgrade4to5(setupTool):
     portal = _getPortal(setupTool)
+    request = portal.REQUEST
+    # Whew. Thanks to @davisagli (freakin' brilliant dude) for figuring this out:
+    from archetypes.schemaextender.extender import disableCache
+    disableCache(request)
+    # Without the above two lines, we eventually construct an Active ERNE Set during the full ingest below
+    # and it mistakenly picks up a Person's schema instead of its own.  When getting its title, a person's
+    # is computed, so it looks for a _computeTitle function, but an ActiveERNESet has no such function.
+    # Ingest then fails.
+    # 
+    # Whew!
+    # 
+    # Now, onward:
     # Disable annoying link integrity checking
     qi = getToolByName(portal, 'portal_quickinstaller')
     propTool = getToolByName(portal, 'portal_properties')
