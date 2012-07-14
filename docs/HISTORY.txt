@@ -7,6 +7,15 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
+1.2.2 — Upgrades
+----------------
+
+Made compatible with Plone 4.1.5 and eea.facetednavigation 4.5.  Also
+addressed the following issues:
+
+• CA-965 - Log the upgrade process
+
+
 1.2.1 — Screw Staging
 ---------------------
 

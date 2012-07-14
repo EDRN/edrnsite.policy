@@ -34,6 +34,7 @@ _externalRequirements = [
     'plone.app.dexterity',
     'Pillow',
     'eea.facetednavigation',
+    'zope.globalrequest',
 ]
 _classifiers = [
     'Development Status :: 4 - Beta',

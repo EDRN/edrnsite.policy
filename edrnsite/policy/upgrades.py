@@ -1,5 +1,5 @@
 # encoding: utf-8
-# Copyright 2010-2011 California Institute of Technology. ALL RIGHTS
+# Copyright 2010–2012 California Institute of Technology. ALL RIGHTS
 # RESERVED. U.S. Government Sponsorship acknowledged.
 
 from plone.contentrules.engine.interfaces import IRuleStorage
@@ -15,7 +15,9 @@ from setuphandlers import (
 from zope.component import getMultiAdapter
 from zope.component import getUtility
 from zope.publisher.browser import TestRequest
-import transaction, re
+import transaction, re, logging
+
+_logger = logging.getLogger(__name__)
 
 # Dependent packages in profile 0
 _dependencies0 = (
@@ -117,7 +119,9 @@ def setAutoIngestProperties(portal):
 def installNewPackages(portal, packageList):
     quickInstaller = getToolByName(portal, 'portal_quickinstaller')
     for package in packageList:
+        _logger.info('Installing "%s"', package)
         if quickInstaller.isProductInstalled(package):
+            _logger.debug('Package "%s" was already installed', package)
             continue
         else:
             quickInstaller.installProduct(package)
@@ -338,9 +342,11 @@ def upgrade1to4(setupTool):
     
 
 def upgrade4to5(setupTool):
+    _logger.info('Upgrading EDRN Public Portal from profile version 4 to profile version 5')
     portal = _getPortal(setupTool)
     request = portal.REQUEST
     # Whew. Thanks to @davisagli (freakin' brilliant dude) for figuring this out:
+    _logger.info("Disabling schema extender's cache")
     from archetypes.schemaextender.extender import disableCache
     disableCache(request)
     # Without the above two lines, we eventually construct an Active ERNE Set during the full ingest below
@@ -358,29 +364,53 @@ def upgrade4to5(setupTool):
     contentRuleStorage = getUtility(IRuleStorage)
     origContentRuleMode = contentRuleStorage.active
     try:
+        _logger.info('Disabling link integrity checks')
         propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
+        _logger.info('Disabling content rules')
         contentRuleStorage.active = False
         # Clear the catalog
         catalog = getToolByName(portal, 'portal_catalog')
+        _logger.info('Clearing the catalog')
         catalog.manage_catalogClear()
+        _logger.info('Enabling JQuery')
         enableJQuery(portal) # Enable jquery.js. Fixes CA-872.
+        _logger.info('Clearing the login-lockout table')
         clearLoginLockoutTable(portal) # CA-873
+        _logger.info('Installing new packages')
         installNewPackages(portal, _newPackages5)
+        _logger.info('Reinstalling products %r', _dependencies5)
         qi.reinstallProducts(_dependencies5)
         for product in _dependencies5:
+            _logger.info('Upgrading product "%s"', product)
             qi.upgradeProduct(product)
             transaction.commit()
         if 'specimens' in portal.keys():
+            _logger.info('Nuking the specimens tab')
             portal.manage_delObjects('specimens')
         from eke.specimens.upgrades import addSampleSpecimenSets
+        # Recreate the members list page to fix the problem with upgrading eea.facetednavigation 4.0rc1→4.5
+        _logger.info('Re-creating the members list search page')
+        createMembersListSearchPage(portal)
+        # Likewise, but for the publications folder: disable and then re-enable faceted view
+        if 'publications' in portal.keys():
+            publications = portal['publications']
+            subtyper = getMultiAdapter((publications, request), name=u'faceted_subtyper')
+            _logger.info('Disabling, then re-enabling the faceted subtyper on the publications tab')
+            subtyper.disable()
+            subtyper.enable()
+        _logger.info('Adding sample specimen sets')
         addSampleSpecimenSets(setupTool)
+        _logger.info('Disabling portlets on the specimens tab')
         disableSpecimenPortlets(portal)
+        _logger.info('Deleting and re-setting the auto-ingest paths')
         portal.manage_delProperties(['edrnIngestPaths'])
         setAutoIngestProperties(portal)
+        _logger.info('Ingesting everything fully')
         portal.unrestrictedTraverse('@@ingestEverythingFully')()
-        catalog = getToolByName(portal, 'portal_catalog')
+        _logger.info('Clearing, finding, and re-building the catalog')
         catalog.clearFindAndRebuild()
         uidCatalog = getToolByName(portal, 'uid_catalog')
+        _logger.info('Rebuilding the UID catalog')
         uidCatalog.manage_rebuildCatalog()
         transaction.commit()
     finally:
