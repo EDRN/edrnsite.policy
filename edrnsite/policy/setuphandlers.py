@@ -3,6 +3,7 @@
 # RESERVED. U.S. Government Sponsorship acknowledged.
 
 from eea.facetednavigation.interfaces import ICriteria
+from eea.facetednavigation.layout.interfaces import IFacetedLayout
 from eke.biomarker.interfaces import IBiomarker
 from eke.biomarker.utils import COLLABORATIVE_GROUP_BMDB_IDS_TO_NAMES
 from eke.committees.interfaces import ICommittee
@@ -522,6 +523,8 @@ def createMembersListSearchPage(portal):
     _doPublish(membersList, getToolByName(portal, 'portal_workflow'))
     subtyper = getMultiAdapter((membersList, request), name=u'faceted_subtyper')
     subtyper.enable()
+    layout = IFacetedLayout(membersList)
+    layout.update_layout('folder_listing')
     criteria = ICriteria(membersList)
     for cid in criteria.keys():
         criteria.delete(cid)
