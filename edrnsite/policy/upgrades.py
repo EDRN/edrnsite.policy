@@ -67,12 +67,12 @@ _newPackages4 = (
 _newPackages5 = (
     'eea.facetednavigation', # Not really new, but uninstalled prior to 5 so new setup code can take affect
     'eke.specimens', # Not really new, but upgraded the heck out of it
-    'edrnsite.content', # New
 )
 _dependencies5 = (
     'eea.jquery',
     'eke.specimens', # Not really new, but upgraded the heck out of it
     'eke.ecas', # Added indexes
+    'edrnsite.collaborations', # New content types
 )
 
 # Old site ID format
