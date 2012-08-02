@@ -374,6 +374,8 @@ def upgrade4to5(setupTool):
         catalog.manage_catalogClear()
         _logger.info('Enabling JQuery')
         enableJQuery(portal) # Enable jquery.js. Fixes CA-872.
+        _logger.info('Disabling Google Analytics')
+        removeGoogleAnalytics(portal)
         _logger.info('Clearing the login-lockout table')
         clearLoginLockoutTable(portal) # CA-873
         _logger.info('Installing new packages')
