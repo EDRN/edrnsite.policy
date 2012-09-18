@@ -7,6 +7,19 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
+1.2.3 — NCI Deployment
+----------------------
+
+This release updates the upgrade process of the EDRN site policy so that the
+EDRN portal is left in a state where it's ready to be scanned by Rational
+AppScan:
+
+• Content rules are disabled (no email notifications)
+• Link integrity checks are disabled
+• Routine RDF ingest is disabled
+• The portal "from" email address is set to a developer's email.
+
+
 1.2.2 — Upgrades
 ----------------
 

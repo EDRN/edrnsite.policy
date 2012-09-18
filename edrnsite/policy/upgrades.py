@@ -360,63 +360,65 @@ def upgrade4to5(setupTool):
     # Disable annoying link integrity checking
     qi = getToolByName(portal, 'portal_quickinstaller')
     propTool = getToolByName(portal, 'portal_properties')
-    origLinkIntegrityMode = propTool.site_properties.getProperty('enable_link_integrity_checks', True)
+    propTool.site_properties.getProperty('enable_link_integrity_checks', True)
     contentRuleStorage = getUtility(IRuleStorage)
-    origContentRuleMode = contentRuleStorage.active
-    try:
-        _logger.info('Disabling link integrity checks')
-        propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
-        _logger.info('Disabling content rules')
-        contentRuleStorage.active = False
-        # Clear the catalog
-        catalog = getToolByName(portal, 'portal_catalog')
-        _logger.info('Clearing the catalog')
-        catalog.manage_catalogClear()
-        _logger.info('Enabling JQuery')
-        enableJQuery(portal) # Enable jquery.js. Fixes CA-872.
-        _logger.info('Disabling Google Analytics')
-        removeGoogleAnalytics(portal)
-        _logger.info('Clearing the login-lockout table')
-        clearLoginLockoutTable(portal) # CA-873
-        _logger.info('Installing new packages')
-        installNewPackages(portal, _newPackages5)
-        _logger.info('Reinstalling products %r', _dependencies5)
-        qi.reinstallProducts(_dependencies5)
-        for product in _dependencies5:
-            _logger.info('Upgrading product "%s"', product)
-            qi.upgradeProduct(product)
-            transaction.commit()
-        if 'specimens' in portal.keys():
-            _logger.info('Nuking the specimens tab')
-            portal.manage_delObjects('specimens')
-        from eke.specimens.upgrades import addSampleSpecimenSets
-        # Recreate the members list page to fix the problem with upgrading eea.facetednavigation 4.0rc1→4.5
-        _logger.info('Re-creating the members list search page')
-        createMembersListSearchPage(portal)
-        # Likewise, but for the publications folder: disable and then re-enable faceted view
-        if 'publications' in portal.keys():
-            publications = portal['publications']
-            subtyper = getMultiAdapter((publications, request), name=u'faceted_subtyper')
-            _logger.info('Disabling, then re-enabling the faceted subtyper on the publications tab')
-            subtyper.disable()
-            subtyper.enable()
-        _logger.info('Adding sample specimen sets')
-        addSampleSpecimenSets(setupTool)
-        _logger.info('Disabling portlets on the specimens tab')
-        disableSpecimenPortlets(portal)
-        _logger.info('Deleting and re-setting the auto-ingest paths')
-        portal.manage_delProperties(['edrnIngestPaths'])
-        setAutoIngestProperties(portal)
-        _logger.info('Ingesting everything fully')
-        portal.unrestrictedTraverse('@@ingestEverythingFully')()
-        _logger.info('Clearing, finding, and re-building the catalog')
-        catalog.clearFindAndRebuild()
-        uidCatalog = getToolByName(portal, 'uid_catalog')
-        _logger.info('Rebuilding the UID catalog')
-        uidCatalog.manage_rebuildCatalog()
+    _logger.info('Disabling link integrity checks')
+    propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
+    _logger.info('Disabling content rules')
+    contentRuleStorage.active = False
+    # Clear the catalog
+    catalog = getToolByName(portal, 'portal_catalog')
+    _logger.info('Clearing the catalog')
+    catalog.manage_catalogClear()
+    _logger.info('Enabling JQuery')
+    enableJQuery(portal) # Enable jquery.js. Fixes CA-872.
+    _logger.info('Disabling Google Analytics')
+    removeGoogleAnalytics(portal)
+    _logger.info('Clearing the login-lockout table')
+    clearLoginLockoutTable(portal) # CA-873
+    _logger.info('Installing new packages')
+    installNewPackages(portal, _newPackages5)
+    _logger.info('Reinstalling products %r', _dependencies5)
+    qi.reinstallProducts(_dependencies5)
+    for product in _dependencies5:
+        _logger.info('Upgrading product "%s"', product)
+        qi.upgradeProduct(product)
         transaction.commit()
-    finally:
-        # Restore annoying link integrity checking
-        propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=origLinkIntegrityMode)
-        contentRuleStorage.active = origContentRuleMode
+    if 'specimens' in portal.keys():
+        _logger.info('Nuking the specimens tab')
+        portal.manage_delObjects('specimens')
+    from eke.specimens.upgrades import addSampleSpecimenSets
+    # Recreate the members list page to fix the problem with upgrading eea.facetednavigation 4.0rc1→4.5
+    _logger.info('Re-creating the members list search page')
+    createMembersListSearchPage(portal)
+    # Likewise, but for the publications folder: disable and then re-enable faceted view
+    if 'publications' in portal.keys():
+        publications = portal['publications']
+        subtyper = getMultiAdapter((publications, request), name=u'faceted_subtyper')
+        _logger.info('Disabling, then re-enabling the faceted subtyper on the publications tab')
+        subtyper.disable()
+        subtyper.enable()
+    _logger.info('Adding sample specimen sets')
+    addSampleSpecimenSets(setupTool)
+    _logger.info('Disabling portlets on the specimens tab')
+    disableSpecimenPortlets(portal)
+    _logger.info('Deleting and re-setting the auto-ingest paths')
+    portal.manage_delProperties(['edrnIngestPaths'])
+    setAutoIngestProperties(portal)
+    _logger.info('Ingesting everything fully')
+    portal.unrestrictedTraverse('@@ingestEverythingFully')()
+    _logger.info('Clearing ingest paths to prevent automatic ingest')
+    if portal.hasProperty('edrnIngestPaths'):
+        portal.manage_delProperties(['edrnIngestPaths'])
+    _logger.info('Resetting portal "from" email address')
+    portal.manage_changeProperties(email_from_address='sean.kelly@jpl.nasa.gov')
+    _logger.info('Clearing, finding, and re-building the catalog')
+    catalog.clearFindAndRebuild()
+    uidCatalog = getToolByName(portal, 'uid_catalog')
+    _logger.info('Rebuilding the UID catalog')
+    uidCatalog.manage_rebuildCatalog()
+    transaction.commit()
+    # We leave link integrity and content rules OFF since at this point the site will be
+    # scanned by IBM Rational AppScan and that's sure to screw everything up.
+
     
