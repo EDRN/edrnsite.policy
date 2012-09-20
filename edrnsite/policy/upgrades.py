@@ -111,7 +111,7 @@ def setAutoIngestProperties(portal):
         nonPublishedIngestPaths = ('biomarkers', 'science-data')
         portal.manage_addProperty('nonPublishedIngestPaths', nonPublishedIngestPaths, 'lines')
     if not portal.hasProperty('nonClearedIngestPaths'):
-        nonClearedIngestPaths = ('protocols', 'sites', 'specimens/erne')
+        nonClearedIngestPaths = ('protocols', 'sites', 'specimens')
         portal.manage_addProperty('nonClearedIngestPaths', nonClearedIngestPaths, 'lines')
 
 
