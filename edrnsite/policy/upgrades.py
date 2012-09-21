@@ -111,7 +111,7 @@ def setAutoIngestProperties(portal):
         nonPublishedIngestPaths = ('biomarkers', 'science-data')
         portal.manage_addProperty('nonPublishedIngestPaths', nonPublishedIngestPaths, 'lines')
     if not portal.hasProperty('nonClearedIngestPaths'):
-        nonClearedIngestPaths = ('protocols', 'sites', 'specimens')
+        nonClearedIngestPaths = ('protocols', 'sites', 'specimens/erne')
         portal.manage_addProperty('nonClearedIngestPaths', nonClearedIngestPaths, 'lines')
 
 
@@ -402,7 +402,7 @@ def upgrade4to5(setupTool):
     addSampleSpecimenSets(setupTool)
     _logger.info('Disabling portlets on the specimens tab')
     disableSpecimenPortlets(portal)
-    _logger.info('Deleting and re-setting the auto-ingest paths')
+    _logger.info('Re-setting the auto-ingest paths')
     portal.manage_delProperties(['edrnIngestPaths'])
     setAutoIngestProperties(portal)
     _logger.info('Ingesting everything fully')
