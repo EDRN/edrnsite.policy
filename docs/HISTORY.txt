@@ -6,6 +6,12 @@ about the issues mentioned here can be found at the issue tracker, at::
 
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
+1.2.4 — TBD
+-----------
+
+• Support CA-1001: delete old committees on upgrade so that
+  Group-Space–based can replace them.
+
 
 1.2.3 — NCI Deployment
 ----------------------
