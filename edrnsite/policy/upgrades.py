@@ -73,6 +73,7 @@ _dependencies5 = (
     'eke.specimens', # Not really new, but upgraded the heck out of it
     'eke.ecas', # Added indexes
     'edrnsite.collaborations', # New content types
+    'eke.committees', # Updated allowed types in content types
 )
 
 # Old site ID format
@@ -370,6 +371,10 @@ def upgrade4to5(setupTool):
     catalog = getToolByName(portal, 'portal_catalog')
     _logger.info('Clearing the catalog')
     catalog.manage_catalogClear()
+    _logger.info('Terminating existing committees with extreme prejudice')
+    if 'committees' in portal.keys():
+        committees = portal['committees']
+        committees.manage_delObjects(committees.keys())
     _logger.info('Enabling JQuery')
     enableJQuery(portal) # Enable jquery.js. Fixes CA-872.
     _logger.info('Disabling Google Analytics')
