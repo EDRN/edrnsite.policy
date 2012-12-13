@@ -11,10 +11,11 @@ from Products.CMFCore.utils import getToolByName
 import sys
 
 _testDeps = (
+    'plone.app.jquery',
     'plone.app.ldap',
     'plone.app.discussion',
     'edrn.theme',
-    'edrnsite.content',
+#    'edrnsite.content',
     'edrnsite.portlets',
     'edrnsite.funding',
     'edrnsite.misccontent',

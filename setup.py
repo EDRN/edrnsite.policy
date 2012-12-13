@@ -35,6 +35,7 @@ _externalRequirements = [
     'Pillow',
     'eea.facetednavigation',
     'zope.globalrequest',
+    'plone.app.jquery',
 ]
 _classifiers = [
     'Development Status :: 4 - Beta',
