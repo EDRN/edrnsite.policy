@@ -79,6 +79,11 @@ class FullIngestor(BrowserView):
                     _logger.info('Skipping publishing of "%s" since it takes care of its own publication state', path)
             except:
                 _logger.exception('Ingest failed for "%s"', path)
+
+        # And re-index
+        _logger.info('Clearing and rebuilding the catalog')
+        catalog = getToolByName(context, 'portal_catalog')
+        catalog.clearFindAndRebuild()
         
         # OK, now we can restore whatever the content rule state was
         contentRules.active = contentRulesState
