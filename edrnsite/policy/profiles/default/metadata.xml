@@ -7,7 +7,6 @@ RESERVED. U.S. Government Sponsorship acknowledged.
     <version>5</version>
     <description>The EDRN Site Policy turns a plain old Plone site into the EDRN public portal.</description>
     <dependencies>
-        <!-- <dependency>profile-plone.app.jquery:default</dependency> -->
         <dependency>profile-eea.facetednavigation:default</dependency>
         <dependency>profile-edrn.theme:default</dependency>
         <!-- <dependency>profile-edrnsite.content:default</dependency> -->
@@ -26,6 +25,5 @@ RESERVED. U.S. Government Sponsorship acknowledged.
         <dependency>profile-eke.ecas:default</dependency>
         <dependency>profile-eke.review:default</dependency>
         <dependency>profile-eke.specimens:default</dependency>
-        <!-- <dependency>profile-plone.app.dexterity:default</dependency> -->
     </dependencies>
 </metadata>
