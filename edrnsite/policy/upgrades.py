@@ -67,6 +67,7 @@ _newPackages4 = (
 _newPackages5 = (
     'eea.facetednavigation', # Not really new, but uninstalled prior to 5 so new setup code can take affect
     'eke.specimens', # Not really new, but upgraded the heck out of it
+    'edrnsite.vanity', # Will shift to profile 6 since NCI is just now (2013-2-4) installing EDRN Portal 4.2
 )
 _dependencies5 = (
     'eea.jquery',
