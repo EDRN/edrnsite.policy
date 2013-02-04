@@ -320,8 +320,8 @@ class SetupTest(unittest.TestCase):
     def testAddons(self):
         '''Check that dependent packages are installed'''
         qi = getToolByName(self.portal, 'portal_quickinstaller')
-        # For the future:
-        # self.failUnless(qi.isProductInstalled('plone.app.dexterity'), "Dexterity wasn't installed")
+        self.failUnless(qi.isProductInstalled('edrnsite.vanity'), "edrnsite.vanity is not installed")
+        self.failUnless(qi.isProductInstalled('plone.app.dexterity'), "Dexterity wasn't installed")
     def testEditingSettings(self):
         '''Ensure editor settings are correct'''
         props = self.portal.portal_properties.site_properties

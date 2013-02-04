@@ -11,9 +11,9 @@ from Products.CMFCore.utils import getToolByName
 import sys
 
 _testDeps = (
-    'plone.app.jquery',
+#    'plone.app.jquery',
     'plone.app.ldap',
-    'plone.app.discussion',
+#    'plone.app.discussion',
     'edrn.theme',
 #    'edrnsite.content',
     'edrnsite.portlets',
@@ -21,6 +21,7 @@ _testDeps = (
     'edrnsite.misccontent',
     'edrnsite.collaborations',
     'edrnsite.search',
+    'edrnsite.vanity',
     'eke.knowledge',
     'eke.publications',
     'eke.site',

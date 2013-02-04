@@ -25,17 +25,17 @@ _keywords    = 'web zope plone edrn cancer biomarkers policy'
 _externalRequirements = [
     'setuptools',
     'Plone',
-    'Products.PloneHotfix20110720',
+#    'Products.PloneHotfix20110720',
     'Products.LoginLockout',
     'plone.app.ldap',
     'plone.app.contentrules',
-    'plone.app.discussion',
+#    'plone.app.discussion',
     'plone.app.caching',
-    'plone.app.dexterity',
+#    'plone.app.dexterity',
     'Pillow',
     'eea.facetednavigation',
     'zope.globalrequest',
-    'plone.app.jquery',
+#    'plone.app.jquery',
 ]
 _classifiers = [
     'Development Status :: 4 - Beta',

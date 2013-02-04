@@ -12,6 +12,7 @@ about the issues mentioned here can be found at the issue tracker, at::
 
 • Rebuild the catalog after ingest so that sites and protocols appear when
   using the new RDF server.
+• Add edrnsite.vanity
 
 
 1.2.4 — Groups In SPAAAAACE!
