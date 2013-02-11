@@ -67,7 +67,6 @@ _newPackages4 = (
 _newPackages5 = (
     'eea.facetednavigation', # Not really new, but uninstalled prior to 5 so new setup code can take affect
     'eke.specimens', # Not really new, but upgraded the heck out of it
-    'edrnsite.vanity', # Will shift to profile 6 since NCI is just now (2013-2-4) installing EDRN Portal 4.2
 )
 _dependencies5 = (
     'eea.jquery',
@@ -75,6 +74,14 @@ _dependencies5 = (
     'eke.ecas', # Added indexes
     'edrnsite.collaborations', # New content types
     'eke.committees', # Updated allowed types in content types
+)
+
+# Profile 6
+_newPackages6 = (
+    'edrnsite.vanity',
+)
+_dependencies6 = (
+    # No pkgs need to be reinstalled at this time 2013-2-11
 )
 
 # Old site ID format
@@ -427,4 +434,71 @@ def upgrade4to5(setupTool):
     # We leave link integrity and content rules OFF since at this point the site will be
     # scanned by IBM Rational AppScan and that's sure to screw everything up.
 
-    
+
+def upgrade5to6(setupTool):
+    _logger.info('Upgrading EDRN Public Portal from profile version 5 to profile version 6')
+    portal = _getPortal(setupTool)
+    request = portal.REQUEST
+    _logger.info("Disabling schema extender's cache")
+    from archetypes.schemaextender.extender import disableCache
+    disableCache(request)
+    qi = getToolByName(portal, 'portal_quickinstaller')
+    propTool = getToolByName(portal, 'portal_properties')
+    propTool.site_properties.getProperty('enable_link_integrity_checks', True)
+    contentRuleStorage = getUtility(IRuleStorage)
+    _logger.info('Disabling link integrity checks')
+    propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
+    _logger.info('Disabling content rules')
+    contentRuleStorage.active = False
+    # Clear the catalog
+    catalog = getToolByName(portal, 'portal_catalog')
+    _logger.info('Clearing the catalog')
+    catalog.manage_catalogClear()
+    _logger.info('Disabling Google Analytics')
+    removeGoogleAnalytics(portal)
+    _logger.info('Clearing the login-lockout table')
+    clearLoginLockoutTable(portal) # CA-873
+    _logger.info('Installing new packages')
+    installNewPackages(portal, _newPackages6)
+    _logger.info('Reinstalling products %r', _dependencies6)
+    qi.reinstallProducts(_dependencies6)
+    for product in _dependencies6:
+        _logger.info('Upgrading product "%s"', product)
+        qi.upgradeProduct(product)
+        transaction.commit()
+    _logger.info('Ingesting everything fully')
+    portal.unrestrictedTraverse('@@ingestEverythingFully')()
+    _logger.info('Clearing ingest paths to prevent automatic ingest')
+    if portal.hasProperty('edrnIngestPaths'):
+        portal.manage_delProperties(['edrnIngestPaths'])
+    _logger.info('Resetting portal "from" email address')
+    portal.manage_changeProperties(email_from_address='sean.kelly@jpl.nasa.gov')
+    _logger.info('Clearing, finding, and re-building the catalog')
+    catalog.clearFindAndRebuild()
+    uidCatalog = getToolByName(portal, 'uid_catalog')
+    _logger.info('Rebuilding the UID catalog')
+    uidCatalog.manage_rebuildCatalog()
+    transaction.commit()
+    # We leave link integrity and content rules OFF since at this point the site will be
+    # scanned by IBM Rational AppScan and that's sure to screw everything up.
+
+
+# UPGRADE from operations 4.2 to 4.3
+#
+# portal_javascripts:
+# Delete jquery.js
+# Move nodeutilities.js to below plone_javascript_variables.js
+# Move cookie_functions.js to below nodeutilities.js
+# Move form_tabbing.js to below collapsiblesections.js
+# Move popupforms.js to below form_tabbing.js
+# Enable popupforms.js
+# Move jquery.highlightsearchterms.js to below popupforms.js
+# Move first_input_focus.js to below jquery.highlightsearchterms.js
+# Move accessibility.js to below first_input_focus.js
+# Move styleswitcher.js to below accessibility.js
+# Move toc.js to below styleswitcher.js
+# Delete se-highlight.js
+# Move dropdown.js to below ++resource++plone.app.discussion.javascripts/comments.js
+# Move modernizr.js to below cookie_functions.js
+# Restrict ++resource++base2-dom-fp.js to authenticated users
+# Disable ++resource++kukit-devel.js
