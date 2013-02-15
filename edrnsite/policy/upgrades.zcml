@@ -33,5 +33,14 @@ RESERVED. U.S. Government Sponsorship acknowledged.
         handler='edrnsite.policy.upgrades.upgrade4to5'
         sortkey='1'
     />
+    <genericsetup:upgradeStep
+        source='5'
+        destination='6'
+        title='Upgrade 5 to 6'
+        description='Upgrade the EDRN default profile from version 5 to version 6'
+        profile='edrnsite.policy:default'
+        handler='edrnsite.policy.upgrades.upgrade5to6'
+        sortkey='1'
+    />
 </configure>
 

@@ -19,6 +19,8 @@ import transaction, re, logging
 
 _logger = logging.getLogger(__name__)
 
+PROFILE_ID = 'profile-edrnsite.policy:default'
+
 # Dependent packages in profile 0
 _dependencies0 = (
     'Products.CacheSetup',
@@ -436,6 +438,7 @@ def upgrade4to5(setupTool):
 
 
 def upgrade5to6(setupTool):
+    import pdb; pdb.set_trace()
     _logger.info('Upgrading EDRN Public Portal from profile version 5 to profile version 6')
     portal = _getPortal(setupTool)
     request = portal.REQUEST
@@ -450,6 +453,8 @@ def upgrade5to6(setupTool):
     propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
     _logger.info('Disabling content rules')
     contentRuleStorage.active = False
+    _logger.info('Reloading Javascript Registry')
+    setupTool.runImportStepFromProfile(PROFILE_ID, 'jsregistry')
     # Clear the catalog
     catalog = getToolByName(portal, 'portal_catalog')
     _logger.info('Clearing the catalog')
