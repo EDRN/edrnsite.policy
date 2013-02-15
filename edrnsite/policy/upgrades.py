@@ -438,7 +438,6 @@ def upgrade4to5(setupTool):
 
 
 def upgrade5to6(setupTool):
-    import pdb; pdb.set_trace()
     _logger.info('Upgrading EDRN Public Portal from profile version 5 to profile version 6')
     portal = _getPortal(setupTool)
     request = portal.REQUEST
