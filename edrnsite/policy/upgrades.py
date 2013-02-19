@@ -15,7 +15,9 @@ from setuphandlers import (
 from zope.component import getMultiAdapter
 from zope.component import getUtility
 from zope.publisher.browser import TestRequest
+from edrn.theme.upgrades import upgrade4to5 as edrnThemeUpgrade4to5
 import transaction, re, logging
+
 
 _logger = logging.getLogger(__name__)
 
@@ -83,7 +85,7 @@ _newPackages6 = (
     'edrnsite.vanity',
 )
 _dependencies6 = (
-    # No pkgs need to be reinstalled at this time 2013-2-11
+    'edrn.theme',
 )
 
 # Old site ID format
@@ -470,6 +472,7 @@ def upgrade5to6(setupTool):
         _logger.info('Upgrading product "%s"', product)
         qi.upgradeProduct(product)
         transaction.commit()
+    edrnThemeUpgrade4to5(setupTool)
     _logger.info('Ingesting everything fully')
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
     _logger.info('Clearing ingest paths to prevent automatic ingest')
