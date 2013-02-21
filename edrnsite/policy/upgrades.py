@@ -2,6 +2,8 @@
 # Copyright 2010–2012 California Institute of Technology. ALL RIGHTS
 # RESERVED. U.S. Government Sponsorship acknowledged.
 
+from BTrees.OOBTree import OOBTree
+from Acquisition import aq_parent
 from plone.contentrules.engine.interfaces import IRuleStorage
 from plone.app.viewletmanager.interfaces import IViewletSettingsStorage
 from plone.i18n.normalizer.interfaces import IIDNormalizer
@@ -16,6 +18,7 @@ from zope.component import getMultiAdapter
 from zope.component import getUtility
 from zope.publisher.browser import TestRequest
 from edrn.theme.upgrades import upgrade4to5 as edrnThemeUpgrade4to5
+from eke.committees.upgrades import reloadTypes4to5 as ekeCommitteesReloadTypes4to5
 import transaction, re, logging
 
 
@@ -86,6 +89,12 @@ _newPackages6 = (
 )
 _dependencies6 = (
     'edrn.theme',
+    'eea.facetednavigation',
+    'collective.js.jqueryui',
+)
+_reinstall6 = (
+    'LoginLockout',
+    'plone.app.ldap',
 )
 
 # Old site ID format
@@ -438,11 +447,21 @@ def upgrade4to5(setupTool):
     # We leave link integrity and content rules OFF since at this point the site will be
     # scanned by IBM Rational AppScan and that's sure to screw everything up.
 
+def fixLoginLockoutPlugin(portal):
+    acl_users = aq_parent(portal).acl_users
+    if hasattr(acl_users, 'login_lockout_plugin'):
+        plugin = getattr(acl_users, 'login_lockout_plugin')
+        for tree in ('_login_attempts', '_successful_login_attempts', '_last_pw_change'):
+            if not hasattr(plugin, tree):
+                setattr(plugin, tree, OOBTree())
+                plugin._p_changed = 1
 
 def upgrade5to6(setupTool):
     _logger.info('Upgrading EDRN Public Portal from profile version 5 to profile version 6')
     portal = _getPortal(setupTool)
     request = portal.REQUEST
+    _logger.info('Fixing login lockout plugin')
+    fixLoginLockoutPlugin(portal)
     _logger.info("Disabling schema extender's cache")
     from archetypes.schemaextender.extender import disableCache
     disableCache(request)
@@ -472,7 +491,12 @@ def upgrade5to6(setupTool):
         _logger.info('Upgrading product "%s"', product)
         qi.upgradeProduct(product)
         transaction.commit()
+    for thing in _reinstall6:
+        _logger.info('Uninstalling then reinstalling "%s"' % thing)
+        qi.uninstallProducts([thing])
+        qi.installProduct(thing)
     edrnThemeUpgrade4to5(setupTool)
+    ekeCommitteesReloadTypes4to5(setupTool)
     _logger.info('Ingesting everything fully')
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
     _logger.info('Clearing ingest paths to prevent automatic ingest')
