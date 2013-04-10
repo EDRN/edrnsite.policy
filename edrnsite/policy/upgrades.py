@@ -19,6 +19,7 @@ from zope.component import getUtility
 from zope.publisher.browser import TestRequest
 from edrn.theme.upgrades import upgrade4to5 as edrnThemeUpgrade4to5
 from eke.committees.upgrades import reloadTypes4to5 as ekeCommitteesReloadTypes4to5
+from eke.specimens.upgrades import setupCatalog as ekeSpecimensSetupCatalog
 import transaction, re, logging
 
 
@@ -91,6 +92,7 @@ _dependencies6 = (
     'edrn.theme',
     'eea.facetednavigation',
     'collective.js.jqueryui',
+    'eke.specimens',
 )
 _reinstall6 = (
     'LoginLockout',
@@ -456,6 +458,13 @@ def fixLoginLockoutPlugin(portal):
                 setattr(plugin, tree, OOBTree())
                 plugin._p_changed = 1
 
+def setBiomarkerIngestPaths(portal, bioRDF, bioOrganRDF):
+    if 'biomarkers' not in portal.keys(): return
+    biomarkers = portal['biomarkers']
+    biomarkers.rdfDataSource = bioRDF
+    biomarkers.bmoDataSource = bioOrganRDF
+
+
 def upgrade5to6(setupTool):
     _logger.info('Upgrading EDRN Public Portal from profile version 5 to profile version 6')
     portal = _getPortal(setupTool)
@@ -497,6 +506,10 @@ def upgrade5to6(setupTool):
         qi.installProduct(thing)
     edrnThemeUpgrade4to5(setupTool)
     ekeCommitteesReloadTypes4to5(setupTool)
+    ekeSpecimensSetupCatalog(setupTool)
+    _logger.info('Setting biomarkers to ingest from TEST BMDB')
+    setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
+        'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
     _logger.info('Ingesting everything fully')
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
     _logger.info('Clearing ingest paths to prevent automatic ingest')
