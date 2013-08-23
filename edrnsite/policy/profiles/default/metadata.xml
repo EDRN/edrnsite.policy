@@ -11,7 +11,6 @@ RESERVED. U.S. Government Sponsorship acknowledged.
         <dependency>profile-edrn.theme:default</dependency>
         <!-- <dependency>profile-edrnsite.content:default</dependency> -->
         <dependency>profile-edrnsite.funding:default</dependency>
-        <dependency>profile-edrnsite.search:default</dependency>
         <dependency>profile-edrnsite.portlets:default</dependency>
         <dependency>profile-edrnsite.misccontent:default</dependency>
         <dependency>profile-edrnsite.collaborations:default</dependency>

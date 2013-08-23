@@ -18,7 +18,6 @@ _testDeps = (
     'edrnsite.funding',
     'edrnsite.misccontent',
     'edrnsite.collaborations',
-    'edrnsite.search',
     'edrnsite.vanity',
     'eke.knowledge',
     'eke.publications',

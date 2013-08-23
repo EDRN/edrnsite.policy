@@ -9,7 +9,7 @@ RESERVED. U.S. Government Sponsorship acknowledged.
         title='EDRN Event: Item Added'
         description='Event triggered when an item is added (newly created or pasted) to a container.'
         enabled='True'
-        event='zope.app.container.interfaces.IObjectAddedEvent'
+        event='zope.container.interfaces.IObjectAddedEvent'
         stop-after='True'>
         <conditions/>
         <actions>
@@ -63,7 +63,7 @@ Thank you for taking the time to keep abreast on the latest changes at the EDRN 
         title='EDRN Event: Item Deleted'
         description='Event triggered when an item is removed (moved or deleted) from a container.'
         enabled='True'
-        event='zope.app.container.interfaces.IObjectRemovedEvent'
+        event='zope.container.interfaces.IObjectRemovedEvent'
         stop-after='True'>
         <conditions/>
         <actions>

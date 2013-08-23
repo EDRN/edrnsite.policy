@@ -35,7 +35,6 @@ def setupEDRNSitePolicy():
     ztc.installPackage('eke.knowledge')
     ztc.installPackage('eke.publications')
     ztc.installPackage('edrnsite.portlets')
-    ztc.installPackage('edrnsite.search')
     ztc.installPackage('edrnsite.funding')
     ztc.installPackage('edrnsite.misccontent')
     ztc.installPackage('edrnsite.collaborations')
