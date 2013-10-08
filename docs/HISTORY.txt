@@ -6,6 +6,11 @@ about the issues mentioned here can be found at the issue tracker, at::
 
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
+1.2.7 — TBD
+-----------
+
+• Upgrade eke.biomarker during edrnsite.policy upgrade
+
 
 1.2.6 — Upgrades
 ----------------

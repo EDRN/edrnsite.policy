@@ -21,7 +21,7 @@ from edrn.theme.upgrades import upgrade4to5 as edrnThemeUpgrade4to5
 from eke.committees.upgrades import reloadTypes4to5 as ekeCommitteesReloadTypes4to5
 from eke.specimens.upgrades import setupCatalog as ekeSpecimensSetupCatalog
 import transaction, re, logging
-
+from eke.biomarker.upgrades import upgradeBiomarkerFolders, loadPortalTypes
 
 _logger = logging.getLogger(__name__)
 
@@ -507,9 +507,14 @@ def upgrade5to6(setupTool):
     edrnThemeUpgrade4to5(setupTool)
     ekeCommitteesReloadTypes4to5(setupTool)
     ekeSpecimensSetupCatalog(setupTool)
-    _logger.info('Setting biomarkers to ingest from TEST BMDB')
-    setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
-        'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
+    # 2013-10-08: no longer needed, ops BMDB is fine:
+    # _logger.info('Setting biomarkers to ingest from TEST BMDB')
+    # setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
+    #     'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
+    # 2013-10-08: we will have to re-do this after Portal 4.2 is finally deployed at NCI:
+    loadPortalTypes(setupTool)
+    upgradeBiomarkerFolders(setupTool)
+    # /2013-10-08
     _logger.info('Ingesting everything fully')
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
     _logger.info('Clearing ingest paths to prevent automatic ingest')
