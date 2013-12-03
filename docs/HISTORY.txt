@@ -10,6 +10,8 @@ about the issues mentioned here can be found at the issue tracker, at::
 -----------
 
 • Upgrade eke.biomarker during edrnsite.policy upgrade
+• CA-1219 - Portal installer should provide option to cull content for speedy
+  scanning
 
 
 1.2.6 — Upgrades

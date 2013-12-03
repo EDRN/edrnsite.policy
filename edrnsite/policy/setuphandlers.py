@@ -1,5 +1,5 @@
 # encoding: utf-8
-# Copyright 2009 California Institute of Technology. ALL RIGHTS
+# Copyright 2009–2013 California Institute of Technology. ALL RIGHTS
 # RESERVED. U.S. Government Sponsorship acknowledged.
 
 from eea.facetednavigation.interfaces import ICriteria
@@ -272,6 +272,8 @@ def importOtherContent(portal, context):
     ):
         if objID in ids:
             continue
+        # For the purposes of RationalApp Scan, just create folders, so treat tesating as always true
+        testing = True
         if testing:
             # Don't bother importing the huge content into the test database.
             # It just won't fit. Instead, just make the folder.

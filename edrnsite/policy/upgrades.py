@@ -1,5 +1,5 @@
 # encoding: utf-8
-# Copyright 2010–2012 California Institute of Technology. ALL RIGHTS
+# Copyright 2010–2013 California Institute of Technology. ALL RIGHTS
 # RESERVED. U.S. Government Sponsorship acknowledged.
 
 from BTrees.OOBTree import OOBTree
@@ -95,6 +95,16 @@ _dependencies6 = (
     'eke.specimens',
 )
 _reinstall6 = (
+    'LoginLockout',
+    'plone.app.ldap',
+)
+
+# Profile 7
+_newPackages7 = ()
+_dependencies7 = (
+    'eke.biomarker',
+)
+_reinstall7 = (
     'LoginLockout',
     'plone.app.ldap',
 )
@@ -512,6 +522,72 @@ def upgrade5to6(setupTool):
     # setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
     #     'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
     # 2013-10-08: we will have to re-do this after Portal 4.2 is finally deployed at NCI:
+    # loadPortalTypes(setupTool)
+    # upgradeBiomarkerFolders(setupTool)
+    # /2013-10-08
+    _logger.info('Ingesting everything fully')
+    portal.unrestrictedTraverse('@@ingestEverythingFully')()
+    _logger.info('Clearing ingest paths to prevent automatic ingest')
+    if portal.hasProperty('edrnIngestPaths'):
+        portal.manage_delProperties(['edrnIngestPaths'])
+    _logger.info('Resetting portal "from" email address')
+    portal.manage_changeProperties(email_from_address='sean.kelly@jpl.nasa.gov')
+    _logger.info('Clearing, finding, and re-building the catalog')
+    catalog.clearFindAndRebuild()
+    uidCatalog = getToolByName(portal, 'uid_catalog')
+    _logger.info('Rebuilding the UID catalog')
+    uidCatalog.manage_rebuildCatalog()
+    transaction.commit()
+    # We leave link integrity and content rules OFF since at this point the site will be
+    # scanned by IBM Rational AppScan and that's sure to screw everything up.
+
+def upgrade6to7(setupTool):
+    _logger.info('Upgrading EDRN Public Portal from profile version 6 to profile version 7')
+    portal = _getPortal(setupTool)
+    request = portal.REQUEST
+    # _logger.info('Fixing login lockout plugin')
+    # fixLoginLockoutPlugin(portal)
+    _logger.info("Disabling schema extender's cache")
+    from archetypes.schemaextender.extender import disableCache
+    disableCache(request)
+    qi = getToolByName(portal, 'portal_quickinstaller')
+    propTool = getToolByName(portal, 'portal_properties')
+    propTool.site_properties.getProperty('enable_link_integrity_checks', True)
+    contentRuleStorage = getUtility(IRuleStorage)
+    _logger.info('Disabling link integrity checks')
+    propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
+    _logger.info('Disabling content rules')
+    contentRuleStorage.active = False
+    # _logger.info('Reloading Javascript Registry')
+    # setupTool.runImportStepFromProfile(PROFILE_ID, 'jsregistry')
+    # Clear the catalog
+    catalog = getToolByName(portal, 'portal_catalog')
+    _logger.info('Clearing the catalog')
+    catalog.manage_catalogClear()
+    _logger.info('Disabling Google Analytics')
+    removeGoogleAnalytics(portal)
+    _logger.info('Clearing the login-lockout table')
+    clearLoginLockoutTable(portal) # CA-873
+    _logger.info('Installing new packages')
+    installNewPackages(portal, _newPackages7)
+    _logger.info('Reinstalling products %r', _dependencies7)
+    qi.reinstallProducts(_dependencies7)
+    for product in _dependencies7:
+        _logger.info('Upgrading product "%s"', product)
+        qi.upgradeProduct(product)
+        transaction.commit()
+    for thing in _reinstall7:
+        _logger.info('Uninstalling then reinstalling "%s"' % thing)
+        qi.uninstallProducts([thing])
+        qi.installProduct(thing)
+    # edrnThemeUpgrade4to5(setupTool)
+    # ekeCommitteesReloadTypes4to5(setupTool)
+    # ekeSpecimensSetupCatalog(setupTool)
+    # 2013-10-08: no longer needed, ops BMDB is fine:
+    # _logger.info('Setting biomarkers to ingest from TEST BMDB')
+    # setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
+    #     'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
+    # 2013-10-08: we will have to re-do this after Portal 4.2 is finally deployed at NCI:
     loadPortalTypes(setupTool)
     upgradeBiomarkerFolders(setupTool)
     # /2013-10-08
@@ -530,6 +606,7 @@ def upgrade5to6(setupTool):
     transaction.commit()
     # We leave link integrity and content rules OFF since at this point the site will be
     # scanned by IBM Rational AppScan and that's sure to screw everything up.
+
 
 
 # UPGRADE from operations 4.2 to 4.3
