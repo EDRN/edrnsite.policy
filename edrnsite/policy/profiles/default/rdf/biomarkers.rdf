@@ -49,10 +49,6 @@
       </rdf:Bag>
     </bmdb:hasBiomarkerStudyDatas>
     <bmdb:referencedInPublication rdf:resource="http://edrn.jpl.nasa.gov/bmdb/publications/view/25"/>
-    <bmdb:referencesResource rdf:resource="http://www.ncbi.nlm.nih.gov/entrez/viewer.fcgi?db=protein&amp;id=4502101"/>
     <bmdb:referencesResource rdf:resource="http://ca.expasy.org/uniprot/P04083"/>
-    <bmdb:referencesResource rdf:resource="http://www.genenames.org/data/hgnc_data.php?hgnc_id=533"/>
-    <bmdb:referencesResource rdf:resource="http://www.genome.jp/dbget-bin/www_bget?hsa:301"/>
-    <bmdb:referencesResource rdf:resource="http://www.proteinatlas.org/ENSG00000135046"/>
   </bmdb:Biomarker>
 </rdf:RDF>
