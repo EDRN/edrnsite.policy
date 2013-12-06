@@ -541,6 +541,14 @@ def upgrade5to6(setupTool):
     # We leave link integrity and content rules OFF since at this point the site will be
     # scanned by IBM Rational AppScan and that's sure to screw everything up.
 
+def removeCustomQuickLinksPortlet(context):
+    # Prior 4.4 (profile level 7), we added two new "buttons" to the QuickLinks portlet.
+    # In 4.4.2, the QuickLinks portlet has those buttons now (and the theme supports it)
+    # so nuke the manual customization.
+    viewCustomizationTool = getToolByName(context, 'portal_view_customizations')
+    if 'zope.interface.interface-quicklinks.pt' in viewCustomizationTool:
+        viewCustomizationTool.manage_delObjects(['zope.interface.interface-quicklinks.pt'])
+
 def upgrade6to7(setupTool):
     _logger.info('Upgrading EDRN Public Portal from profile version 6 to profile version 7')
     portal = _getPortal(setupTool)
@@ -588,6 +596,7 @@ def upgrade6to7(setupTool):
     # setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
     #     'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
     # 2013-10-08: we will have to re-do this after Portal 4.2 is finally deployed at NCI:
+    removeCustomQuickLinksPortlet(portal)    
     loadPortalTypes(setupTool)
     upgradeBiomarkerFolders(setupTool)
     # /2013-10-08
