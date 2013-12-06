@@ -6,12 +6,14 @@ about the issues mentioned here can be found at the issue tracker, at::
 
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
-1.2.7 — TBD
------------
+1.2.7 — Quickie
+---------------
 
 • Upgrade eke.biomarker during edrnsite.policy upgrade
 • CA-1219 - Portal installer should provide option to cull content for speedy
   scanning
+• CA-1230 - Quick Links Portlets needs buttons for Informatics and Network
+  Consulting Team
 
 
 1.2.6 — Upgrades
