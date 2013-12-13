@@ -6,6 +6,13 @@ about the issues mentioned here can be found at the issue tracker, at::
 
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
+1.2.8 — TBD
+-----------
+
+• CA-1231 - Stripped down EDRN Portal doesn't have LDAP
+
+
+
 1.2.7 — Quickie
 ---------------
 

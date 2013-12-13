@@ -47,10 +47,10 @@ _logger = logging.getLogger('Plone')
 _edrnHomePageDescription = u'''The Early Detection Research Network (EDRN), an initiative of the National Cancer Institute (NCI), brings together dozens of institutions to help accelerate the translation of biomarker information into clinical applications and to evaluate new ways of testing cancer in its earliest stages and for cancer risk.
 '''
 _edrnHomePageBodyHTML = u'''<table><tbody>
-<tr><td><a href="about-edrn/scicomponents">&#x25ba;&#x00a0;Scientific Components</a></td>
-<td><a href="advocates">&#x25ba;&#x00a0;For Public, Patients, Advocates</a></td></tr>
-<tr><td><a href="colops">&#x25ba;&#x00a0;Collaborative Opportunities</a> (how to join EDRN)</td>
-<td><a href="researchers">&#x25ba;&#x00a0;For Researchers</a></td></tr>
+<tr><td><a href="about-edrn/scicomponents">- Scientific Components</a></td>
+<td><a href="advocates">- For Public, Patients, Advocates</a></td></tr>
+<tr><td><a href="colops">- Collaborative Opportunities</a> (how to join EDRN)</td>
+<td><a href="researchers">- For Researchers</a></td></tr>
 </tbody></table>'''
 
 _viewingTablesNote = u'''<p>Most of the tables in this site support sorting through your browser. Just click on a heading in a table to sort by that heading.</p>
@@ -113,7 +113,7 @@ def connectLDAP(portal):
     for i in ldapConfig.servers.keys():
         del ldapConfig.servers[i]
     ldapConfig.servers['ldapserver-1'] = LDAPServer(
-        'cancer.jpl.nasa.gov', connection_type=1, connection_timeout=5, operation_timeout=15, enabled=True
+        'edrn.jpl.nasa.gov', connection_type=1, connection_timeout=5, operation_timeout=15, enabled=True
     )
     p = ldapConfig.schema['uid']
     p.ldap_name, p.plone_name, p.description, p.multi_valued = 'uid', '', u'User ID', False
@@ -134,6 +134,12 @@ def connectLDAP(portal):
     guaranteePluginExists()
     # To enable accurate counts of failed attempts by LoginLockout:
     portal.acl_users['ldap-plugin'].acl_users.setCacheTimeout('negative', 0)
+    # plone.app.ldap doesn't provide an API to set the encryption type (CA-1231):
+    portal.acl_users['ldap-plugin'].acl_users._pwd_encryption = 'SHA'
+    # plone.app.ldap doesn't associate acl_users & acl_users/ldap-plugin with the RAMCache (CA-1231):
+    ramCache = getToolByName(portal, 'RAMCache')
+    ramCache.ZCacheManager_setAssociations({'associate_acl_users': 1, 'associate_acl_users/ldap-plugin': 1})
+
 
 def _doPublish(item, wfTool):
     try:
@@ -412,6 +418,7 @@ def createWelcomePage(portal):
     except WorkflowException:
         pass
     frontPage.reindexObject()
+    portal.setDefaultPage('front-page')
 
 def addAdminstriviaImages(portal, context):
     '''The GenericSetup profile imports pages and folders just fine, but can't handle images.
