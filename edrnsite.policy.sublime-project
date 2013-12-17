@@ -1,12 +1,5 @@
 {
 	"folders":
-	[
-		{
-			"path": "docs"
-		},
-        {
-            "path": "edrnsite"
-        },
         {
             "path": ".",
             "folder_exclude_patterns": ["bin", "dep-src", "develop-eggs", "dist", "build", "*.egg-info", "parts", "var"],
