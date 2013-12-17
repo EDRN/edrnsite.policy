@@ -10,7 +10,7 @@ import os.path
 # ------------
 
 _name        = 'edrnsite.policy'
-_version     = '1.2.8'
+_version     = '1.2.9'
 _description = 'EDRN Public Portal Site Policy and Component Orchestration'
 _url         = 'http://cancer.jpl.nasa.gov/products/edrnsite-policy'
 _downloadURL = 'http://oodt.jpl.nasa.gov/dist/edrnsite'
