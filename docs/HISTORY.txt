@@ -6,6 +6,13 @@ about the issues mentioned here can be found at the issue tracker, at::
 
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
+1.2.9 — Le Sigh
+---------------
+
+• CA-1236 - Stripped-down portal's Super User LDAP group has no Management
+  permissions
+
+
 1.2.8 — Direct Me To Your Leader
 --------------------------------
 

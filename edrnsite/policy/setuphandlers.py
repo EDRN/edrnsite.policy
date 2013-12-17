@@ -139,7 +139,10 @@ def connectLDAP(portal):
     # plone.app.ldap doesn't associate acl_users & acl_users/ldap-plugin with the RAMCache (CA-1231):
     ramCache = getToolByName(portal, 'RAMCache')
     ramCache.ZCacheManager_setAssociations({'associate_acl_users': 1, 'associate_acl_users/ldap-plugin': 1})
-
+    # Strangely, the "Super User" (LDAP group) to "Manager" (Zope role) mapping doesn't appear in the
+    # operational EDRN portal, even though it somehow works.  But in a newly stripped-down portal,
+    # we definitely need it in there
+    portal.acl_users['ldap-plugin'].acl_users.manage_addGroupMapping('Super User', 'Manager')
 
 def _doPublish(item, wfTool):
     try:
