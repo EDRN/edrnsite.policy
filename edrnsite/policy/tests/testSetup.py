@@ -279,9 +279,10 @@ class SetupTest(unittest.TestCase):
         # self.assertEquals(0.25, lockoutPlugin.getProperty('_reset_period')) # Reset in 15 minutes (one quarter hour)
     def testFullIngest(self):
         '''Check if the re-ingestion features of CA-528 are available'''
-        ingestPaths = self.portal.getProperty('edrnIngestPaths')
-        self.failUnless(ingestPaths is not None)
-        self.assertEquals(12, len(ingestPaths))
+        # Note: no longer test ingest paths; see CA-1237
+        # ingestPaths = self.portal.getProperty('edrnIngestPaths')
+        # self.failUnless(ingestPaths is not None)
+        # self.assertEquals(12, len(ingestPaths))
         fullIngestor = queryMultiAdapter((self.portal, TestRequest()), name=u'ingestEverythingFully')
         self.failUnless(fullIngestor is not None)
     def testFacetedNavigation(self):

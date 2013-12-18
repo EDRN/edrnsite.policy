@@ -6,6 +6,12 @@ about the issues mentioned here can be found at the issue tracker, at::
 
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
+1.2.10 — La Sigh
+----------------
+
+• CA-1237 - Stripped-down portal has ingest enabled; should be disabled
+
+
 1.2.9 — Le Sigh
 ---------------
 
