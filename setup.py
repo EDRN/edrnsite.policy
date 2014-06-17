@@ -58,7 +58,7 @@ def _read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
 _header = '*' * len(_name) + '\n' + _name + '\n' + '*' * len(_name)
-_longDescription = _header + '\n\n' + _read('README.txt') + '\n\n' + _read('docs', 'INSTALL.txt') + '\n\n' \
+_longDescription = _header + '\n\n' + _read('README.rst') + '\n\n' + _read('docs', 'INSTALL.txt') + '\n\n' \
     + _read('docs', 'HISTORY.txt') + '\n\n' + _read('docs', 'LICENSE.txt')
 open('doc.txt', 'w').write(_longDescription)
 _cp = SafeConfigParser()
