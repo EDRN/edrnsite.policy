@@ -6,6 +6,13 @@ about the issues mentioned here can be found at the issue tracker, at::
 
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
+
+1.2.11 — I Had Some Chicken; Pass Me the FLOSS
+----------------------------------------------
+
+• First official release as free/libre/open source software.
+
+
 1.2.10 — La Sigh
 ----------------
 
