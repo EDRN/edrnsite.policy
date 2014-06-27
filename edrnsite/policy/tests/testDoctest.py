@@ -14,7 +14,7 @@ optionFlags = (doctest.ELLIPSIS | doctest.NORMALIZE_WHITESPACE | doctest.REPORT_
 
 def test_suite():
     return unittest.TestSuite([
-        layered(doctest.DocFileSuite('README.txt', package='edrnsite.policy', optionflags=optionFlags), LAYER),
+        layered(doctest.DocFileSuite('README.rst', package='edrnsite.policy', optionflags=optionFlags), LAYER),
     ])
 
 if __name__ == '__main__':
