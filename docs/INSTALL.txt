@@ -3,7 +3,7 @@ Installation
 
 Use Buildout_ with the plone.recipe.zope2instance recipe.
 
-* Add ``edrnsite.policy`` to the list of eggs to install, e.g.::
+• Add ``edrnsite.policy`` to the list of eggs to install, e.g.::
  
     [buildout]
     ...
@@ -11,15 +11,7 @@ Use Buildout_ with the plone.recipe.zope2instance recipe.
         ...
         edrnsite.policy
         
-* Tell the plone.recipe.zope2instance recipe to install a ZCML slug::
-  
-    [instance]
-    recipe = plone.recipe.zope2instance
-    ...
-    zcml =
-        edrnsite.policy
-        
-* Re-run buildout, e.g. with::
+• Re-run buildout, e.g. with::
   
     % ./bin/buildout
         
