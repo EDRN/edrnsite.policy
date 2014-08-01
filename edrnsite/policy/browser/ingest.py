@@ -81,6 +81,8 @@ class FullIngestor(BrowserView):
                 _logger.exception('Ingest failed for "%s"', path)
 
         # And re-index
+        import transaction
+        transaction.commit()
         _logger.info('Clearing and rebuilding the catalog')
         catalog = getToolByName(context, 'portal_catalog')
         catalog.clearFindAndRebuild()
