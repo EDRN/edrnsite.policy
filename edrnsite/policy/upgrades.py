@@ -11,7 +11,7 @@ from Products.CMFCore.utils import getToolByName
 from setuphandlers import (
     enableEmbeddableVideos, createCommitteesFolder, createCollaborationsFolder, _doPublish,
     orderFolderTabs, createMembersListSearchPage, createSpecimensPage, disableSpecimenPortlets,
-    addTableSortingNote, setEditorProperties, makeFilesVersionable,
+    addTableSortingNote, setEditorProperties, makeFilesVersionable, disablePublicationsPortlets,
     enableJQuery
 )
 from zope.component import getMultiAdapter
@@ -615,6 +615,39 @@ def upgrade6to7(setupTool):
     transaction.commit()
     # We leave link integrity and content rules OFF since at this point the site will be
     # scanned by IBM Rational AppScan and that's sure to screw everything up.
+
+def upgrade7to8(setupTool):
+    _logger.info('Upgrading EDRN Public Portal from profile version 8 to profile version 8')
+    portal = _getPortal(setupTool)
+    request = portal.REQUEST
+    catalog = getToolByName(portal, 'portal_catalog')
+    _logger.info("Disabling schema extender's cache")
+    from archetypes.schemaextender.extender import disableCache
+    disableCache(request)
+    qi = getToolByName(portal, 'portal_quickinstaller')
+    propTool = getToolByName(portal, 'portal_properties')
+    propTool.site_properties.getProperty('enable_link_integrity_checks', True)
+    contentRuleStorage = getUtility(IRuleStorage)
+    _logger.info('Disabling link integrity checks')
+    propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
+    _logger.info('Disabling content rules')
+    contentRuleStorage.active = False
+    qi.upgradeProduct('eke.publications')
+    disablePublicationsPortlets(portal)
+    _logger.info('Ingesting everything fully')
+    portal.unrestrictedTraverse('@@ingestEverythingFully')()
+    _logger.info('Clearing ingest paths to prevent automatic ingest')
+    if portal.hasProperty('edrnIngestPaths'):
+        portal.manage_delProperties(['edrnIngestPaths'])
+    _logger.info('Resetting portal "from" email address')
+    portal.manage_changeProperties(email_from_address='sean.kelly@jpl.nasa.gov')
+    _logger.info('Clearing, finding, and re-building the catalog')
+    catalog.clearFindAndRebuild()
+    uidCatalog = getToolByName(portal, 'uid_catalog')
+    _logger.info('Rebuilding the UID catalog')
+    uidCatalog.manage_rebuildCatalog()
+    transaction.commit()
+    _logger.info('Upgrade 7-to-8 complete')
 
 
 

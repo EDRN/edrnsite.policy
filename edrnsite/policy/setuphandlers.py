@@ -4,6 +4,7 @@
 
 from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.layout.interfaces import IFacetedLayout
+from eea.facetednavigation.settings.interfaces import IHidePloneRightColumn
 from eke.biomarker.interfaces import IBiomarker
 from eke.biomarker.utils import COLLABORATIVE_GROUP_BMDB_IDS_TO_NAMES
 from eke.committees.interfaces import ICommittee
@@ -27,6 +28,7 @@ from Products.CMFCore.utils import getToolByName
 from Products.CMFCore.WorkflowCore import WorkflowException
 from ZODB.DemoStorage import DemoStorage
 from zope.component import getMultiAdapter, getUtility, queryUtility, ComponentLookupError
+from zope.interface import alsoProvides
 from zope.publisher.browser import TestRequest
 import urllib2, os, sys, logging
 
@@ -810,6 +812,15 @@ def disableSpecimenPortlets(portal):
     assignmentMgr = getMultiAdapter((specimens, column), ILocalPortletAssignmentManager)
     assignmentMgr.setBlacklistStatus(CONTEXT_CATEGORY, True)
 
+def disablePublicationsPortlets(portal):
+    u'''Disable portlets on the right side of the Publications page.'''
+    if 'publications' not in portal.keys(): return
+    publications = portal['publications']
+    column = getUtility(IPortletManager, name=u'plone.rightcolumn')
+    assignmentMgr = getMultiAdapter((publications, column), ILocalPortletAssignmentManager)
+    assignmentMgr.setBlacklistStatus(CONTEXT_CATEGORY, True)
+    alsoProvides(publications, IHidePloneRightColumn)
+
 def setEditorProperties(portal):
     '''Get rid of Kupu and use TinyMCE'''
     qi = getToolByName(portal, 'portal_quickinstaller')
@@ -869,6 +880,7 @@ def setupVarious(context):
     ingestInitially(portal, context)
     createSpecimensPage(portal)
     disableSpecimenPortlets(portal)
+    disablePublicationsPortlets(portal)
     deleteDefaultPortlets(portal)
     publishKnowledge(portal)
     orderFolderTabs(portal)
