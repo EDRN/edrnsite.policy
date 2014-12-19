@@ -34,7 +34,6 @@ _externalRequirements = [
     'eea.facetednavigation',
     'zope.globalrequest',
 #    'plone.app.jquery',
-    'elementtree==1.2.7-20070827-preview',
 ]
 _classifiers = [
     'Development Status :: 4 - Beta',
