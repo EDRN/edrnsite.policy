@@ -55,9 +55,9 @@ RESERVED. U.S. Government Sponsorship acknowledged.
         source='7'
         destination='8'
         title='Upgrade 7 to 8'
-        description='Upgrade the EDRN default profile from version 6 to version 7'
+        description='Upgrade the EDRN default profile from version 7 to version 8'
         profile='edrnsite.policy:default'
-        handler='edrnsite.policy.upgrades.upgrade6to7'
+        handler='edrnsite.policy.upgrades.upgrade7to8'
         sortkey='1'
     />
 </configure>
