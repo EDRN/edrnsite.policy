@@ -10,7 +10,7 @@ import os.path
 # ------------
 
 _name        = 'edrnsite.policy'
-_version     = '1.2.13'
+_version     = '1.2.14'
 _description = 'EDRN Public Portal Site Policy and Component Orchestration'
 _author      = 'Sean Kelly'
 _authorEmail = 'sean.kelly@jpl.nasa.gov'
