@@ -7,6 +7,12 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
+1.2.13 — More Publishing!
+-------------------------
+
+• CA-759: Improve publication layout.
+
+
 1.2.12 — You're Nothing Unless You Publish
 ------------------------------------------
 
