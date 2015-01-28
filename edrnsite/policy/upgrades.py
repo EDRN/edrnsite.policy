@@ -617,7 +617,7 @@ def upgrade6to7(setupTool):
     # scanned by IBM Rational AppScan and that's sure to screw everything up.
 
 def upgrade7to8(setupTool):
-    _logger.info('Upgrading EDRN Public Portal from profile version 8 to profile version 8')
+    _logger.info('Upgrading EDRN Public Portal from profile version 7 to profile version 8')
     portal = _getPortal(setupTool)
     request = portal.REQUEST
     catalog = getToolByName(portal, 'portal_catalog')
