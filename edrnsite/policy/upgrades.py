@@ -666,7 +666,7 @@ def upgrade8to9(setupTool):
     _logger.info('Disabling content rules')
     contentRuleStorage.active = False
     qi.upgradeProduct('eke.publications')
-    qi.upgradeProduct('eke.biomarkers')
+    qi.upgradeProduct('eke.biomarker')
     disablePublicationsPortlets(portal)
     _logger.info('Ingesting everything fully')
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
