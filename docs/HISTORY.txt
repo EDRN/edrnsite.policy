@@ -7,6 +7,15 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
+1.2.14 — Bug Fixes
+------------------
+
+• CA-1292
+• CA-1300
+• CA-1302
+• CA-1303
+
+
 1.2.13 — More Publishing!
 -------------------------
 
