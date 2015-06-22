@@ -4,7 +4,7 @@ Copyright 2009-2015 California Institute of Technology. ALL RIGHTS
 RESERVED. U.S. Government Sponsorship acknowledged.
 -->
 <metadata>
-    <version>9</version>
+    <version>10</version>
     <description>The EDRN Site Policy turns a plain old Plone site into the EDRN public portal.</description>
     <dependencies>
         <dependency>profile-eea.facetednavigation:default</dependency>
@@ -24,5 +24,6 @@ RESERVED. U.S. Government Sponsorship acknowledged.
         <dependency>profile-eke.ecas:default</dependency>
         <dependency>profile-eke.review:default</dependency>
         <dependency>profile-eke.specimens:default</dependency>
+        <dependency>profile-eke.secretome:default</dependency>
     </dependencies>
 </metadata>

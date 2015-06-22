@@ -69,5 +69,14 @@ RESERVED. U.S. Government Sponsorship acknowledged.
         handler='edrnsite.policy.upgrades.upgrade8to9'
         sortkey='1'
     />
+    <genericsetup:upgradeStep
+        source='9'
+        destination='10'
+        title='Upgrade 9 to 10'
+        description='Upgrade the EDRN default profile from version 9 to version 10'
+        profile='edrnsite.policy:default'
+        handler='edrnsite.policy.upgrades.upgrade9to10'
+        sortkey='1'
+    />
 </configure>
 
