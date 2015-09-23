@@ -24,6 +24,5 @@ RESERVED. U.S. Government Sponsorship acknowledged.
         <dependency>profile-eke.ecas:default</dependency>
         <dependency>profile-eke.review:default</dependency>
         <dependency>profile-eke.specimens:default</dependency>
-        <dependency>profile-eke.secretome:default</dependency>
     </dependencies>
 </metadata>

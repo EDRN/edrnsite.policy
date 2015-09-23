@@ -700,7 +700,8 @@ def upgrade9to10(setupTool):
     propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
     _logger.info('Disabling content rules')
     contentRuleStorage.active = False
-    qi.installProduct('eke.secretome')
+    # No, decided not to write secretome with Plone:
+    # qi.installProduct('eke.secretome')
     # setup.runAllImportStepsFromProfile('profile-eke.secretome:default')
     disablePublicationsPortlets(portal)
     _logger.info('Ingesting everything fully')

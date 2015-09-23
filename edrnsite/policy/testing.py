@@ -28,7 +28,6 @@ _testDeps = (
     'eke.ecas',
     'eke.review',
     'eke.specimens',
-    'eke.secretome',
     'eea.facetednavigation',
 )
 

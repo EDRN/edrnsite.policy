@@ -10,7 +10,7 @@ about the issues mentioned here can be found at the issue tracker, at::
 1.2.15 — TBD
 ------------
 
-• Added Secretome
+• Added Secretome, then removed Secretome.
 
 
 1.2.14 — Bug Fixes
