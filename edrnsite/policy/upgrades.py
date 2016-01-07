@@ -473,6 +473,7 @@ def setBiomarkerIngestPaths(portal, bioRDF, bioOrganRDF):
     biomarkers = portal['biomarkers']
     biomarkers.rdfDataSource = bioRDF
     biomarkers.bmoDataSource = bioOrganRDF
+    biomarkers.bmuDataSource = 'http://edrn.jpl.nasa.gov/dmcc/rdf-data/biomuta'
 
 
 def upgrade5to6(setupTool):
@@ -519,8 +520,8 @@ def upgrade5to6(setupTool):
     ekeSpecimensSetupCatalog(setupTool)
     # 2013-10-08: no longer needed, ops BMDB is fine:
     # _logger.info('Setting biomarkers to ingest from TEST BMDB')
-    # setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
-    #     'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
+    setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
+         'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
     # 2013-10-08: we will have to re-do this after Portal 4.2 is finally deployed at NCI:
     # loadPortalTypes(setupTool)
     # upgradeBiomarkerFolders(setupTool)
@@ -593,8 +594,8 @@ def upgrade6to7(setupTool):
     # ekeSpecimensSetupCatalog(setupTool)
     # 2013-10-08: no longer needed, ops BMDB is fine:
     # _logger.info('Setting biomarkers to ingest from TEST BMDB')
-    # setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
-    #     'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
+    setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
+         'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
     # 2013-10-08: we will have to re-do this after Portal 4.2 is finally deployed at NCI:
     removeCustomQuickLinksPortlet(portal)    
     loadPortalTypes(setupTool)
