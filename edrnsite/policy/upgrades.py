@@ -705,6 +705,8 @@ def upgrade9to10(setupTool):
     # qi.installProduct('eke.secretome')
     # setup.runAllImportStepsFromProfile('profile-eke.secretome:default')
     disablePublicationsPortlets(portal)
+    setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
+         'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
     _logger.info('Ingesting everything fully')
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
     _logger.info('Clearing ingest paths to prevent automatic ingest')
@@ -718,8 +720,6 @@ def upgrade9to10(setupTool):
     _logger.info('Rebuilding the UID catalog')
     uidCatalog.manage_rebuildCatalog()
     transaction.commit()
-    setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
-         'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
     _logger.info('Upgrade 9-to-10 complete')
 
 
