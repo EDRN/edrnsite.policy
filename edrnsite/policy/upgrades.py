@@ -520,8 +520,8 @@ def upgrade5to6(setupTool):
     ekeSpecimensSetupCatalog(setupTool)
     # 2013-10-08: no longer needed, ops BMDB is fine:
     # _logger.info('Setting biomarkers to ingest from TEST BMDB')
-    setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
-         'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
+    #setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
+    #     'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
     # 2013-10-08: we will have to re-do this after Portal 4.2 is finally deployed at NCI:
     # loadPortalTypes(setupTool)
     # upgradeBiomarkerFolders(setupTool)
@@ -594,8 +594,8 @@ def upgrade6to7(setupTool):
     # ekeSpecimensSetupCatalog(setupTool)
     # 2013-10-08: no longer needed, ops BMDB is fine:
     # _logger.info('Setting biomarkers to ingest from TEST BMDB')
-    setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
-         'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
+    #setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
+    #     'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
     # 2013-10-08: we will have to re-do this after Portal 4.2 is finally deployed at NCI:
     removeCustomQuickLinksPortlet(portal)    
     loadPortalTypes(setupTool)
@@ -718,6 +718,8 @@ def upgrade9to10(setupTool):
     _logger.info('Rebuilding the UID catalog')
     uidCatalog.manage_rebuildCatalog()
     transaction.commit()
+    setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
+         'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
     _logger.info('Upgrade 9-to-10 complete')
 
 
