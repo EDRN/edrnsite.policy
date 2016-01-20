@@ -11,6 +11,8 @@ about the issues mentioned here can be found at the issue tracker, at::
 ------------
 
 • Added Secretome, then removed Secretome.
+• Set new Biomuta ingest path for biomarkers.
+• No longer rely on python-ldap==2.3.13.
 
 
 1.2.14 — Bug Fixes
