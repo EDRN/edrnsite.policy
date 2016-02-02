@@ -7,8 +7,8 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
-1.2.15 — TBD
-------------
+1.2.15 — Various Upgrades
+-------------------------
 
 • Added Secretome, then removed Secretome.
 • Set new Biomuta ingest path for biomarkers.
