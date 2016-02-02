@@ -710,7 +710,7 @@ def upgrade9to10(setupTool):
         import socket
         if not socket.gethostname().startswith('tumor'):
             b = portal['biomarkers']
-            b.bmuDataSource = 'http://edrn.jpl.nasa.gov/dmcc/rdf-data/biomuta'
+            b.bmuDataSource = 'http://edrn.jpl.nasa.gov/dmcc/rdf-data/biomuta/@@rdf'
     _logger.info('Ingesting everything fully')
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
     _logger.info('Clearing ingest paths to prevent automatic ingest')
