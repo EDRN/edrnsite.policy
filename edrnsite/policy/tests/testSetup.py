@@ -235,6 +235,10 @@ class SetupTest(unittest.TestCase):
             self.portal['biomarkers'].bmoDataSource
         )
         self.assertEquals(
+            'https://edrn.jpl.nasa.gov/dmcc/rdf-data/biomuta/@@rdf',
+            self.portal['biomarkers'].bmuDataSource
+        )
+        self.assertEquals(
             'http://edrn.jpl.nasa.gov/bmdb/rdf/resources',
             self.portal['resources']['miscellaneous-resources'].rdfDataSource
         )

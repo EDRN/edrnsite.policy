@@ -473,7 +473,7 @@ def setBiomarkerIngestPaths(portal, bioRDF, bioOrganRDF):
     biomarkers = portal['biomarkers']
     biomarkers.rdfDataSource = bioRDF
     biomarkers.bmoDataSource = bioOrganRDF
-    biomarkers.bmuDataSource = 'http://edrn.jpl.nasa.gov/dmcc/rdf-data/biomuta'
+    biomarkers.bmuDataSource = 'https://edrn.jpl.nasa.gov/dmcc/rdf-data/biomuta/@@rdf'
 
 
 def upgrade5to6(setupTool):
