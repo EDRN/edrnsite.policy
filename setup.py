@@ -1,5 +1,5 @@
 # encoding: utf-8
-# Copyright 2009–2012 California Institute of Technology. ALL RIGHTS
+# Copyright 2009–2016 California Institute of Technology. ALL RIGHTS
 # RESERVED. U.S. Government Sponsorship acknowledged.
 
 from setuptools import setup, find_packages
@@ -10,7 +10,7 @@ import os.path
 # ------------
 
 _name        = 'edrnsite.policy'
-_version     = '1.2.16'
+_version     = '1.2.17'
 _description = 'EDRN Public Portal Site Policy and Component Orchestration'
 _author      = 'Sean Kelly'
 _authorEmail = 'sean.kelly@jpl.nasa.gov'
