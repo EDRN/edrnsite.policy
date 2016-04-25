@@ -414,7 +414,7 @@ def createWelcomePage(portal):
         if portal['front-page'].portal_type == 'EDRN Home': return
         portal.manage_delObjects('front-page')
     frontPage = portal[portal.invokeFactory('EDRN Home', 'front-page')]
-    frontPage.setTitle('Welcome2 to EDRN')
+    frontPage.setTitle('Welcome to EDRN')
     frontPage.setDescription(_edrnHomePageDescription)
     frontPage.setText(_edrnHomePageBodyHTML)
     frontPage.showGarishSearchBox = True
@@ -642,7 +642,7 @@ def createKnowledgeFolders(portal):
     existing = portal.objectIds()
     for objID, kind, title, desc in (
         ('biomarkers', 'Biomarker Folder', u'Biomarkers', u'Cancer biomarkers currently being evaluated by the EDRN.'),
-        ('protocols', 'Study Folder', u'Protocols2', u'Studies, projects, protocols, and other research fronts.'),
+        ('protocols', 'Study Folder', u'Protocols', u'Studies, projects, protocols, and other research fronts.'),
         ('publications', 'Publication Folder', u'Publications', u'Articles, papers, journal entries, books, and other publications.'),
         ('sites', 'Site Folder', u'Sites', u'Member institutions and other sites of the Early Detection Research Network.'),
     ):
