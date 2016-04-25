@@ -6,8 +6,19 @@ about the issues mentioned here can be found at the issue tracker, at::
 
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
+1.2.17 - TBD
+------------
 
-1.2.15 — TBD
+• TBD
+
+1.2.16 - Added Biomuta
+------------
+
+• Added Biomuta
+• CA-1324
+
+
+1.2.15 — Secretome addition/removal
 ------------
 
 • Added Secretome, then removed Secretome.
