@@ -6,10 +6,10 @@ about the issues mentioned here can be found at the issue tracker, at::
 
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
-1.2.17 - TBD
+1.2.17 - (Ignore)
 ------------
 
-• TBD
+• Accidental release, please ignore (can't delete from git)
 
 
 1.2.16 — Release to NCI
