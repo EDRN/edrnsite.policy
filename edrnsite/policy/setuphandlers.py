@@ -199,6 +199,7 @@ def ingestInitially(portal, context):
         # No data yet, do initial ingest
         biomarkers.rdfDataSource = urlPrefix + 'biomarkers.rdf'
         biomarkers.bmoDataSource = urlPrefix + 'biomarkerorgans.rdf'
+        biomarkers.bmuDataSource = urlPrefix + 'biomuta.rdf'
         publications.rdfDataSource = urlPrefix + 'dmcc-pubs.rdf'
         publications.additionalDataSources = [urlPrefix + 'bmdb-pubs.rdf']
         sites.rdfDataSource = urlPrefix + 'sites.rdf'
@@ -454,6 +455,7 @@ def setIngestURLs(portal):
     portal.resources['miscellaneous-resources'].rdfDataSource = 'http://edrn.jpl.nasa.gov/bmdb/rdf/resources'
     portal['biomarkers'].bmoDataSource                        = 'http://edrn.jpl.nasa.gov/bmdb/rdf/biomarkerorgans'
     portal['biomarkers'].rdfDataSource                        = 'http://edrn.jpl.nasa.gov/bmdb/rdf/biomarkers'
+    portal['biomarkers'].bmuDataSource                        = 'https://edrn.jpl.nasa.gov/dmcc/rdf-data/biomuta/@@rdf'
     portal['protocols'].rdfDataSource                         = 'http://ginger.fhcrc.org/dmcc/rdf-data/protocols/rdf'
     portal['publications'].additionalDataSources              = ['http://edrn.jpl.nasa.gov/bmdb/rdf/publications']
     portal['publications'].rdfDataSource                      = 'http://ginger.fhcrc.org/dmcc/rdf-data/publications/rdf'

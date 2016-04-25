@@ -473,7 +473,7 @@ def setBiomarkerIngestPaths(portal, bioRDF, bioOrganRDF):
     biomarkers = portal['biomarkers']
     biomarkers.rdfDataSource = bioRDF
     biomarkers.bmoDataSource = bioOrganRDF
-    biomarkers.bmuDataSource = 'http://edrn.jpl.nasa.gov/dmcc/rdf-data/biomuta'
+    biomarkers.bmuDataSource = 'https://edrn.jpl.nasa.gov/dmcc/rdf-data/biomuta/@@rdf'
 
 
 def upgrade5to6(setupTool):
@@ -705,8 +705,12 @@ def upgrade9to10(setupTool):
     # qi.installProduct('eke.secretome')
     # setup.runAllImportStepsFromProfile('profile-eke.secretome:default')
     disablePublicationsPortlets(portal)
-    setBiomarkerIngestPaths(portal, 'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkers',
-         'http://tumor.jpl.nasa.gov/bmdb/rdf/biomarkerorgans')
+    # Set the new bmuDataSource on biomarkers, but not on testing (this is ugly)
+    if 'biomarkers' in portal.keys():
+        import socket
+        if not socket.gethostname().startswith('tumor'):
+            b = portal['biomarkers']
+            b.bmuDataSource = 'http://edrn.jpl.nasa.gov/dmcc/rdf-data/biomuta/@@rdf'
     _logger.info('Ingesting everything fully')
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
     _logger.info('Clearing ingest paths to prevent automatic ingest')

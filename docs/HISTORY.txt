@@ -11,17 +11,19 @@ about the issues mentioned here can be found at the issue tracker, at::
 
 • TBD
 
-1.2.16 - Added Biomuta
-------------
 
-• Added Biomuta
-• CA-1324
+1.2.16 — Release to NCI
+-----------------------
+
+• https://oodt.jpl.nasa.gov/jira/browse/CA-1324
 
 
-1.2.15 — Secretome addition/removal
-------------
+1.2.15 — Various Upgrades
+-------------------------
 
 • Added Secretome, then removed Secretome.
+• Set new Biomuta ingest path for biomarkers.
+• No longer rely on python-ldap==2.3.13.
 
 
 1.2.14 — Bug Fixes
