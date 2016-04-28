@@ -78,5 +78,14 @@ RESERVED. U.S. Government Sponsorship acknowledged.
         handler='edrnsite.policy.upgrades.upgrade9to10'
         sortkey='1'
     />
+    <genericsetup:upgradeStep
+        source='10'
+        destination='11'
+        title='Upgrade 10 to 11 with Visualizations'
+        description='Upgrade the EDRN default profile from version 10 to version 11 and adds nifty visualizations'
+        profile='edrnsite.policy:default'
+        handler='edrnsite.policy.upgrades.upgrade10to11'
+        sortkey='1'
+    />
 </configure>
 

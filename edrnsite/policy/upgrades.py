@@ -727,6 +727,101 @@ def upgrade9to10(setupTool):
     _logger.info('Upgrade 9-to-10 complete')
 
 
+def upgrade9to10(setupTool):
+    _logger.info('Upgrading EDRN Public Portal from profile version 9 to profile version 10')
+    portal = _getPortal(setupTool)
+    request = portal.REQUEST
+    catalog, setup = getToolByName(portal, 'portal_catalog'), getToolByName(portal, 'portal_setup')
+    _logger.info("Disabling schema extender's cache")
+    from archetypes.schemaextender.extender import disableCache
+    disableCache(request)
+    qi = getToolByName(portal, 'portal_quickinstaller')
+    propTool = getToolByName(portal, 'portal_properties')
+    propTool.site_properties.getProperty('enable_link_integrity_checks', True)
+    contentRuleStorage = getUtility(IRuleStorage)
+    _logger.info('Disabling link integrity checks')
+    propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
+    _logger.info('Disabling content rules')
+    contentRuleStorage.active = False
+    # No, decided not to write secretome with Plone:
+    # qi.installProduct('eke.secretome')
+    # setup.runAllImportStepsFromProfile('profile-eke.secretome:default')
+    disablePublicationsPortlets(portal)
+    # Set the new bmuDataSource on biomarkers, but not on testing (this is ugly)
+    if 'biomarkers' in portal.keys():
+        import socket
+        if not socket.gethostname().startswith('tumor'):
+            b = portal['biomarkers']
+            b.bmuDataSource = 'http://edrn.jpl.nasa.gov/dmcc/rdf-data/biomuta/@@rdf'
+    _logger.info('Ingesting everything fully')
+    portal.unrestrictedTraverse('@@ingestEverythingFully')()
+    _logger.info('Clearing ingest paths to prevent automatic ingest')
+    if portal.hasProperty('edrnIngestPaths'):
+        portal.manage_delProperties(['edrnIngestPaths'])
+    _logger.info('Resetting portal "from" email address')
+    portal.manage_changeProperties(email_from_address='sean.kelly@jpl.nasa.gov')
+    _logger.info('Clearing, finding, and re-building the catalog')
+    catalog.clearFindAndRebuild()
+    uidCatalog = getToolByName(portal, 'uid_catalog')
+    _logger.info('Rebuilding the UID catalog')
+    uidCatalog.manage_rebuildCatalog()
+    transaction.commit()
+    _logger.info('Upgrade 9-to-10 complete')
+
+
+def upgrade10to11(setupTool):
+    _logger.info('Upgrading EDRN Public Portal from profile version 10 to profile version 11 with nifty visualizations')
+    portal = _getPortal(setupTool)
+    request = portal.REQUEST
+    catalog, setup = getToolByName(portal, 'portal_catalog'), getToolByName(portal, 'portal_setup')
+    _logger.info("Disabling schema extender's cache")
+    from archetypes.schemaextender.extender import disableCache
+    disableCache(request)
+    qi = getToolByName(portal, 'portal_quickinstaller')
+    propTool = getToolByName(portal, 'portal_properties')
+    propTool.site_properties.getProperty('enable_link_integrity_checks', True)
+    contentRuleStorage = getUtility(IRuleStorage)
+    _logger.info('Disabling link integrity checks')
+    propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
+    _logger.info('Disabling content rules')
+    contentRuleStorage.active = False
+    # Set new summarizer data sources
+    _logger.info('Setting up new summary data sources')
+    import socket
+    if not socket.gethostname().startswith('tumor'):
+        biomarkerSummary = 'https://edrn.jpl.nasa.gov/cancerdataexpo/summarizer-data/biomarker/@@summary'
+        siteSummary = 'https://edrn.jpl.nasa.gov/cancerdataexpo/summarizer-data/collaboration/@@summary'
+        pubSummary = 'https://edrn.jpl.nasa.gov/cancerdataexpo/summarizer-data/publication/@@summary'
+    else:
+        biomarkerSummary = 'https://edrn-dev.jpl.nasa.gov/cancerdataexpo/summarizer-data/biomarker/@@summary'
+        siteSummary = 'https://edrn-dev.jpl.nasa.gov/cancerdataexpo/summarizer-data/collaboration/@@summary'
+        pubSummary = 'https://edrn-dev.jpl.nasa.gov/cancerdataexpo/summarizer-data/publication/@@summary'
+    if 'biomarkers' in portal.keys():
+        _logger.info('Setting biomarkers summary data source to %s', biomarkerSummary)
+        o = portal['biomarkers']
+        o.bmSumDataSource = biomarkerSummary
+    if 'committees' in portal.keys():
+        _logger.info('Setting committees summary data source to %s', siteSummary)
+        o = portal['committees']
+        o.siteSumDataSource = siteSummary
+    if 'publications' in portal.keys():
+        _logger.info('Setting publications summary data source to %s', pubSummary)
+        o = portal['publications']
+        o.pubSumDataSource = pubSummary
+    _logger.info('Ingesting everything fully')
+    portal.unrestrictedTraverse('@@ingestEverythingFully')()
+    _logger.info('Clearing ingest paths to prevent automatic ingest')
+    if portal.hasProperty('edrnIngestPaths'):
+        portal.manage_delProperties(['edrnIngestPaths'])
+    _logger.info('Resetting portal "from" email address')
+    portal.manage_changeProperties(email_from_address='sean.kelly@jpl.nasa.gov')
+    _logger.info('Clearing, finding, and re-building the catalog')
+    catalog.clearFindAndRebuild()
+    uidCatalog = getToolByName(portal, 'uid_catalog')
+    _logger.info('Rebuilding the UID catalog')
+    uidCatalog.manage_rebuildCatalog()
+    transaction.commit()
+    _logger.info('Upgrade 10-to-11 complete')
 
 # UPGRADE from operations 4.2 to 4.3
 #

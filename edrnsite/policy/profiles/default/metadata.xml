@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
-Copyright 2009-2015 California Institute of Technology. ALL RIGHTS
+Copyright 2009-2016 California Institute of Technology. ALL RIGHTS
 RESERVED. U.S. Government Sponsorship acknowledged.
 -->
 <metadata>
-    <version>10</version>
+    <version>11</version>
     <description>The EDRN Site Policy turns a plain old Plone site into the EDRN public portal.</description>
     <dependencies>
         <dependency>profile-eea.facetednavigation:default</dependency>
