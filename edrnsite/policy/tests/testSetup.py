@@ -199,15 +199,15 @@ class SetupTest(unittest.TestCase):
     def testKnowledgeFolderURLs(self):
         '''Verify that knowledge folders have the correct URLs for future ingest.'''
         self.assertEquals(
-            'http://ginger.fhcrc.org/dmcc/rdf-data/body-systems/rdf',
+            'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/body-systems/rdf',
             self.portal['resources']['body-systems'].rdfDataSource
         )
         self.assertEquals(
-            'http://ginger.fhcrc.org/dmcc/rdf-data/diseases/rdf',
+            'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/diseases/rdf',
             self.portal['resources']['diseases'].rdfDataSource
         )
         self.assertEquals(
-            'http://ginger.fhcrc.org/dmcc/rdf-data/publications/rdf',
+            'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/publications/rdf',
             self.portal['publications'].rdfDataSource
         )
         self.assertEquals(
@@ -215,15 +215,15 @@ class SetupTest(unittest.TestCase):
             self.portal['publications'].additionalDataSources[0]
         )
         self.assertEquals(
-            'http://ginger.fhcrc.org/dmcc/rdf-data/sites/rdf',
+            'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/sites/rdf',
             self.portal['sites'].rdfDataSource
         )
         self.assertEquals(
-            'http://ginger.fhcrc.org/dmcc/rdf-data/registered-person/rdf',
+            'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/registered-person/rdf',
             self.portal['sites'].peopleDataSource
         )
         self.assertEquals(
-            'http://ginger.fhcrc.org/dmcc/rdf-data/protocols/rdf',
+            'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/protocols/rdf',
             self.portal['protocols'].rdfDataSource
         )
         self.assertEquals(
@@ -235,7 +235,7 @@ class SetupTest(unittest.TestCase):
             self.portal['biomarkers'].bmoDataSource
         )
         self.assertEquals(
-            'https://edrn.jpl.nasa.gov/dmcc/rdf-data/biomuta/@@rdf',
+            'https://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/biomuta/@@rdf',
             self.portal['biomarkers'].bmuDataSource
         )
         self.assertEquals(
@@ -247,7 +247,7 @@ class SetupTest(unittest.TestCase):
             self.portal['science-data'].rdfDataSource
         )
         self.assertEquals(
-            'http://ginger.fhcrc.org/dmcc/rdf-data/committees/rdf',
+            'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/committees/rdf',
             self.portal['committees'].rdfDataSource
         )
     def testVideoEmbeddingSettings(self):
