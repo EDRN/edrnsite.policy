@@ -4,7 +4,7 @@ Copyright 2009-2016 California Institute of Technology. ALL RIGHTS
 RESERVED. U.S. Government Sponsorship acknowledged.
 -->
 <metadata>
-    <version>11</version>
+    <version>11</version> <!-- Policy 11 goes with edrnsite.policy 1.2.17 and PublicPortal 4.5.7 -->
     <description>The EDRN Site Policy turns a plain old Plone site into the EDRN public portal.</description>
     <dependencies>
         <dependency>profile-eea.facetednavigation:default</dependency>
