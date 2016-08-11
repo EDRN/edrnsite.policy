@@ -473,7 +473,7 @@ def setBiomarkerIngestPaths(portal, bioRDF, bioOrganRDF):
     biomarkers = portal['biomarkers']
     biomarkers.rdfDataSource = bioRDF
     biomarkers.bmoDataSource = bioOrganRDF
-    biomarkers.bmuDataSource = 'https://edrn.jpl.nasa.gov/dmcc/rdf-data/biomuta/@@rdf'
+    biomarkers.bmuDataSource = 'https://edrn.jpl.nasa.gov/cancerdataexpo/rdf-data/biomuta/@@rdf'
 
 
 def upgrade5to6(setupTool):
@@ -710,7 +710,7 @@ def upgrade9to10(setupTool):
         import socket
         if not socket.gethostname().startswith('tumor'):
             b = portal['biomarkers']
-            b.bmuDataSource = 'http://edrn.jpl.nasa.gov/dmcc/rdf-data/biomuta/@@rdf'
+            b.bmuDataSource = 'http://edrn.jpl.nasa.gov/cancerdataexpo/rdf-data/biomuta/@@rdf'
     _logger.info('Ingesting everything fully')
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
     _logger.info('Clearing ingest paths to prevent automatic ingest')
@@ -752,7 +752,7 @@ def upgrade9to10(setupTool):
         import socket
         if not socket.gethostname().startswith('tumor'):
             b = portal['biomarkers']
-            b.bmuDataSource = 'http://edrn.jpl.nasa.gov/dmcc/rdf-data/biomuta/@@rdf'
+            b.bmuDataSource = 'http://edrn.jpl.nasa.gov/cancerdataexpo/rdf-data/biomuta/@@rdf'
     _logger.info('Ingesting everything fully')
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
     _logger.info('Clearing ingest paths to prevent automatic ingest')

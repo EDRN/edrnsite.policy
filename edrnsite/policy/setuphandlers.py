@@ -450,18 +450,21 @@ def addAdminstriviaImages(portal, context):
 
 def setIngestURLs(portal):
     '''Set up the URLs knowledge folders will use for future ingests.'''
-    portal.resources['body-systems'].rdfDataSource            = 'http://ginger.fhcrc.org/dmcc/rdf-data/body-systems/rdf'
-    portal.resources['diseases'].rdfDataSource                = 'http://ginger.fhcrc.org/dmcc/rdf-data/diseases/rdf'
+    portal.resources['body-systems'].rdfDataSource            = 'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/body-systems/rdf'
+    portal.resources['diseases'].rdfDataSource                = 'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/diseases/rdf'
     portal.resources['miscellaneous-resources'].rdfDataSource = 'http://edrn.jpl.nasa.gov/bmdb/rdf/resources'
     portal['biomarkers'].bmoDataSource                        = 'http://edrn.jpl.nasa.gov/bmdb/rdf/biomarkerorgans'
     portal['biomarkers'].rdfDataSource                        = 'http://edrn.jpl.nasa.gov/bmdb/rdf/biomarkers'
-    portal['biomarkers'].bmuDataSource                        = 'https://edrn.jpl.nasa.gov/dmcc/rdf-data/biomuta/@@rdf'
-    portal['protocols'].rdfDataSource                         = 'http://ginger.fhcrc.org/dmcc/rdf-data/protocols/rdf'
+    portal['biomarkers'].bmuDataSource                        = 'https://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/biomuta/@@rdf'
+    portal['biomarkers'].bmSumDataSource                      = 'https://edrn-dev.jpl.nasa.gov/cancerdataexpo/summarizer-data/biomarker/@@summary'
+    portal['protocols'].rdfDataSource                         = 'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/protocols/rdf'
     portal['publications'].additionalDataSources              = ['http://edrn.jpl.nasa.gov/bmdb/rdf/publications']
-    portal['publications'].rdfDataSource                      = 'http://ginger.fhcrc.org/dmcc/rdf-data/publications/rdf'
-    portal['sites'].peopleDataSource                          = 'http://ginger.fhcrc.org/dmcc/rdf-data/registered-person/rdf'
-    portal['sites'].rdfDataSource                             = 'http://ginger.fhcrc.org/dmcc/rdf-data/sites/rdf'
-    portal['committees'].rdfDataSource                        = 'http://ginger.fhcrc.org/dmcc/rdf-data/committees/rdf'
+    portal['publications'].rdfDataSource                      = 'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/publications/rdf'
+    portal['publications'].pubSumDataSource                   = 'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/summarizer-data/publication/@@summary'
+    portal['sites'].peopleDataSource                          = 'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/registered-person/rdf'
+    portal['sites'].rdfDataSource                             = 'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/sites/rdf'
+    portal['committees'].rdfDataSource                        = 'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/committees/rdf'
+    portal['committees'].siteSumDataSource                    = 'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/summarizer-data/collaboration/@@summary'
     # Beware: long URL
     portal['science-data'].rdfDataSource = 'http://edrn.jpl.nasa.gov/fmprodp3/rdf/dataset?' + \
         'type=ALL&baseUrl=http://edrn.jpl.nasa.gov/ecas/dataset.php'
@@ -765,7 +768,7 @@ def createCommitteesFolder(portal):
     committees = portal[portal.invokeFactory('Committee Folder', 'committees')]
     committees.setTitle(u'Committees')
     committees.setDescription(u'The following describes the committees, subcommittees, and other components of EDRN.')
-    committees.rdfDataSource = u'http://ginger.fhcrc.org/dmcc/rdf-data/committees/rdf'
+    committees.rdfDataSource = u'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/rdf-data/committees/rdf'
     committees.setExcludeFromNav(True)
     committees.reindexObject()
 
