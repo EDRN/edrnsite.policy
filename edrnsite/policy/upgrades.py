@@ -809,6 +809,7 @@ def upgrade10to11(setupTool):
         o = portal['publications']
         o.pubSumDataSource = pubSummary
     _logger.info('Ingesting everything fully')
+    setAutoIngestProperties(portal)
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
     _logger.info('Clearing ingest paths to prevent automatic ingest')
     if portal.hasProperty('edrnIngestPaths'):
