@@ -87,5 +87,14 @@ RESERVED. U.S. Government Sponsorship acknowledged.
         handler='edrnsite.policy.upgrades.upgrade10to11'
         sortkey='1'
     />
+    <genericsetup:upgradeStep
+        source='11'
+        destination='12'
+        title='Upgrade 11 to 12 with early vanity pages'
+        description='Upgrade the EDRN default profile from version 11 to version 12 and adds proto-vanity'
+        profile='edrnsite.policy:default'
+        handler='edrnsite.policy.upgrades.upgrade11to12'
+        sortkey='1'
+    />
 </configure>
 
