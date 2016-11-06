@@ -826,7 +826,7 @@ def upgrade10to11(setupTool):
 
 
 def upgrade11to12(setupTool):
-    _logger.info('Upgrading EDRN Public Portal from profile version 11 to profile version 12 with proto-vanity')
+    _logger.info('Upgrading EDRN Public Portal from profile version 11 to profile version 12 with panic mode')
     portal = _getPortal(setupTool)
     request = portal.REQUEST
     catalog, setup = getToolByName(portal, 'portal_catalog'), getToolByName(portal, 'portal_setup')
@@ -841,7 +841,7 @@ def upgrade11to12(setupTool):
     _logger.info('Disabling content rules')
     contentRuleStorage.active = False
     qi = getToolByName(portal, 'portal_quickinstaller')
-    qi.upgradeProduct('edrnsite.vanity')
+    qi.upgradeProduct('edrnsite.collaborations')
     _logger.info('Ingesting everything fully')
     setAutoIngestProperties(portal)
     portal.unrestrictedTraverse('@@ingestEverythingFully')()

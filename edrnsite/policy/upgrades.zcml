@@ -90,8 +90,8 @@ RESERVED. U.S. Government Sponsorship acknowledged.
     <genericsetup:upgradeStep
         source='11'
         destination='12'
-        title='Upgrade 11 to 12 with early vanity pages'
-        description='Upgrade the EDRN default profile from version 11 to version 12 and adds proto-vanity'
+        title='Upgrade 11 to 12 with reverse chronological order to collaborative groups'
+        description='Upgrade the EDRN default profile from version 11 to version 12 and goes into panic mode'
         profile='edrnsite.policy:default'
         handler='edrnsite.policy.upgrades.upgrade11to12'
         sortkey='1'
