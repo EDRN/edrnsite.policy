@@ -842,6 +842,7 @@ def upgrade11to12(setupTool):
     contentRuleStorage.active = False
     qi = getToolByName(portal, 'portal_quickinstaller')
     qi.upgradeProduct('edrnsite.collaborations')
+    qi.upgradeProduct('eke.ecas')
     _logger.info('Ingesting everything fully')
     setAutoIngestProperties(portal)
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
@@ -879,3 +880,4 @@ def upgrade11to12(setupTool):
 # Move modernizr.js to below cookie_functions.js
 # Restrict ++resource++base2-dom-fp.js to authenticated users
 # Disable ++resource++kukit-devel.js
+# Upgrade eke.ecas to have faceted searching

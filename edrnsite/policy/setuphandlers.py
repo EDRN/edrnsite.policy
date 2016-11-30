@@ -468,6 +468,7 @@ def setIngestURLs(portal):
     # Beware: long URL
     portal['science-data'].rdfDataSource = 'http://edrn.jpl.nasa.gov/fmprodp3/rdf/dataset?' + \
         'type=ALL&baseUrl=http://edrn.jpl.nasa.gov/ecas/dataset.php'
+    portal['science-data'].dsSumDataSource = 'http://edrn-dev.jpl.nasa.gov/cancerdataexpo/summarizer-data/dataset/@@summary'
 
 def empowerSuperUserGroup(context):
     '''Give people in the Super User group great power.  This assumes that
