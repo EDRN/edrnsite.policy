@@ -842,7 +842,6 @@ def upgrade11to12(setupTool):
     contentRuleStorage.active = False
     qi = getToolByName(portal, 'portal_quickinstaller')
     qi.upgradeProduct('edrnsite.collaborations')
-    qi.upgradeProduct('eke.ecas')
     _logger.info('Ingesting everything fully')
     setAutoIngestProperties(portal)
     portal.unrestrictedTraverse('@@ingestEverythingFully')()
@@ -859,7 +858,14 @@ def upgrade11to12(setupTool):
     transaction.commit()
     _logger.info('Upgrade 11-to-12 complete')
 
-
+#only upgrade eke.ecas for the latest dataset faceted page
+def upgrade12to13(setupTool):
+    _logger.info('Upgrading EDRN Public Portal from profile version 12 to profile version 13')
+    portal = _getPortal(setupTool)
+    qi = getToolByName(portal, 'portal_quickinstaller')
+    qi.upgradeProduct('eke.ecas')
+    transaction.commit()
+    _logger.info('Upgrade 12-to-13 complete')
 
 # UPGRADE from operations 4.2 to 4.3
 #
