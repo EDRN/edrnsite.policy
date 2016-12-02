@@ -6,12 +6,19 @@ about the issues mentioned here can be found at the issue tracker, at::
 
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
+
+1.2.19 — TBD
+------------
+
+• CA-1421 - Updates to Science Data Tab
+• CA-1436 - Collaborative Group Workspaces - Separate Projects and Protocols
+
+
 1.2.18 — Panic Mode
 -------------------
 
 • CA-1423 - Collaborative groups should show documents in reverse
   chronological order
-• CA-1421 - Updates to Science Data Tab
 
 
 1.2.17 — Visuals

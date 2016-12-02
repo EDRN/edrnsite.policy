@@ -99,7 +99,7 @@ RESERVED. U.S. Government Sponsorship acknowledged.
     <genericsetup:upgradeStep
         source='12'
         destination='13'
-        title='Upgrade 12 to 13 with new dataset faceted page'
+        title='Upgrade 12 to 13 with new dataset faceted page and fixed projects in collaborative groups'
         description='Upgrade the EDRN default profile from version 12 to version 13'
         profile='edrnsite.policy:default'
         handler='edrnsite.policy.upgrades.upgrade12to13'
