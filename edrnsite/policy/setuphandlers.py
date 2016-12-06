@@ -610,7 +610,6 @@ def createMembersListSearchPage(portal):
         sortreversed=False,
         hidezerocount=False
     )
-    criteria.add('debug', 'top', 'default', title='Debug Criteria', user='kelly')
     criteria.add('criteria', 'top', 'default', title='Current Search')
     membersList.reindexObject()
 

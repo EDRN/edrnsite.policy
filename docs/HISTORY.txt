@@ -7,8 +7,8 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
-1.2.19 — TBD
-------------
+1.2.19 — Pork and Beans
+-----------------------
 
 • CA-1421 - Updates to Science Data Tab
 • CA-1436 - Collaborative Group Workspaces - Separate Projects and Protocols
