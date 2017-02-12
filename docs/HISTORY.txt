@@ -7,6 +7,12 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
+1.2.20 — TBD
+------------
+
+• Upgrade steps to support vanity pages
+
+
 1.2.19 — Pork and Beans
 -----------------------
 
