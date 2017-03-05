@@ -4,9 +4,10 @@
 
 from BTrees.OOBTree import OOBTree
 from Acquisition import aq_parent
-from plone.contentrules.engine.interfaces import IRuleStorage
 from plone.app.viewletmanager.interfaces import IViewletSettingsStorage
+from plone.contentrules.engine.interfaces import IRuleStorage
 from plone.i18n.normalizer.interfaces import IIDNormalizer
+from plone.registry.interfaces import IRegistry
 from Products.CMFCore.utils import getToolByName
 from setuphandlers import (
     enableEmbeddableVideos, createCommitteesFolder, createCollaborationsFolder, _doPublish,
@@ -927,6 +928,44 @@ def upgrade13to14(setupTool):
     uidCatalog.manage_rebuildCatalog()
     transaction.commit()
     _logger.info('Upgrade 13-to-14 complete')
+
+
+def upgrade14to15(setupTool):
+    _logger.info('Upgrading EDRN Public Portal from profile version 14 to profile version 15 without vanity pages')
+    portal = _getPortal(setupTool)
+    request = portal.REQUEST
+    catalog, setup = getToolByName(portal, 'portal_catalog'), getToolByName(portal, 'portal_setup')
+    _logger.info("Disabling schema extender's cache")
+    from archetypes.schemaextender.extender import disableCache
+    disableCache(request)
+    propTool = getToolByName(portal, 'portal_properties')
+    propTool.site_properties.getProperty('enable_link_integrity_checks', True)
+    contentRuleStorage = getUtility(IRuleStorage)
+    _logger.info('Disabling link integrity checks')
+    propTool.site_properties.manage_changeProperties(enable_link_integrity_checks=False)
+    _logger.info('Disabling content rules')
+    contentRuleStorage.active = False
+    qi, actions = getToolByName(portal, 'portal_quickinstaller'), getToolByName(portal, 'portal_actions')
+    getUtility(IRegistry)['edrnsite.vanity.enable'] = False
+    if 'vanity' in actions.user.keys():
+        actions.user.manage_delObjects(['vanity'])
+    qi.uninstallProducts(['edrnsite.vanity'])
+    _logger.info('Ingesting everything fully')
+    setAutoIngestProperties(portal)
+    portal.unrestrictedTraverse('@@ingestEverythingFully')()
+    _logger.info('Clearing ingest paths to prevent automatic ingest')
+    if portal.hasProperty('edrnIngestPaths'):
+        portal.manage_delProperties(['edrnIngestPaths'])
+    _logger.info('Resetting portal "from" email address')
+    portal.manage_changeProperties(email_from_address='sean.kelly@jpl.nasa.gov')
+    _logger.info('Clearing, finding, and re-building the catalog')
+    catalog.clearFindAndRebuild()
+    uidCatalog = getToolByName(portal, 'uid_catalog')
+    _logger.info('Rebuilding the UID catalog')
+    uidCatalog.manage_rebuildCatalog()
+    transaction.commit()
+    _logger.info('Upgrade 14-to-15 complete')
+
 
 # UPGRADE from operations 4.2 to 4.3
 #

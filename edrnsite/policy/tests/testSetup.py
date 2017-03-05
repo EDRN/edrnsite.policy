@@ -322,11 +322,6 @@ class SetupTest(unittest.TestCase):
         javascripts = getToolByName(self.portal, 'portal_javascripts')
         jqueryIndex = javascripts.getResourcePosition('jquery.js')
         self.assertEquals(0, jqueryIndex, '"jquery.js" not in correct position; expected 0, got %d' % jqueryIndex)
-    def testAddons(self):
-        '''Check that dependent packages are installed'''
-        qi = getToolByName(self.portal, 'portal_quickinstaller')
-        self.failUnless(qi.isProductInstalled('edrnsite.vanity'), "edrnsite.vanity is not installed")
-        self.failUnless(qi.isProductInstalled('plone.app.dexterity'), "Dexterity wasn't installed")
     def testEditingSettings(self):
         '''Ensure editor settings are correct'''
         props = self.portal.portal_properties.site_properties

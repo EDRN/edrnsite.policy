@@ -7,6 +7,12 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
+1.2.21 — TBD
+------------
+
+• CA-1498 - Disable vanity pages
+
+
 1.2.20 — You're So Vain
 -----------------------
 

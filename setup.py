@@ -34,6 +34,18 @@ _externalRequirements = [
     'eea.facetednavigation',
     'zope.globalrequest',
 #    'plone.app.jquery',
+    'edrn.theme',
+    'edrnsite.funding',
+    'edrnsite.misccontent',
+    'edrnsite.collaborations',
+    'eke.knowledge',
+    'eke.site',
+    'eke.study',
+    'eke.biomarker',
+    'eke.committees',
+    'eke.ecas',
+    'eke.review',
+    'eke.specimens',
 ]
 _classifiers = [
     'Development Status :: 4 - Beta',
