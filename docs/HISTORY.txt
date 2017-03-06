@@ -11,6 +11,7 @@ about the issues mentioned here can be found at the issue tracker, at::
 ------------
 
 • CA-1498 - Disable vanity pages
+• CA-1306 - Minimal portal needs to not spam Karl Krueger
 
 
 1.2.20 — You're So Vain

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
-Copyright 2009 California Institute of Technology. ALL RIGHTS
+Copyright 2009–2017 California Institute of Technology. ALL RIGHTS
 RESERVED. U.S. Government Sponsorship acknowledged.
 -->
-<object name='MailHost' meta_type='Secure Mail Host' smtp_host='localhost' smtp_port='25' smtp_pwd='' smtp_uid=''/>
+<object name='MailHost' meta_type='Secure Mail Host' smtp_host='non.exist.ent' smtp_port='25' smtp_pwd='' smtp_uid=''/>

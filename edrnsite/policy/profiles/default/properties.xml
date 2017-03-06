@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
-Copyright 2009–2013 California Institute of Technology. ALL RIGHTS
+Copyright 2009–2017 California Institute of Technology. ALL RIGHTS
 RESERVED. U.S. Government Sponsorship acknowledged.
 -->
 <site>
 	<property name='title'>EDRN Public Portal</property>
 	<property name='description'>Early Detection Research Network</property>
     <property name='email_from_name'>EDRN Portal Administrator</property>
-    <property name='email_from_address'>kruegerk@mail.nih.gov</property>
+    <property name='email_from_address'>nobody@nowhere.nonexistent</property>
     <property name='edrnIngestPaths' type='lines'>
 <!-- We want no ingest paths set for a new portal because it will be
 scanned by NIH security and the scan takes forever and if it ingests

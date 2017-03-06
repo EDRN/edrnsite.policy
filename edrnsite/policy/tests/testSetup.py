@@ -94,9 +94,9 @@ class SetupTest(unittest.TestCase):
         #     self.assertEquals('private', wfTool.getInfoFor(self.portal[i], 'review_state'))
     def testMailSettings(self):
         '''Ensure the portal is ready to send email.'''
-        self.assertEquals(u'kruegerk@mail.nih.gov', self.portal.getProperty('email_from_address'))
+        self.assertEquals(u'nobody@nowhere.nonexistent', self.portal.getProperty('email_from_address'))
         self.assertEquals(u'EDRN Portal Administrator', self.portal.getProperty('email_from_name'))
-        self.assertEquals(u'localhost', self.portal.MailHost.smtp_host)
+        self.assertEquals(u'non.exist.ent', self.portal.MailHost.smtp_host)
     def testTypesNotSearched(self):
         '''Make sure types that are not searched aren't clobbered.'''
         typesNotSearched = frozenset(self.portal.portal_properties.site_properties.getProperty('types_not_searched'))
