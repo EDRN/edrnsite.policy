@@ -7,8 +7,8 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
-1.2.21 — TBD
-------------
+1.2.21 — You're Not That Vain
+-----------------------------
 
 • CA-1498 - Disable vanity pages
 • CA-1306 - Minimal portal needs to not spam Karl Krueger
