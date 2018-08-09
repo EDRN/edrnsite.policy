@@ -6,7 +6,7 @@
 '''
 
 import doctest
-import unittest2 as unittest
+import unittest
 from plone.testing import layered
 from edrnsite.policy.testing import EDRNSITE_POLICY_FUNCTIONAL_TESTING as LAYER
 

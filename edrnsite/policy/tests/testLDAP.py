@@ -8,7 +8,7 @@ testLDAP.py
 Tests for the LDAP configuration of the EDRN Site policy.
 '''
 
-import unittest2 as unittest
+import unittest
 from edrnsite.policy.testing import EDRNSITE_POLICY_INTEGRATION_TESTING
 from Products.PluggableAuthService.interfaces.plugins import IAuthenticationPlugin, ICredentialsResetPlugin, \
     IGroupEnumerationPlugin, IGroupsPlugin, IPropertiesPlugin, IRoleEnumerationPlugin, IRolesPlugin, IUserAdderPlugin, \

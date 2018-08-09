@@ -8,7 +8,7 @@ testSetup.py
 Tests for the setup of the EDRN Site policy.
 '''
 
-import unittest2 as unittest
+import unittest
 from edrnsite.policy.testing import EDRNSITE_POLICY_INTEGRATION_TESTING
 from Products.CMFCore.permissions import MailForgottenPassword
 from Products.CMFCore.utils import getToolByName

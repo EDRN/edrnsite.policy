@@ -7,10 +7,11 @@ about the issues mentioned here can be found at the issue tracker, at::
     https://oodt.jpl.nasa.gov/jira/browse/CA
 
 
-1.2.22 — TBD
-------------
+1.2.22 — Plone 4.3.9 Upgrade
+----------------------------
 
 • CA-1543 - Send email after RDF ingest
+• CA-1592
 
 
 1.2.21 — You're Not That Vain

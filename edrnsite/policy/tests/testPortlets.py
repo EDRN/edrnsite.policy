@@ -5,7 +5,7 @@
 '''Tests for the EDRN site's portlets.
 '''
 
-import unittest2 as unittest
+import unittest
 from edrnsite.policy.testing import EDRNSITE_POLICY_INTEGRATION_TESTING
 from zope.component import getUtility, getMultiAdapter
 from plone.portlets.interfaces import IPortletManager, IPortletAssignmentMapping
