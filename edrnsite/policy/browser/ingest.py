@@ -1,5 +1,5 @@
 # encoding: utf-8
-# Copyright 2010 California Institute of Technology. ALL RIGHTS
+# Copyright 2010–2018 California Institute of Technology. ALL RIGHTS
 # RESERVED. U.S. Government Sponsorship acknowledged.
 
 '''EDRN Site Policy: browser capabilities: ingestion.'''
@@ -11,7 +11,7 @@ from Products.Five.browser import BrowserView
 from zope.component import getMultiAdapter, getUtility
 from plone.contentrules.engine.interfaces import IRuleStorage
 from plone.app.linkintegrity.interfaces import ILinkIntegrityInfo
-import logging, plone.api, datetime
+import logging, plone.api, datetime, transaction
 
 _logger = logging.getLogger(__name__)
 
@@ -82,6 +82,7 @@ class FullIngestor(BrowserView):
                     ingestor = getMultiAdapter((obj, self.request), name=u'ingest')
                     ingestor.render = False
                     ingestor()
+                    transaction.commit()
                     _logger.info('Ingest of "%s" completed', path)
                     report.append(u'Ingest of "{}" completed'.format(path))
                     # Some paths don't need publication
@@ -92,17 +93,17 @@ class FullIngestor(BrowserView):
                     else:
                         _logger.info('Skipping publishing of "%s" since it takes care of its own publication state', path)
                         report.append(u'Skipping publishing of "{}"; it takes care of its own publication'.format(path))
+                    transaction.commit()
                 except:
                     _logger.exception('Ingest failed for "%s"', path)
                     report.append(u'Ingest failed for "{}"'.format(path))
 
             # And re-index
-            import transaction
-            transaction.commit()
             _logger.info('Clearing and rebuilding the catalog')
             report.append(u'Clearing and rebuilding the catalog.')
             catalog = getToolByName(context, 'portal_catalog')
             catalog.clearFindAndRebuild()
+            transaction.commit()
 
             # OK, now we can restore whatever the content rule state was
             contentRules.active = contentRulesState
